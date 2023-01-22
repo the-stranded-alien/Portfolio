@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import AboutPage from "./pages/AboutPage";
+import CertificationsPage from "./pages/CertificationsPage";
+import CoursesPage from "./pages/CoursesPage";
+import EducationPage from "./pages/EducationPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ResumePage from "./pages/ResumePage";
+import SkillsPage from "./pages/SkillsPage";
+import WorkPage from "./pages/WorkPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div>
+                <NavBar />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/work" element={<WorkPage />} />
+                    <Route path="/skills" element={<SkillsPage />} />
+                    <Route path="/education" element={<EducationPage />} />
+                    <Route path="/projects" element={<ProjectsPage />} />
+                    <Route path="/courses" element={<CoursesPage />} />
+                    <Route path="/certifications" element={<CertificationsPage />} />
+                    <Route path="/resume" element={<ResumePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
