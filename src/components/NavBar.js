@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Dropdown, Icon, Image } from 'semantic-ui-react';
+import { Menu, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import './NavBar.css';
 
