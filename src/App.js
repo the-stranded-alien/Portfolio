@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import { Card, Icon } from 'semantic-ui-react';
+import SkillItem from './components/Skills/SkillItem';
 
 function App() {
     return (
@@ -14,9 +15,7 @@ function App() {
                     <Card.Meta>
                         <span className="date">Started 07/2023</span>
                     </Card.Meta>
-                    <Card.Description>
-                        This website is under construction
-                    </Card.Description>
+                    <Card.Description>This website is under construction</Card.Description>
                 </Card.Content>
                 <Card.Content extra>
                     <a>
@@ -25,6 +24,9 @@ function App() {
                     </a>
                 </Card.Content>
             </Card>
+            <div className={'temp-progress-bar'}>
+                <SkillItem value={1} />
+            </div>
             <Footer />
         </div>
     );

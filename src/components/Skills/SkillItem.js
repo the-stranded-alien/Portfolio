@@ -1,5 +1,20 @@
-import { Slider } from 'semantic-ui-react';
+import React from 'react';
+import { Progress } from 'semantic-ui-react';
 
-const SkillItem = (min, max, value) => {
-    return <Slider min={min} max={max} value={value} />;
+const skillValueOutOf = 10;
+
+const SkillItem = ({ value }) => {
+    return (
+        <Progress
+            size={'medium'}
+            color={'green'}
+            value={value}
+            total={skillValueOutOf}
+            progress={'ratio'}
+        >
+            Progress...
+        </Progress>
+    );
 };
+
+export default SkillItem;
