@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .desktop-menu {
+        display: inline-block;
+    }
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.navbar-avatar {
+    width: 30px;
+    height: 30px;
+}
