@@ -1,17 +1,9 @@
 import React from 'react';
-import SkillItem from '../components/Skills/SkillItem';
-import skillData from '../data/Skills/skills.json';
 import './SkillPage.css';
-
-const renderSkills = () => {
-    const skills = skillData.skills;
-    return skills.map((skill, index) => (
-        <SkillItem key={index} value={skill.value} name={skill.name} />
-    ));
-};
+import SkillList from '../components/Skills/SkillList';
 
 function SkillPage() {
-    return <div className="skillPage">{renderSkills()}</div>;
+    return <div className="skillPage">{SkillList()}</div>;
 }
 
 export default SkillPage;

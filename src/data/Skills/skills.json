@@ -1,16 +1,40 @@
 {
   "skills": [
     {
-      "name": "HTML",
-      "value": 5
+      "category": "Front-End",
+      "overallValue": 5,
+      "subSkills": [
+        {
+          "name": "HTML",
+          "value": 6
+        },
+        {
+          "name": "CSS",
+          "value": 4
+        },
+        {
+          "name": "JavaScript",
+          "value": 7
+        },
+        {
+          "name": "React",
+          "value": 7
+        }
+      ]
     },
     {
-      "name": "CSS",
-      "value": 3
-    },
-    {
-      "name": "JavaScript",
-      "value": 6
+      "category": "Back-End",
+      "overallValue": 8,
+      "subSkills": [
+        {
+          "name": "Spring & Spring-Boot",
+          "value": 8
+        },
+        {
+          "name": "NodeJs",
+          "value": 7
+        }
+      ]
     }
   ]
 }
