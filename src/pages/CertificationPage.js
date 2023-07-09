@@ -1,7 +1,7 @@
 import React from 'react';
 
-function CertificationsPage() {
+function CertificationPage() {
     return <h1> Certification Page ... </h1>;
 }
 
-export default CertificationsPage;
+export default CertificationPage;

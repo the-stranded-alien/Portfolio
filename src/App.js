@@ -7,10 +7,10 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WorkPage from './pages/WorkPage';
 import EducationPage from './pages/EducationPage';
-import SkillsPage from './pages/SkillsPage';
-import ProjectsPage from './pages/ProjectsPage';
-import CertificationsPage from './pages/CertificationsPage';
-import CoursesPage from './pages/CoursesPage';
+import SkillPage from './pages/SkillPage';
+import ProjectPage from './pages/ProjectPage';
+import CertificationPage from './pages/CertificationPage';
+import CoursePage from './pages/CoursePage';
 import ResumePage from './pages/ResumePage';
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/work" element={<WorkPage />} />
                 <Route path="/education" element={<EducationPage />} />
-                <Route path="/skill" element={<SkillsPage />} />
-                <Route path="/project" element={<ProjectsPage />} />
-                <Route path="/certification" element={<CertificationsPage />} />
-                <Route path="/course" element={<CoursesPage />} />
+                <Route path="/skill" element={<SkillPage />} />
+                <Route path="/project" element={<ProjectPage />} />
+                <Route path="/certification" element={<CertificationPage />} />
+                <Route path="/course" element={<CoursePage />} />
                 <Route path="/resume" element={<ResumePage />} />
             </Routes>
             <Footer />

@@ -3,7 +3,7 @@ import { Progress } from 'semantic-ui-react';
 
 const skillValueOutOf = 10;
 
-const SkillItem = ({ value }) => {
+const SkillItem = ({ value, name }) => {
     return (
         <Progress
             size={'medium'}
@@ -12,7 +12,7 @@ const SkillItem = ({ value }) => {
             total={skillValueOutOf}
             progress={'ratio'}
         >
-            Progress...
+            {name}
         </Progress>
     );
 };
