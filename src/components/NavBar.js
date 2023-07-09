@@ -9,10 +9,10 @@ const NavBar = () => {
         { name: 'About Me', path: '/about', icon: 'address card' },
         { name: 'Work Experience', path: '/work', icon: 'suitcase' },
         { name: 'Education', path: '/education', icon: 'book' },
-        { name: 'Skills', path: '/skills', icon: 'keyboard' },
-        { name: 'Projects', path: '/projects', icon: 'file' },
-        { name: 'Certifications', path: '/certifications', icon: 'newspaper' },
-        { name: 'Courses', path: '/courses', icon: 'video' },
+        { name: 'Skills', path: '/skill', icon: 'keyboard' },
+        { name: 'Projects', path: '/project', icon: 'file' },
+        { name: 'Certifications', path: '/certification', icon: 'newspaper' },
+        { name: 'Courses', path: '/course', icon: 'video' },
         { name: 'Resume', path: '/resume', icon: 'clipboard' },
     ];
 
