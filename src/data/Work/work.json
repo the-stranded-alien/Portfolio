@@ -1,0 +1,22 @@
+{
+  "work": [
+    {
+      "company": "Beskar Technologies",
+      "designation": "Associate Consultant",
+      "startDate": "16 May, 2022",
+      "endDate": "Current"
+    },
+    {
+      "company": "Finvolv",
+      "designation": "Software Engineer",
+      "startDate": "02 August, 2021",
+      "endDate": "10 May, 2022"
+    },
+    {
+      "company": "Finvolv",
+      "designation": "Product Intern",
+      "startDate": "01 February, 2021",
+      "endDate": "31 July, 2021"
+    }
+  ]
+}
