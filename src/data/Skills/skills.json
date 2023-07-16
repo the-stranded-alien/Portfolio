@@ -1,17 +1,6 @@
 {
   "skills": [
     {
-      "category": "Programming Languages",
-      "logo": "language.png",
-      "overAllValue": 8,
-      "subSkills": [
-        "Java",
-        "JavaScript & TypeScript",
-        "Python & GoLang",
-        "C & C++"
-      ]
-    },
-    {
       "category": "Front-End Development",
       "logo": "frontend.png",
       "overAllValue": 5,
@@ -32,6 +21,28 @@
       ]
     },
     {
+      "category": "Cloud",
+      "logo": "cloud.jpeg",
+      "overAllValue": 7,
+      "subSkills": [
+        "Cloud Architecture",
+        "AWS",
+        "GCP"
+      ]
+    },
+    {
+      "category": "Programming Languages",
+      "logo": "language.png",
+      "overAllValue": 8,
+      "subSkills": [
+        "Java",
+        "JavaScript & TypeScript",
+        "Python & GoLang",
+        "C & C++",
+        "Data Structures & Algorithms"
+      ]
+    },
+    {
       "category": "DBMS & Databases",
       "logo": "database.jpeg",
       "overAllValue": 7,
@@ -41,16 +52,6 @@
         "MongoDB",
         "Cassandra",
         "ClickHouse"
-      ]
-    },
-    {
-      "category": "Cloud",
-      "logo": "cloud.jpeg",
-      "overAllValue": 7,
-      "subSkills": [
-        "Cloud Architecture",
-        "AWS",
-        "GCP"
       ]
     },
     {

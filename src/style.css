@@ -574,8 +574,8 @@ button:focus {
 }
 
 .skill-card-image {
-    background: mediumpurple;
-    height: 150px
+    background: transparent;
+    height: 200px
 }
 
 .skill-card-view {

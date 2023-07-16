@@ -19,10 +19,10 @@ const SkillCard = (props) => {
                 <br />
                 <Card.Subtitle>
                     <ProgressBar
-                        animated
+                        striped
                         now={props.overAllValue * 10}
                         label={`${props.overAllValue}/10`}
-                        variant="success"
+                        variant="info"
                     ></ProgressBar>
                 </Card.Subtitle>
                 <hr />

@@ -71,11 +71,6 @@ const NavBar = () => {
                                 <AiOutlineLaptop style={{ marginBottom: '2px' }} /> Skills
                             </Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link as={Link} to="/project" onClick={() => updateExpand(false)}>
-                                <AiOutlineProject style={{ marginBottom: '2px' }} /> Projects
-                            </Nav.Link>
-                        </Nav.Item>
                         {/*<Nav.Item>*/}
                         {/*    <Nav.Link*/}
                         {/*        as={Link}*/}
@@ -88,6 +83,11 @@ const NavBar = () => {
                         <Nav.Item>
                             <Nav.Link as={Link} to="/course" onClick={() => updateExpand(false)}>
                                 <AiOutlineVideoCamera style={{ marginBottom: '2px' }} /> Courses
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/project" onClick={() => updateExpand(false)}>
+                                <AiOutlineProject style={{ marginBottom: '2px' }} /> Projects
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
