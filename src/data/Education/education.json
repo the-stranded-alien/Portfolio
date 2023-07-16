@@ -1,0 +1,31 @@
+{
+  "education": [
+    {
+      "title": "B.Tech (Hons.) Computer Science Engineering (CSE)",
+      "college": "Jaypee Institute Of Information Technology",
+      "location": "Noida, Uttar Pradesh, India",
+      "score": "8.6 GPA",
+      "startDate": "July 2017",
+      "endDate": "July 2021",
+      "logo": "jiit.png"
+    },
+    {
+      "title": "Senior Secondary School (CBSE) - Class 12",
+      "college": "Bal Bharti School",
+      "location": "Prayagraj, Uttar Pradesh, India",
+      "score": "81.6 %",
+      "startDate": "April 2015",
+      "endDate": "March 2016",
+      "logo": "balbharti.jpeg"
+    },
+    {
+      "title": "High School (CBSE) - Class 10",
+      "college": "Bal Bharti School",
+      "location": "Prayagraj, Uttar Pradesh, India",
+      "score": "10 CGPA",
+      "startDate": "April 2013",
+      "endDate": "March 2014",
+      "logo": "balbharti.jpeg"
+    }
+  ]
+}

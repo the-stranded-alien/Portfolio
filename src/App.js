@@ -9,7 +9,7 @@ import Work from './components/Work/Work';
 import Education from './components/Education/Education';
 import Skill from './components/Skill/Skill';
 import Project from './components/Project/Project';
-import Certification from './components/Certification/Certification';
+// import Certification from './components/Certification/Certification';
 import Course from './components/Course/Course';
 import Resume from './components/Resume/Resume';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
