@@ -1,22 +1,47 @@
 {
-  "work": [
+  "totalExperience": 2,
+  "workExperience": [
     {
       "company": "Beskar Technologies",
+      "companyLogo": "beskar.png",
       "designation": "Associate Consultant",
+      "location": "Bengaluru, Karnataka, India",
       "startDate": "16 May, 2022",
-      "endDate": "Current"
+      "endDate": "Current",
+      "achievements": [
+        "Worked on a public portal for external users to see specific workflows.",
+        "Built a micro-service for getting external signatures on documents.",
+        "Built a mailing service which supported internationalization.",
+        "Worked on a highly scalable and configurable RevOps platform.",
+        "Built couple of configurations to drive the behaviour of application.",
+        "Created user specific dashboards and notifications."
+      ]
     },
     {
-      "company": "Finvolv",
+      "company": "Finvolv (formerly Kuliza Technologies)",
+      "companyLogo": "finvolv.svg",
       "designation": "Software Engineer",
+      "location": "Bengaluru, Karnataka, India",
       "startDate": "02 August, 2021",
-      "endDate": "10 May, 2022"
+      "endDate": "10 May, 2022",
+      "achievements": [
+        "Worked on a system that dealt with data security and cyber safety for schools using cloud based workspaces.",
+        "Built several features utilising the GCP APIs to enable better security.",
+        "Built a portal to help manage customisable policies and risks."
+      ]
     },
     {
-      "company": "Finvolv",
+      "company": "Finvolv (formerly Kuliza Technologies)",
+      "companyLogo": "finvolv.svg",
       "designation": "Product Intern",
+      "location": "Bengaluru, Karnataka, India",
       "startDate": "01 February, 2021",
-      "endDate": "31 July, 2021"
+      "endDate": "31 July, 2021",
+      "achievements": [
+        "Worked on a No-Code platform for lending businesses.",
+        "Built a project for policies and risk definition, detection and mitigation.",
+        "Created cron jobs for text analysis, remediations and notifications."
+      ]
     }
   ]
 }

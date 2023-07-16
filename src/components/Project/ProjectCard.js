@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { CgWebsite } from 'react-icons/cg';
 import { BsGithub, BsMedium } from 'react-icons/bs';
 
-const ProjectCards = (props) => {
+const ProjectCard = (props) => {
     return (
         <Card className="project-card-view">
             <Card.Img
@@ -53,4 +53,4 @@ const ProjectCards = (props) => {
         </Card>
     );
 };
-export default ProjectCards;
+export default ProjectCard;

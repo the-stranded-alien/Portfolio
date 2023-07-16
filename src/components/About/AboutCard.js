@@ -10,10 +10,15 @@ function AboutCard() {
                     <p style={{ textAlign: 'justify' }}>
                         Hi Everyone, I am <span className="purple">Sahil Gupta </span>
                         from <span className="purple"> Muzaffarnagar, Uttar Pradesh, India.</span>
-                        <br /> I am a Computer Science Engineering Graduate from Jaypee Institute of
-                        Information Technology, Noida.
+                        <br /> I am a{' '}
+                        <span className="purple">
+                            Computer Science Engineering Graduate from Jaypee Institute of
+                            Information Technology, Noida
+                        </span>
+                        .
                         <br />
-                        Currently I am working as an Associate Consultant at Beskar Technologies.
+                        Currently I am working as an{' '}
+                        <span className="purple">Associate Consultant at Beskar Technologies</span>.
                         <br />
                         <br />
                         Apart from coding, some other activities that I love to do!
@@ -23,7 +28,7 @@ function AboutCard() {
                             <ImPointRight /> Cooking
                         </li>
                         <li className="about-activity">
-                            <ImPointRight /> Learn about Tech, Space, Geology, and Global Affairs
+                            <ImPointRight /> Learning about Tech, Space, Geology, and Global Affairs
                         </li>
                         <li className="about-activity">
                             <ImPointRight /> Listening Music and Watching Movies & Documentaries
