@@ -1,0 +1,152 @@
+{
+  "courses": [
+    {
+      "title": "NodeJs",
+      "description": "Node.js, Express, MongoDB & More: The Complete Bootcamp 2023",
+      "issuer": "Udemy",
+      "instructor": "Jonas Schmedtmann",
+      "imagePath": "Udemy_NodeJs.jpeg",
+      "completionDate": "February 4, 2023",
+      "duration": "42 hours",
+      "link": "https://www.udemy.com/certificate/UC-e06e700c-bbad-47cc-8dde-e0fae802d427/",
+      "gitHubLink": "https://github.com/the-stranded-alien/Node.js"
+    },
+    {
+      "title": "ReactJs",
+      "description": "Modern React with Redux (2023 Update)",
+      "issuer": "Udemy",
+      "instructor": "Stephen Grider",
+      "imagePath": "Udemy_ReactWithRedux.jpeg",
+      "completionDate": "January 21, 2023",
+      "duration": "64 hours",
+      "link": "https://www.udemy.com/certificate/UC-cfd38bf9-e58a-418c-9dff-ee4772f475cb/",
+      "gitHubLink": "https://github.com/the-stranded-alien/React"
+    },
+    {
+      "title": "Testing - SpringBoot",
+      "description": "Testing Spring Boot: Beginner to Guru",
+      "issuer": "Udemy",
+      "instructor": "John Thompson",
+      "imagePath": "Udemy_Git.jpeg",
+      "completionDate": "December 29, 2022",
+      "duration": "17 hours",
+      "link": "https://www.udemy.com/certificate/UC-bf6d26e7-37de-4287-865e-84d97bbce73f/",
+      "gitHubLink": "https://github.com/the-stranded-alien/Testing_Java_With_JUnit-5"
+    },
+    {
+      "title": "GoLang - WebDev",
+      "description": "Web Development with Google's Go (GoLang) Programming Language)",
+      "issuer": "Udemy",
+      "instructor": "Todd McLeod",
+      "imagePath": "Udemy_GoLangWebDev.jpeg",
+      "completionDate": "December 28, 2022",
+      "duration": "19 hours",
+      "link": "https://www.udemy.com/certificate/UC-60fd1ef9-436f-4be7-b08f-d3e470c1f1df/",
+      "gitHubLink": "https://github.com/the-stranded-alien/Web_Development_With_GoLang"
+    },
+
+    {
+      "title": "GoLang",
+      "description": "Learn How To Code: Google's Go (GoLang) Programming Language",
+      "issuer": "Udemy",
+      "instructor": "Todd McLeod",
+      "imagePath": "Udemy_GoLang.jpeg",
+      "completionDate": "November 21, 2022",
+      "duration": "45.5 hours",
+      "link": "https://www.udemy.com/certificate/UC-f12b3dd0-fc0c-491e-a15e-88919240b021/",
+      "gitHubLink": "https://github.com/the-stranded-alien/Trying_GoLang"
+    },
+    {
+      "title": "Git",
+      "description": "Git & Github Master Course (2021)",
+      "issuer": "Udemy",
+      "instructor": "Mohit Uniyal",
+      "imagePath": "Udemy_Git.jpeg",
+      "completionDate": "September 21, 2021",
+      "duration": "11 hours",
+      "link": "https://www.udemy.com/certificate/UC-0f927b9c-9e54-499c-99ac-f5902ee00222/"
+    },
+    {
+      "title": "Java Basics",
+      "description": "Java Fundamentals Online Course",
+      "issuer": "Coding Blocks",
+      "instructor": "Prateek Narang",
+      "imagePath": "CodingBlocks_Java_Basics.png",
+      "completionDate": "January, 2021",
+      "duration": "7 months",
+      "link": "https://online.codingblocks.com/app/certificates/CBOL-121231-f35f",
+      "gitHubLink": "https://github.com/the-stranded-alien/JAVA"
+    },
+    {
+      "title": "Competitive Coding",
+      "description": "Competitive Programming Online Course",
+      "issuer": "Coding Blocks",
+      "instructor": "Prateek Narang",
+      "imagePath": "CodingBlocks_Competitive_Coding.png",
+      "completionDate": "December, 2020",
+      "duration": "7 months",
+      "link": "https://online.codingblocks.com/certificates/CBOL-98620-924f",
+      "gitHubLink": "https://github.com/the-stranded-alien/Competitive_Programming_CPP"
+    },
+    {
+      "title": "Data Structures Projects",
+      "description": "Data Structures in Real Life Projects Online Course",
+      "issuer": "Coding Blocks",
+      "instructor": "Prateek Narang",
+      "imagePath": "CodingBlocks_DS_Projects.png",
+      "completionDate": "June, 2020",
+      "duration": "3 months",
+      "link": "https://online.codingblocks.com/app/certificates/CBOL-73109-7c7a",
+      "gitHubLink": "https://github.com/the-stranded-alien/Data_Structures_Projects"
+    },
+    {
+      "title": "Data Science",
+      "description": "Data Science Master Online Course",
+      "issuer": "Coding Blocks",
+      "instructor": "Prateek Narang",
+      "imagePath": "CodingBlocks_Data_Science.png",
+      "completionDate": "April, 2020",
+      "duration": "12 months",
+      "link": "https://online.codingblocks.com/app/certificates/CBOL-22769-d845",
+      "gitHubLink": "https://github.com/the-stranded-alien/Machine_Learning"
+    },
+    {
+      "title": "GitHub",
+      "description": "Git and Github Online Course",
+      "issuer": "Coding Blocks",
+      "instructor": "Arnav Gupta",
+      "imagePath": "CodingBlocks_Git_GitHub.png",
+      "completionDate": "January, 2020",
+      "duration": "7 months",
+      "link": "https://online.codingblocks.com/app/certificates/CBOL-18258-3f05"
+    },
+    {
+      "title": "MongoDB",
+      "description": "M001: MongoDB Basics",
+      "issuer": "MongoDB University",
+      "instructor": "MongoDB Instructors",
+      "imagePath": "MongoDBUniversity_Basics.png",
+      "completionDate": "August, 2019",
+      "duration": "3 months"
+    },
+    {
+      "title": "Web Development - NodeJS",
+      "description": "Node JS Online Course",
+      "issuer": "Coding Blocks",
+      "instructor": "Arnav Gupta",
+      "imagePath": "CodingBlocks_WebDev_NodeJS.png",
+      "completionDate": "July, 2019",
+      "duration": "8 months",
+      "link": "https://online.codingblocks.com/app/certificates/CBOL-6289-7433"
+    },
+    {
+      "title": "Data Structures & Algorithms",
+      "description": "Data Structure and Algorithms in C++ (LaunchPad - Classroom)",
+      "issuer": "Coding Blocks",
+      "instructor": "Deepak Aggarwal",
+      "imagePath": "CodingBlocks_DS_Algo_CPP.jpg",
+      "completionDate": "March, 2019",
+      "duration": "3 months"
+    }
+  ]
+}
