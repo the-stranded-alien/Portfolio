@@ -1,39 +1,103 @@
 {
   "skills": [
     {
-      "category": "Front-End",
-      "overallValue": 5,
+      "category": "Programming Languages",
+      "logo": "language.png",
+      "overAllValue": 8,
       "subSkills": [
-        {
-          "name": "HTML",
-          "value": 6
-        },
-        {
-          "name": "CSS",
-          "value": 4
-        },
-        {
-          "name": "JavaScript",
-          "value": 7
-        },
-        {
-          "name": "React",
-          "value": 7
-        }
+        "Java",
+        "JavaScript & TypeScript",
+        "Python & GoLang",
+        "C & C++"
       ]
     },
     {
-      "category": "Back-End",
-      "overallValue": 8,
+      "category": "Front-End Development",
+      "logo": "frontend.png",
+      "overAllValue": 5,
       "subSkills": [
-        {
-          "name": "Spring & Spring-Boot",
-          "value": 8
-        },
-        {
-          "name": "NodeJs",
-          "value": 7
-        }
+        "HTML, CSS, BootStrap",
+        "JavaScript, TypeScript",
+        "React.js"
+      ]
+    },
+    {
+      "category": "Back-End Development",
+      "logo": "backend.jpeg",
+      "overAllValue": 9,
+      "subSkills": [
+        "Core Java",
+        "Spring & Spring-Boot",
+        "Node.js"
+      ]
+    },
+    {
+      "category": "DBMS & Databases",
+      "logo": "database.jpeg",
+      "overAllValue": 7,
+      "subSkills": [
+        "MySQL",
+        "Postgres",
+        "MongoDB",
+        "Cassandra",
+        "ClickHouse"
+      ]
+    },
+    {
+      "category": "Cloud",
+      "logo": "cloud.jpeg",
+      "overAllValue": 7,
+      "subSkills": [
+        "Cloud Architecture",
+        "AWS",
+        "GCP"
+      ]
+    },
+    {
+      "category": "DevOps",
+      "logo": "devops.png",
+      "overAllValue": 6,
+      "subSkills": [
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "CircleCI",
+        "GitHub"
+      ]
+    },
+    {
+      "category": "Testing",
+      "logo": "test.jpeg",
+      "overAllValue": 7,
+      "subSkills": [
+        "TDD",
+        "JUnit",
+        "TestNG",
+        "Selenium"
+      ]
+    },
+    {
+      "category": "Messaging and Events",
+      "logo": "kafka-rabbit.png",
+      "overAllValue": 6,
+      "subSkills": [
+        "Kafka",
+        "RabbitMQ",
+        "Twilio Sendgrid"
+      ]
+    },
+    {
+      "category": "Data Science",
+      "logo": "data-science.jpeg",
+      "overAllValue": 5,
+      "subSkills": [
+        "Data Mining & Processing",
+        "Data Visualisation and Analytics",
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Image Processing"
       ]
     }
   ]
