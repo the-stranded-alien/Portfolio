@@ -1,36 +1,54 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import Preloader from './components/Preloader';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import WorkPage from './pages/WorkPage';
-import EducationPage from './pages/EducationPage';
-import SkillPage from './pages/SkillPage';
-import ProjectPage from './pages/ProjectPage';
-import CertificationPage from './pages/CertificationPage';
-import CoursePage from './pages/CoursePage';
-import ResumePage from './pages/ResumePage';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Work from './components/Work/Work';
+import Education from './components/Education/Education';
+import Skill from './components/Skill/Skill';
+import Project from './components/Project/Project';
+import Certification from './components/Certification/Certification';
+import Course from './components/Course/Course';
+import Resume from './components/Resume/Resume';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import './style.css';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+    const [load, updateLoad] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            updateLoad(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <div className="App">
-            <NavBar />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/home" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/work" element={<WorkPage />} />
-                <Route path="/education" element={<EducationPage />} />
-                <Route path="/skill" element={<SkillPage />} />
-                <Route path="/project" element={<ProjectPage />} />
-                <Route path="/certification" element={<CertificationPage />} />
-                <Route path="/course" element={<CoursePage />} />
-                <Route path="/resume" element={<ResumePage />} />
-            </Routes>
-            <Footer />
-        </div>
+        <Router>
+            <Preloader load={load} />
+            <div className="App" id={load ? 'no-scroll' : 'scroll'}>
+                <NavBar />
+                <ScrollToTop />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/work" element={<Work />} />
+                    <Route path="/education" element={<Education />} />
+                    <Route path="/skill" element={<Skill />} />
+                    <Route path="/project" element={<Project />} />
+                    {/*<Route path="/certification" element={<Certification />} />*/}
+                    <Route path="/course" element={<Course />} />
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+                <Footer />
+            </div>
+        </Router>
     );
 }
 

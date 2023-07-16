@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "hasBlog": false,
+      "hasLiveDemo": false,
+      "hasGitHubRepo": true,
+      "title": "Policy Based Risk Management App - V5",
+      "description": "A Policy Based Risk Management Web-App in Java-SpringBoot With Redis Caching And Advanced Concepts of JPA & Hibernate",
+      "gitHubLink": "https://github.com/the-stranded-alien/Policy_Module_SpringBoot_05",
+      "demoLink": "",
+      "blogLink": "",
+      "imagePath": "risk.png"
+    },
+    {
+      "hasBlog": false,
+      "hasLiveDemo": false,
+      "hasGitHubRepo": true,
+      "title": "Policy Based Risk Management App - V4",
+      "description": "A Policy Based Risk Management Web-App in Java-SpringBoot Using Advanced Concepts of JPA & Hibernate With A Refined Schema",
+      "gitHubLink": "https://github.com/the-stranded-alien/Policy_Module_SpringBoot_04",
+      "demoLink": "",
+      "blogLink": "",
+      "imagePath": "risk.png"
+    },
+    {
+      "hasBlog": false,
+      "hasLiveDemo": false,
+      "hasGitHubRepo": true,
+      "title": "Policy Based Risk Management App - V3",
+      "description": "A Policy Based Risk Management Web-App in Java-SpringBoot Using Advanced Concepts of JPA & Hibernate With A Complex Schema",
+      "gitHubLink": "https://github.com/the-stranded-alien/Policy_Module_SpringBoot_03",
+      "demoLink": "",
+      "blogLink": "",
+      "imagePath": "risk.png"
+    },
+    {
+      "hasBlog": false,
+      "hasLiveDemo": false,
+      "hasGitHubRepo": true,
+      "title": "Policy Based Risk Management App - V2",
+      "description": "A Policy Based Risk Management Web-App in Java-SpringBoot Using Basics of JPA & Hibernate",
+      "gitHubLink": "https://github.com/the-stranded-alien/Policy_Module_SpringBoot_02",
+      "demoLink": "",
+      "blogLink": "",
+      "imagePath": "risk.png"
+    },
+    {
+      "hasBlog": false,
+      "hasLiveDemo": false,
+      "hasGitHubRepo": true,
+      "title": "Policy Based Risk Management App - V1",
+      "description": "A Policy Based Risk Management Web-App in Java-SpringBoot",
+      "gitHubLink": "https://github.com/the-stranded-alien/Policy_Module_SpringBoot_01",
+      "demoLink": "",
+      "blogLink": "",
+      "imagePath": "risk.png"
+    }
+  ]
+}

@@ -1,33 +1,74 @@
 import React from 'react';
-import { Grid, Menu, Icon } from 'semantic-ui-react';
+import { Container, Row, Col } from 'react-bootstrap';
+import {
+    AiFillGithub,
+    AiFillTwitterCircle,
+    AiFillInstagram,
+    AiFillLinkedin,
+    AiOutlineMail,
+    AiOutlinePhone,
+    AiOutlineSketch,
+} from 'react-icons/ai';
 
 const Footer = () => {
     return (
-        <Grid.Row>
-            <Grid.Column>
-                <Menu fixed="bottom" inverted>
-                    <Menu.Item>
-                        <Icon corner name="call" />
-                        +91 7249999056
-                    </Menu.Item>
-                    <Menu.Item>
-                        <Icon corner name="mail" />
-                        sahil16gupta11@gmail.com
-                    </Menu.Item>
-                    <Menu.Menu position="right">
-                        <Menu.Item href="https://www.github.com">
-                            <Icon corner name="github" />
-                        </Menu.Item>
-                        <Menu.Item href="https://www.linkedin.com">
-                            <Icon corner name="linkedin" />
-                        </Menu.Item>
-                        <Menu.Item href="https://www.twitter.com">
-                            <Icon corner name="twitter" />
-                        </Menu.Item>
-                    </Menu.Menu>
-                </Menu>
-            </Grid.Column>
-        </Grid.Row>
+        <Container fluid className="footer">
+            <Row>
+                <Col md="3" className="footer text-white fw-bold">
+                    <AiOutlineSketch /> Sahil Gupta
+                </Col>
+                <Col md="3" className="footer text-white fw-bold">
+                    <AiOutlinePhone /> +91 7249999056
+                </Col>
+                <Col md="3" className="footer text-white fw-bold">
+                    <AiOutlineMail /> sahil16gupta11@gmail.com
+                </Col>
+                <Col md="3" className="footer-body">
+                    <ul className="footer-icons">
+                        <li className="social-icons">
+                            <a
+                                href="https://github.com/the-stranded-alien"
+                                style={{ color: 'white' }}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <AiFillGithub />
+                            </a>
+                        </li>
+                        <li className="social-icons">
+                            <a
+                                href="https://www.linkedin.com/in/sahil-gupta-118093180"
+                                style={{ color: 'white' }}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <AiFillLinkedin />
+                            </a>
+                        </li>
+                        <li className="social-icons">
+                            <a
+                                href="https://twitter.com/SahilGu17734501"
+                                style={{ color: 'white' }}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <AiFillTwitterCircle />
+                            </a>
+                        </li>
+                        <li className="social-icons">
+                            <a
+                                href="https://www.instagram.com/_the_stranded_alien_"
+                                style={{ color: 'white' }}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <AiFillInstagram />
+                            </a>
+                        </li>
+                    </ul>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
