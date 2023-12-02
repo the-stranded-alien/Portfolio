@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.2bfbfadc.css",
-    "main.js": "/static/js/main.64700ed7.js",
+    "main.js": "/static/js/main.c770ada9.js",
     "static/media/home-main.svg": "/static/media/home-main.541f8179af8209ce03ccf2178fe62dbf.svg",
     "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
-    "static/media/Resume_Sahil_Gupta.pdf": "/static/media/Resume_Sahil_Gupta.1f8baba5bccc758357ba.pdf",
+    "static/media/Resume_Sahil_Gupta.pdf": "/static/media/Resume_Sahil_Gupta.fe0067931b4636708145.pdf",
     "static/media/avatar.svg": "/static/media/avatar.285fe7aee882a732956c1498420db293.svg",
     "static/media/logo.png": "/static/media/logo.0a7451f793a7006557a9.png",
     "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
     "static/media/preloader.svg": "/static/media/preloader.d48bebd84d28ffc2406f.svg",
     "index.html": "/index.html",
     "main.2bfbfadc.css.map": "/static/css/main.2bfbfadc.css.map",
-    "main.64700ed7.js.map": "/static/js/main.64700ed7.js.map"
+    "main.c770ada9.js.map": "/static/js/main.c770ada9.js.map"
   },
   "entrypoints": [
     "static/css/main.2bfbfadc.css",
-    "static/js/main.64700ed7.js"
+    "static/js/main.c770ada9.js"
   ]
 }
