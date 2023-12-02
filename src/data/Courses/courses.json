@@ -1,6 +1,17 @@
 {
   "courses": [
     {
+      "title": "SignalR",
+      "description": "SignalR - The Complete Guide (with real world examples)",
+      "issuer": "Udemy",
+      "instructor": "Bhrugen Patel",
+      "imagePath": "Udemy_SignalR.jpeg",
+      "completionDate": "September 16, 2023",
+      "duration": "5 hours",
+      "link": "https://www.udemy.com/certificate/UC-40a30402-1a28-42dc-9927-96b9bb470142/",
+      "gitHubLink": "https://github.com/the-stranded-alien/SignalR"
+    },
+    {
       "title": "NodeJs",
       "description": "Node.js, Express, MongoDB & More: The Complete Bootcamp 2023",
       "issuer": "Udemy",

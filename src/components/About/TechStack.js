@@ -6,6 +6,13 @@ import {
     SiCplusplus,
     SiRedis,
     SiDocker,
+    SiDotnet,
+    SiReact,
+    SiRedux,
+    SiAngular,
+    SiSelenium,
+    SiMaterialdesign,
+    SiCsharp,
     SiKubernetes,
     SiTypescript,
     SiJavascript,
@@ -22,6 +29,7 @@ import {
     SiGooglecloud,
     SiAmazonaws,
     SiGithubactions,
+    SiJenkins,
     SiCircleci,
     SiTerraform,
 } from 'react-icons/si';
@@ -49,6 +57,9 @@ const TechStack = () => {
                 <SiCplusplus />
             </Col>
             <Col xs={3} md={2} className="tech-icons">
+                <SiCsharp />
+            </Col>
+            <Col xs={3} md={2} className="tech-icons">
                 <TbBrandGolang />
             </Col>
             <Col xs={3} md={2} className="tech-icons">
@@ -59,6 +70,18 @@ const TechStack = () => {
             </Col>
             <Col xs={3} md={2} className="tech-icons">
                 <SiBootstrap />
+            </Col>
+            <Col xs={3} md={2} className="tech-icons">
+                <SiMaterialdesign />
+            </Col>
+            <Col xs={3} md={2} className="tech-icons">
+                <SiReact />
+            </Col>
+            <Col xs={3} md={2} className="tech-icons">
+                <SiRedux />
+            </Col>
+            <Col xs={3} md={2} className="tech-icons">
+                <SiAngular />
             </Col>
             <Col xs={3} md={2} className="tech-icons">
                 <SiGooglecloud />
@@ -79,7 +102,7 @@ const TechStack = () => {
                 <DiNodejs />
             </Col>
             <Col xs={3} md={2} className="tech-icons">
-                <DiReact />
+                <SiDotnet />
             </Col>
             <Col xs={3} md={2} className="tech-icons">
                 <DiMysql />
@@ -98,6 +121,9 @@ const TechStack = () => {
             </Col>
             <Col xs={3} md={2} className="tech-icons">
                 <DiGit />
+            </Col>
+            <Col xs={3} md={2} className="tech-icons">
+                <SiSelenium />
             </Col>
             <Col xs={3} md={2} className="tech-icons">
                 <SiRedis />
@@ -119,6 +145,9 @@ const TechStack = () => {
             </Col>
             <Col xs={3} md={2} className="tech-icons">
                 <SiTerraform />
+            </Col>
+            <Col xs={3} md={2} className="tech-icons">
+                <SiJenkins />
             </Col>
         </Row>
     );

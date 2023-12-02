@@ -3,11 +3,11 @@
     {
       "category": "Front-End Development",
       "logo": "frontend.png",
-      "overAllValue": 5,
+      "overAllValue": 7,
       "subSkills": [
-        "HTML, CSS, BootStrap",
+        "HTML, CSS, BootStrap, Material UI",
         "JavaScript, TypeScript",
-        "React.js"
+        "Angular, React.js, Redux"
       ]
     },
     {
@@ -15,9 +15,9 @@
       "logo": "backend.jpeg",
       "overAllValue": 9,
       "subSkills": [
-        "Core Java",
-        "Spring & Spring-Boot",
-        "Node.js"
+        "Core Java, Spring & Spring-Boot",
+        "Node.js",
+        "Dot Net Core"
       ]
     },
     {
@@ -38,7 +38,7 @@
         "Java",
         "JavaScript & TypeScript",
         "Python & GoLang",
-        "C & C++",
+        "C, C++ & C#",
         "Data Structures & Algorithms"
       ]
     },
@@ -51,7 +51,9 @@
         "Postgres",
         "MongoDB",
         "Cassandra",
-        "ClickHouse"
+        "ClickHouse",
+        "Redis",
+        "ElasticSearch"
       ]
     },
     {
@@ -83,6 +85,7 @@
       "logo": "kafka-rabbit.png",
       "overAllValue": 6,
       "subSkills": [
+        "Redis",
         "Kafka",
         "RabbitMQ",
         "Twilio Sendgrid"

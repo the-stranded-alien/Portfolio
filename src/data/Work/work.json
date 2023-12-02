@@ -1,13 +1,39 @@
 {
-  "totalExperience": 2,
+  "totalExperience": 2.5,
   "workExperience": [
+    {
+      "company": "RMES India Pvt. Ltd",
+      "companyLogo": "rugged.svg",
+      "designation": "Software Engineer 2",
+      "location": "Hyderabad, Telangana, India",
+      "startDate": "1 November, 2023",
+      "endDate": "Current",
+      "achievements": [
+        "Fixed memory leaks and change detection related problems and improved the performance of application UI by 20%.",
+        "Built a highly performant application for an embedded system with a really small memory footprint and really smooth performance.",
+        "Trained and mentored a group 10+ interns through their entire internship and technical training."
+      ]
+    },
+    {
+      "company": "RMES India Pvt. Ltd",
+      "companyLogo": "rugged.svg",
+      "designation": "Software Engineer 1",
+      "location": "Hyderabad, Telangana, India",
+      "startDate": "1 August, 2023",
+      "endDate": "31 October, 2023",
+      "achievements": [
+        "Fixed memory leaks and change detection related problems and improved the performance of application UI by 20%.",
+        "Built a highly performant application for an embedded system with a really small memory footprint and really smooth performance.",
+        "Trained and mentored a group 10+ interns through their entire internship and technical training."
+      ]
+    },
     {
       "company": "Beskar Technologies",
       "companyLogo": "beskar.png",
       "designation": "Associate Consultant",
       "location": "Bengaluru, Karnataka, India",
       "startDate": "16 May, 2022",
-      "endDate": "Current",
+      "endDate": "31 July, 2023",
       "achievements": [
         "Worked on a public portal for external users to see specific workflows.",
         "Built a micro-service for getting external signatures on documents.",

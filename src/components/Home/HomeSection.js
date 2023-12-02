@@ -37,7 +37,7 @@ const HomeSection = () => {
                                 </b>
                             </i>
                             <br />
-                            <br />I have 2+ years of work experience in{' '}
+                            <br />I have 2.5+ years of work experience in{' '}
                             <b className="purple">Software Development</b> with
                             <i>
                                 <b className="purple"> SpringBoot & NodeJs</b>
