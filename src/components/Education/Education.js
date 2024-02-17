@@ -7,7 +7,7 @@ function Education() {
     const renderEducation = () => {
         const educationArray = education.education;
         return educationArray.map((education, index) => (
-            <Col md={index === 0 ? 12 : 6} className="education-card">
+            <Col md={index === 0 || 1 ? 12 : 6} className="education-card">
                 <EducationCard
                     key={index}
                     logo={education.logo}
@@ -28,7 +28,10 @@ function Education() {
             <Container>
                 <h1 className="education-heading">
                     I am a <strong className="purple"> Computer Science Engineer. </strong> I
-                    graduated in 2021 from JIIT, Noida.
+                    completed my B.Tech (Hons.) CSE in 2021 from JIIT, Noida. 
+                </h1>
+                <h1 className="education-heading">
+                    Currently I am pursuing a work integrated <strong className='purple'>M.Tech (Cloud Computing)</strong> from BITS Pilani.
                 </h1>
                 <p style={{ color: 'white' }}>These are my educational qualifications.</p>
                 <Row style={{ justifyContent: 'center', paddingBottom: '10px' }}>

@@ -5,6 +5,12 @@ const EducationCard = (props) => {
     return (
         <Card className="education-card-view">
             <Card.Body>
+                <Card.Img
+                    className="education-card-image"
+                    variant="right"
+                    src={`/Assets/Education/${props.logo}`}
+                    alt="education-card-img"
+                />
                 <Card.Title>
                     <strong className="white fw-bold">{props.college}</strong>
                     <br />

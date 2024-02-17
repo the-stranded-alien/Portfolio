@@ -37,10 +37,15 @@ const HomeSection = () => {
                                 </b>
                             </i>
                             <br />
-                            <br />I have 2.5+ years of work experience in{' '}
+                            <br />
+                            I have completed my <b className="purple">B.Tech (Hons.) CSE from JIIT Noida in 2021,</b>, and currently
+                            I am pursuing a work integrated <b className="purple">M.Tech (Cloud Computing) from BITS Pilani</b>.
+                            <br />
+                            <br />
+                            I have 2.5+ years of work experience in{' '}
                             <b className="purple">Software Development</b> with
                             <i>
-                                <b className="purple"> SpringBoot & NodeJs</b>
+                                <b className="purple"> SpringBoot, NodeJs & React</b>
                             </i>
                             &nbsp; and I am always keen to learn
                             <i>
