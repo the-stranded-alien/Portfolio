@@ -42,7 +42,7 @@ const HomeSection = () => {
                             I am pursuing a work integrated <b className="purple">M.Tech (Cloud Computing) from BITS Pilani</b>.
                             <br />
                             <br />
-                            I have 2.5+ years of work experience in{' '}
+                            I have 3+ years of work experience in{' '}
                             <b className="purple">Software Development</b> with
                             <i>
                                 <b className="purple"> SpringBoot, NodeJs & React</b>
