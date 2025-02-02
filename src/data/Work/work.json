@@ -1,13 +1,25 @@
 {
-  "totalExperience": 3,
+  "totalExperience": 3.5,
   "workExperience": [
+    {
+      "company": "RevSure AI",
+      "companyLogo": "revsure.png",
+      "designation": "Senior Software Engineer",
+      "location": "Bengaluru, Karnataka, India",
+      "startDate": "13 January, 2025",
+      "endDate": "Current",
+      "achievements": [
+        "Building and Managing various Data Integrations.",
+        "Started contributing on both frontend and backend of the product as well."
+      ]
+    },
     {
       "company": "RMES India Pvt. Ltd",
       "companyLogo": "rugged.svg",
       "designation": "Software Engineer 2",
       "location": "Hyderabad, Telangana, India",
       "startDate": "1 November, 2023",
-      "endDate": "Current",
+      "endDate": "10 January, 2025",
       "achievements": [
         "Fixed memory leaks and change detection related problems and improved the performance of application UI by 20%.",
         "Built a highly performant application for an embedded system with a really small memory footprint and really smooth performance.",

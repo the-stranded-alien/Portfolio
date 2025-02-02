@@ -16,8 +16,7 @@
       "overAllValue": 9,
       "subSkills": [
         "Core Java, Spring & Spring-Boot",
-        "Node.js",
-        "Dot Net Core"
+        "Node.js"
       ]
     },
     {
@@ -35,10 +34,9 @@
       "logo": "language.png",
       "overAllValue": 8,
       "subSkills": [
-        "Java",
+        "Java, Python",
         "JavaScript & TypeScript",
-        "Python & GoLang",
-        "C, C++ & C#",
+        "C, C++ & GoLang",
         "Data Structures & Algorithms"
       ]
     },
@@ -101,7 +99,9 @@
         "Machine Learning",
         "Deep Learning",
         "Natural Language Processing",
-        "Image Processing"
+        "Image Processing",
+        "Generative AI",
+        "Agentic AI"
       ]
     }
   ]

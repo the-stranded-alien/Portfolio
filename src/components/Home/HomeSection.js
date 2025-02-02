@@ -33,7 +33,7 @@ const HomeSection = () => {
                                 <b className="purple">Full Stack Development </b> and I am also
                                 interested in fields like{' '}
                                 <b className="purple">
-                                    Cloud, DevOps, Databases and System Architecture.
+                                    Cloud, DevOps, Databases, System Architecture and Data Science
                                 </b>
                             </i>
                             <br />
@@ -42,7 +42,7 @@ const HomeSection = () => {
                             I am pursuing a work integrated <b className="purple">M.Tech (Cloud Computing) from BITS Pilani</b>.
                             <br />
                             <br />
-                            I have 3+ years of work experience in{' '}
+                            I have 3.5+ years of work experience in{' '}
                             <b className="purple">Software Development</b> with
                             <i>
                                 <b className="purple"> SpringBoot, NodeJs & React</b>

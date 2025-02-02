@@ -18,7 +18,7 @@ function AboutCard() {
                         .
                         <br />
                         Currently I am working as an{' '}
-                        <span className="purple">Software Engineer 2 at RMES India Pvt. Ltd</span>.
+                        <span className="purple">Senior Software Engineer at RevSure AI</span>.
                         <br />
                         <br />
                         Apart from coding, some other activities that I love to do!
