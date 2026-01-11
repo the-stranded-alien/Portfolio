@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Code2, Database, Cloud, Cpu, Wrench, Sparkles, Zap } from 'lucide-react';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const Skills = ({ data }) => {
   const { skills } = data;
@@ -32,6 +33,7 @@ const Skills = ({ data }) => {
   return (
     <div className="page-container nebula-bg cosmic-grid">
       <div className="aurora"></div>
+      <AnimatedBackground />
       <div className="content-wrapper pt-32">
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.h1 variants={itemVariants} className="section-title">

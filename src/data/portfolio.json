@@ -7,6 +7,16 @@
     "location": "India",
     "bio": "Passionate Senior Software Engineer specializing in agentic AI, multi-agent systems, and full-stack development. Currently building cutting-edge AI solutions at RevSure AI with expertise in cloud computing, DevOps, and modern web technologies.",
     "tagline": "Building the future of AI-powered applications",
+    "buzzWords": [
+      "Agentic AI",
+      "Architecture",
+      "Multi-Agent Systems",
+      "Cloud Computing",
+      "Full-Stack",
+      "LLM Applications",
+      "System Design",
+      "DevOps"
+    ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/sahilgupta1611",
       "github": "https://github.com/the-stranded-alien",
@@ -413,6 +423,125 @@
         "Dynamic retrieval strategies",
         "Context-aware response generation"
       ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Advanced React with Redux",
+      "subtitle": "Complete React Developer Course",
+      "instructor": "Stephen Grider",
+      "institute": "Udemy",
+      "date": "2023-06",
+      "duration": "40 hours",
+      "logo": "/certifications/udemy.png",
+      "certificateLink": "https://www.udemy.com/certificate/example",
+      "githubLink": "https://github.com/the-stranded-alien/react-projects",
+      "skills": ["React", "Redux", "JavaScript", "ES6+", "Hooks", "Context API"]
+    },
+    {
+      "id": 2,
+      "title": "AWS Certified Solutions Architect",
+      "subtitle": "Associate Level Certification",
+      "institute": "Amazon Web Services",
+      "date": "2022-12",
+      "duration": "3 months",
+      "logo": "/certifications/aws.png",
+      "certificateLink": "https://aws.amazon.com/verification",
+      "skills": ["AWS", "Cloud Architecture", "EC2", "S3", "RDS", "VPC", "IAM"]
+    },
+    {
+      "id": 3,
+      "title": "Machine Learning Specialization",
+      "subtitle": "Deep Learning and Neural Networks",
+      "instructor": "Andrew Ng",
+      "institute": "Coursera",
+      "date": "2022-08",
+      "duration": "6 months",
+      "logo": "/certifications/coursera.png",
+      "certificateLink": "https://www.coursera.org/account/accomplishments/verify/example",
+      "skills": ["Machine Learning", "Deep Learning", "Neural Networks", "TensorFlow", "Python", "Scikit-learn"]
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "year": "2023",
+      "description": "Comprehensive guide to building scalable, reliable, and maintainable data systems.",
+      "link": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
+      "category": "System Design"
+    },
+    {
+      "id": 2,
+      "title": "Clean Architecture",
+      "author": "Robert C. Martin",
+      "year": "2022",
+      "description": "A guide to software structure and design principles for building maintainable systems.",
+      "link": "https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164",
+      "category": "Software Engineering"
+    },
+    {
+      "id": 3,
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt, David Thomas",
+      "year": "2021",
+      "description": "A practical guide to becoming a more effective and productive programmer.",
+      "link": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
+      "category": "Software Engineering"
+    }
+  ],
+  "papers": [
+    {
+      "id": 1,
+      "title": "Attention Is All You Need",
+      "authors": "Vaswani et al.",
+      "year": "2017",
+      "venue": "NeurIPS",
+      "description": "Introduces the Transformer architecture, foundation of modern LLMs.",
+      "link": "https://arxiv.org/abs/1706.03762",
+      "category": "Machine Learning"
+    },
+    {
+      "id": 2,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": "Lewis et al.",
+      "year": "2020",
+      "venue": "NeurIPS",
+      "description": "Presents RAG architecture combining retrieval and generation for knowledge-intensive tasks.",
+      "link": "https://arxiv.org/abs/2005.11401",
+      "category": "NLP"
+    },
+    {
+      "id": 3,
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "authors": "Yao et al.",
+      "year": "2022",
+      "venue": "arXiv",
+      "description": "Proposes ReAct framework for combining reasoning and acting in language models.",
+      "link": "https://arxiv.org/abs/2210.03629",
+      "category": "AI Agents"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Building Scalable Multi-Agent Systems",
+      "author": "Sahil Gupta",
+      "date": "2024-01",
+      "description": "Exploring architectures and patterns for building robust multi-agent AI systems.",
+      "link": "https://medium.com/@yourusername/multi-agent-systems",
+      "category": "AI"
+    },
+    {
+      "id": 2,
+      "title": "Understanding RAG Architectures",
+      "author": "Sahil Gupta",
+      "date": "2023-12",
+      "description": "Deep dive into Retrieval-Augmented Generation and its applications in modern AI systems.",
+      "link": "https://medium.com/@yourusername/rag-architectures",
+      "category": "AI"
     }
   ],
   "resume": {

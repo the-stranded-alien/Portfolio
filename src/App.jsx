@@ -10,6 +10,8 @@ import Work from './pages/Work';
 import Education from './pages/Education';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
+import Certifications from './pages/Certifications';
+import Reading from './pages/Reading';
 import Resume from './pages/Resume';
 import portfolioData from './data/portfolio.json';
 
@@ -34,6 +36,8 @@ function App() {
               <Route path="/education" element={<Education data={data} />} />
               <Route path="/skills" element={<Skills data={data} />} />
               <Route path="/projects" element={<Projects data={data} />} />
+              <Route path="/certifications" element={<Certifications data={data} />} />
+              <Route path="/reading" element={<Reading data={data} />} />
               <Route path="/resume" element={<Resume data={data} />} />
             </Routes>
           </main>

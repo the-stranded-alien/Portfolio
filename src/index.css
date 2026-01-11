@@ -33,6 +33,9 @@
     @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8 md:mb-12;
     @apply bg-gradient-to-r from-cosmos-500 via-nebula-500 to-cosmos-600 bg-clip-text text-transparent;
     @apply animate-fade-in-up;
+    line-height: 1.3;
+    padding-bottom: 0.15em;
+    overflow: visible;
   }
 
   .text-gradient {

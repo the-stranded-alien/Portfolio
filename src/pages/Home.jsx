@@ -1,9 +1,23 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Sparkles, Rocket, Zap, Code } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const Home = ({ data }) => {
   const { personal } = data;
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  
+  const buzzWords = personal?.buzzWords || [];
+  
+  useEffect(() => {
+    if (buzzWords.length > 0) {
+      const interval = setInterval(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % buzzWords.length);
+      }, 2000);
+      return () => clearInterval(interval);
+    }
+  }, [buzzWords.length]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,8 +54,9 @@ const Home = ({ data }) => {
   };
 
   return (
-    <div className="page-container nebula-bg cosmic-grid">
+    <div className="page-container nebula-bg cosmic-grid relative">
       <div className="aurora"></div>
+      <AnimatedBackground />
       
       <div className="content-wrapper pt-32 pb-20">
         <motion.div
@@ -92,13 +107,34 @@ const Home = ({ data }) => {
             </motion.h1>
           </motion.div>
 
-          {/* Subtitle */}
-          <motion.p 
+          {/* Subtitle with Animated Buzz Words */}
+          <motion.div 
             variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl text-void-700 dark:text-starlight-300 text-center font-display mb-8 max-w-4xl mx-auto leading-relaxed"
+            className="text-center mb-8 max-w-4xl mx-auto"
           >
-            {personal?.title || 'Your Professional Title'}
-          </motion.p>
+            <p className="text-xl md:text-2xl lg:text-3xl text-void-700 dark:text-starlight-300 font-display mb-4 leading-relaxed">
+              {personal?.title || 'Your Professional Title'}
+            </p>
+            
+            {buzzWords.length > 0 && (
+              <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
+                <div className="h-8 md:h-10 flex items-center">
+                  <AnimatePresence mode="wait">
+                    <motion.span
+                      key={currentWordIndex}
+                      initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -20, scale: 0.8 }}
+                      transition={{ duration: 0.5 }}
+                      className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-gradient inline-block"
+                    >
+                      {buzzWords[currentWordIndex]}
+                    </motion.span>
+                  </AnimatePresence>
+                </div>
+              </div>
+            )}
+          </motion.div>
 
           {/* Bio */}
           <motion.p 
@@ -113,7 +149,7 @@ const Home = ({ data }) => {
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-4 mb-20"
           >
-            <Link to="/projects">
+            <Link to="/work">
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(139, 92, 246, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
@@ -153,7 +189,7 @@ const Home = ({ data }) => {
                 </div>
               </div>
               <div className="text-5xl font-display font-bold text-gradient mb-2">
-                7+
+                5+
               </div>
               <div className="text-void-600 dark:text-starlight-400 font-medium">Years Experience</div>
             </motion.div>
@@ -196,28 +232,6 @@ const Home = ({ data }) => {
             </motion.div>
           </motion.div>
 
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="flex justify-center mt-24"
-          >
-            <motion.div
-              animate={{ y: [0, 15, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="flex flex-col items-center space-y-3 text-void-500 dark:text-starlight-500"
-            >
-              <span className="text-sm font-medium tracking-wide">Scroll to explore</span>
-              <div className="w-7 h-12 border-2 border-cosmos-500/30 dark:border-cosmos-500/50 rounded-full flex justify-center p-1.5 backdrop-blur-sm">
-                <motion.div
-                  animate={{ y: [0, 16, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="w-2 h-2 bg-cosmos-500 dark:bg-cosmos-400 rounded-full shadow-glow"
-                />
-              </div>
-            </motion.div>
-          </motion.div>
         </motion.div>
       </div>
     </div>

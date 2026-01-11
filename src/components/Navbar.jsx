@@ -17,6 +17,8 @@ const Navbar = ({ personalData }) => {
     { name: 'Education', path: '/education' },
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Certifications', path: '/certifications' },
+    { name: 'Reading', path: '/reading' },
     { name: 'Resume', path: '/resume' },
   ];
 
@@ -38,15 +40,15 @@ const Navbar = ({ personalData }) => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
+        isScrolled || isMobileMenuOpen
           ? 'bg-white/80 dark:bg-void-950/90 backdrop-blur-xl border-b border-void-200 dark:border-starlight-800/30 shadow-xl dark:shadow-glow' 
-          : 'bg-transparent'
+          : 'bg-white/80 dark:bg-void-950/90 backdrop-blur-xl lg:bg-transparent lg:backdrop-blur-none border-b border-void-200 dark:border-starlight-800/30 lg:border-b-0'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           {/* Logo */}
-          <Link to="/" className="group">
+          <Link to="/" className="group flex-shrink-0">
             <motion.div 
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
@@ -71,17 +73,18 @@ const Navbar = ({ personalData }) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-1 flex-shrink-0">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.path}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="flex-shrink-0"
               >
                 <Link
                   to={item.path}
-                  className={`nav-link px-4 py-2 rounded-lg ${
+                  className={`nav-link px-3 py-2 rounded-lg text-sm whitespace-nowrap ${
                     location.pathname === item.path ? 'active' : ''
                   }`}
                 >
@@ -166,9 +169,9 @@ const Navbar = ({ personalData }) => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden overflow-hidden"
+              className="lg:hidden overflow-hidden w-full"
             >
-              <div className="py-4 space-y-2">
+              <div className="py-4 space-y-2 border-t border-void-200 dark:border-starlight-800/30 mt-4">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.path}
@@ -178,6 +181,7 @@ const Navbar = ({ personalData }) => {
                   >
                     <Link
                       to={item.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
                       className={`block px-4 py-3 rounded-xl transition-all duration-300 ${
                         location.pathname === item.path
                           ? 'bg-cosmos-500/10 dark:bg-cosmos-500/20 text-cosmos-600 dark:text-cosmos-400 border-l-4 border-cosmos-500 font-semibold'
