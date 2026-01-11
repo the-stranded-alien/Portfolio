@@ -1,8 +1,270 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
-body {
-    margin: 0;
-    font-family: "Raleway", serif !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-void-800/20 dark:border-starlight-800/20;
+  }
+  
+  body {
+    @apply bg-white dark:bg-void-950 text-void-900 dark:text-starlight-50 font-sans transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Page Layouts */
+  .page-container {
+    @apply min-h-screen w-full relative overflow-hidden;
+  }
+
+  .content-wrapper {
+    @apply max-w-7xl mx-auto px-6 py-12 md:py-20 relative z-10;
+  }
+
+  /* Typography */
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8 md:mb-12;
+    @apply bg-gradient-to-r from-cosmos-500 via-nebula-500 to-cosmos-600 bg-clip-text text-transparent;
+    @apply animate-fade-in-up;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-cosmos-500 via-nebula-500 to-cosmos-600 bg-clip-text text-transparent;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white/80 dark:bg-void-900/80 backdrop-blur-xl border border-void-200 dark:border-starlight-800/30;
+    @apply rounded-2xl p-6 md:p-8 shadow-xl dark:shadow-glow-purple;
+    @apply hover:border-cosmos-500/50 dark:hover:border-cosmos-500/50 transition-all duration-500;
+    @apply hover:shadow-2xl dark:hover:shadow-glow-lg hover:-translate-y-1;
+    @apply relative overflow-hidden;
+  }
+
+  .card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-cosmos-500/5 to-nebula-500/5 opacity-0 transition-opacity duration-500;
+  }
+
+  .card:hover::before {
+    @apply opacity-100;
+  }
+
+  .card-glow {
+    @apply card;
+    @apply ring-1 ring-cosmos-500/20 dark:ring-cosmos-500/30;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-cosmos-600 to-nebula-600 text-white rounded-xl;
+    @apply hover:from-cosmos-500 hover:to-nebula-500 transition-all duration-300;
+    @apply shadow-lg hover:shadow-glow-lg font-semibold tracking-wide;
+    @apply border border-cosmos-400/30 hover:border-cosmos-300/50;
+    @apply relative overflow-hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0;
+    @apply translate-x-[-200%] transition-transform duration-700;
+  }
+
+  .btn-primary:hover::before {
+    @apply translate-x-[200%];
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-void-100 dark:bg-void-800 text-void-900 dark:text-starlight-100 rounded-xl;
+    @apply border border-void-300 dark:border-starlight-700;
+    @apply hover:bg-void-200 dark:hover:bg-void-700 hover:border-cosmos-500/50 transition-all duration-300;
+    @apply font-semibold tracking-wide shadow-lg hover:shadow-xl;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 bg-transparent text-void-900 dark:text-starlight-100 rounded-xl;
+    @apply border border-void-300 dark:border-starlight-700;
+    @apply hover:bg-cosmos-500/10 hover:border-cosmos-500 transition-all duration-300;
+    @apply font-semibold tracking-wide;
+  }
+
+  /* Tags */
+  .tag {
+    @apply px-3 py-1.5 bg-cosmos-50 dark:bg-cosmos-950/50 text-cosmos-700 dark:text-cosmos-300;
+    @apply rounded-full text-sm font-medium border border-cosmos-200 dark:border-cosmos-800;
+    @apply hover:bg-cosmos-100 dark:hover:bg-cosmos-900/50 hover:border-cosmos-400 dark:hover:border-cosmos-600;
+    @apply transition-all duration-200 hover:scale-105;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-void-600 dark:text-starlight-300 hover:text-cosmos-600 dark:hover:text-cosmos-400;
+    @apply transition-all duration-300 font-medium relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5;
+    @apply bg-gradient-to-r from-cosmos-500 to-nebula-500;
+    @apply transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-cosmos-600 dark:text-cosmos-400;
+  }
+
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  /* Theme Toggle */
+  .theme-toggle {
+    @apply w-12 h-12 flex items-center justify-center rounded-xl;
+    @apply bg-void-100 dark:bg-void-800 border border-void-300 dark:border-starlight-700;
+    @apply hover:bg-void-200 dark:hover:bg-void-700 hover:border-cosmos-500/50;
+    @apply transition-all duration-300 cursor-pointer;
+    @apply hover:shadow-glow;
+  }
+}
+
+/* Cosmic Background Effects */
+.stars-bg {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 60px 70px, white, transparent),
+    radial-gradient(1px 1px at 50px 50px, white, transparent),
+    radial-gradient(1px 1px at 130px 80px, white, transparent),
+    radial-gradient(2px 2px at 90px 10px, white, transparent);
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  opacity: 0.3;
+}
+
+.dark .stars-bg {
+  opacity: 0.5;
+}
+
+.nebula-bg {
+  background: radial-gradient(ellipse at 0% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 100% 100%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+}
+
+.dark .nebula-bg {
+  background: radial-gradient(ellipse at 0% 0%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+              radial-gradient(ellipse at 100% 100%, rgba(168, 85, 247, 0.25) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, rgba(124, 58, 237, 0.2) 0%, transparent 50%);
+}
+
+.cosmic-grid {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.dark .cosmic-grid {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+}
+
+.aurora {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(168, 85, 247, 0.1) 50%,
+    rgba(124, 58, 237, 0.1) 75%,
+    transparent 100%
+  );
+  animation: aurora 15s ease-in-out infinite;
+}
+
+@keyframes aurora {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.1); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-void-100 dark:bg-void-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-void-400 dark:bg-void-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cosmos-500;
+}
+
+/* Selection */
+::selection {
+  @apply bg-cosmos-500/30 text-cosmos-900 dark:text-cosmos-100;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Glow effects */
+.glow-text {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5),
+               0 0 20px rgba(139, 92, 246, 0.3),
+               0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+.glow-box {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3),
+              0 0 40px rgba(139, 92, 246, 0.2),
+              0 0 60px rgba(139, 92, 246, 0.1);
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.2),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
