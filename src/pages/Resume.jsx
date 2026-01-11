@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Download, FileText, Eye, List } from 'lucide-react';
+import { Download, Eye, List } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 
 const Resume = ({ data }) => {
   const { personal, resume } = data;
-  const [viewMode, setViewMode] = useState('pdf'); // 'pdf' or 'details'
+  const [viewMode, setViewMode] = useState('document'); // 'document' or 'details'
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -17,11 +17,16 @@ const Resume = ({ data }) => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
+  const resumeUrl = resume?.pdfUrl || '/Resume.pdf';
+  
   const handleDownload = () => {
-    // Create a link to download the resume
     const link = document.createElement('a');
-    link.href = resume?.pdfUrl || '/resume.pdf';
-    link.download = `${personal?.name?.replace(/\s+/g, '_')}_Resume.pdf` || 'Resume.pdf';
+    link.href = resumeUrl;
+    // Extract filename from URL or use default
+    const urlParts = resumeUrl.split('/');
+    const fileName = urlParts[urlParts.length - 1] || 
+      (personal?.name ? `${personal.name.replace(/\s+/g, '_')}_Resume.pdf` : 'Resume.pdf');
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -41,9 +46,9 @@ const Resume = ({ data }) => {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
             <div className="inline-flex bg-void-100 dark:bg-void-800 rounded-xl p-1 border border-void-300 dark:border-starlight-700">
               <button
-                onClick={() => setViewMode('pdf')}
+                onClick={() => setViewMode('document')}
                 className={`px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2 ${
-                  viewMode === 'pdf'
+                  viewMode === 'document'
                     ? 'bg-gradient-to-r from-cosmos-600 to-nebula-600 text-white shadow-lg'
                     : 'text-void-600 dark:text-starlight-400 hover:text-cosmos-600 dark:hover:text-cosmos-400'
                 }`}
@@ -75,38 +80,29 @@ const Resume = ({ data }) => {
             </motion.button>
           </motion.div>
 
-          {/* PDF Viewer */}
-          {viewMode === 'pdf' && (
+          {/* PDF Viewer - Plain Display */}
+          {viewMode === 'document' && (
             <motion.div
+              variants={itemVariants}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="card overflow-hidden"
+              className="flex justify-center p-6"
             >
-              <div className="bg-void-100 dark:bg-void-900 rounded-xl overflow-hidden shadow-inner">
-                <div className="aspect-[8.5/11] w-full bg-white dark:bg-void-800 flex items-center justify-center">
-                  <iframe
-                    src={resume?.pdfUrl || '/resume.pdf'}
-                    className="w-full h-full border-0"
-                    title="Resume PDF"
-                    style={{ minHeight: '800px' }}
-                  />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-white dark:bg-void-900 pointer-events-none opacity-0 hover:opacity-0 transition-opacity">
-                    <FileText className="w-16 h-16 text-cosmos-500 mb-4" />
-                    <h3 className="text-xl font-display font-bold text-void-900 dark:text-starlight-50 mb-2">
-                      Resume PDF
-                    </h3>
-                    <p className="text-void-600 dark:text-starlight-400 max-w-md">
-                      To view your resume, please place your resume.pdf file in the public folder
-                      and update the pdfUrl in portfolio.json to "/resume.pdf"
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-void-500 dark:text-starlight-500">
-                  <strong>Note:</strong> Place your resume.pdf in the <code className="px-2 py-1 bg-void-100 dark:bg-void-800 rounded">public</code> folder and update <code className="px-2 py-1 bg-void-100 dark:bg-void-800 rounded">pdfUrl</code> in portfolio.json
-                </p>
+              <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl">
+                <iframe
+                  src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                  className="border-0 outline-0 w-full"
+                  title="Resume PDF"
+                  style={{ 
+                    minHeight: '1000px',
+                    height: '120vh',
+                    display: 'block',
+                    border: 'none',
+                    outline: 'none',
+                    width: '100%'
+                  }}
+                />
               </div>
             </motion.div>
           )}
@@ -177,7 +173,7 @@ const Resume = ({ data }) => {
                             <img 
                               src={job.logo} 
                               alt={`${job.company} logo`}
-                              className="w-12 h-12 object-contain flex-shrink-0 mt-1"
+                              className="w-12 h-12 object-contain flex-shrink-0 mt-1 bg-white dark:bg-white rounded-lg p-1"
                             />
                           )}
                           <div>

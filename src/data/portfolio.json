@@ -3,19 +3,18 @@
     "name": "Sahil Gupta",
     "title": "Senior Software Engineer | Agentic AI & Multi-Agent Systems Specialist",
     "email": "sahil16gupta11@gmail.com",
-    "phone": "+91 XXXXX XXXXX",
-    "location": "India",
+    "phone": "+91-7249999056",
+    "location": "Bengaluru, Karnataka, India",
     "bio": "Passionate Senior Software Engineer specializing in agentic AI, multi-agent systems, and full-stack development. Currently building cutting-edge AI solutions at RevSure AI with expertise in cloud computing, DevOps, and modern web technologies.",
     "tagline": "Building the future of AI-powered applications",
     "buzzWords": [
-      "Agentic AI",
-      "Architecture",
-      "Multi-Agent Systems",
-      "Cloud Computing",
-      "Full-Stack",
-      "LLM Applications",
-      "System Design",
-      "DevOps"
+      "Agentic AI & Generative AI",
+      "Software Architecture",
+      "Distributed Systems",
+      "Full-Stack Development",
+      "Cloud & DevOps",
+      "Data Science",
+      "Databases"
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/sahilgupta1611",
@@ -361,6 +360,15 @@
       "GraphQL",
       "REST APIs",
       "Microservices"
+    ],
+    "Programming Languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "GoLang",
+      "Java",
+      "C++",
+      "SQL"
     ]
   },
   "projects": [
@@ -545,10 +553,10 @@
     }
   ],
   "resume": {
-    "pdfUrl": "/Resume.pdf",
+    "pdfUrl": "/resume.pdf",
     "lastUpdated": "2024-01-10",
     "sections": {
-      "summary": "Senior Software Engineer with 7+ years of experience specializing in agentic AI, multi-agent systems, and full-stack development. Proven track record of leading teams, architecting scalable solutions, and delivering innovative AI-powered applications. Expert in cloud computing, DevOps, and modern web technologies.",
+      "summary": "Senior Software Engineer with 5+ years of experience specializing in agentic AI, multi-agent systems, and full-stack development. Proven track record of leading teams, architecting scalable solutions, and delivering innovative AI-powered applications. Expert in cloud computing, DevOps, and modern web technologies.",
       "highlights": [
         "Led development of sophisticated AI voice agent platforms",
         "Managed team of 10+ engineers at Rugged Monitoring",
