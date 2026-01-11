@@ -164,7 +164,6 @@ const AnimatedBackground = () => {
           return (
             <motion.div
               key={pos.id}
-              layout
               className="absolute hidden md:block pointer-events-none z-10"
               style={{
                 left: `${pos.x}%`,
@@ -190,10 +189,6 @@ const AnimatedBackground = () => {
                 }
               }}
               transition={{ 
-                layout: {
-                  duration: 1.2,
-                  ease: "easeInOut"
-                },
                 opacity: { 
                   duration: 2.5, 
                   repeat: Infinity, 
