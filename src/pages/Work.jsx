@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, Award, TrendingUp } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, Award, TrendingUp, Badge } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 
 const Work = ({ data }) => {
@@ -75,9 +75,18 @@ const Work = ({ data }) => {
                           )
                         )}
                         <div>
-                          <h2 className="text-2xl font-display font-bold text-void-900 dark:text-starlight-50 mb-1">
-                            {job.position}
-                          </h2>
+                          <div className="flex items-center flex-wrap gap-2 mb-1">
+                            <h2 className="text-2xl font-display font-bold text-void-900 dark:text-starlight-50">
+                              {job.position}
+                            </h2>
+                            {job.level && (
+                              <span className="inline-flex items-center bg-cosmos-50 dark:bg-cosmos-950/50 px-1.5 py-0.5 rounded-full border border-cosmos-200 dark:border-cosmos-800/40 -mt-2">
+                                <span className="w-5 h-5 rounded-full bg-gradient-to-r from-cosmos-500 to-nebula-500 text-white text-[9px] font-bold flex items-center justify-center leading-none">
+                                  {job.level}
+                                </span>
+                              </span>
+                            )}
+                          </div>
                           <h3 className="text-xl text-gradient font-semibold">
                             {job.company}
                           </h3>
@@ -104,11 +113,11 @@ const Work = ({ data }) => {
                         <Award className="w-5 h-5 text-nebula-500" />
                         <h4 className="text-lg font-semibold text-void-900 dark:text-starlight-100">Key Achievements</h4>
                       </div>
-                      <ul className="space-y-2">
+                      <ul className="space-y-3">
                         {job.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start space-x-3">
                             <TrendingUp className="w-4 h-4 text-cosmos-500 mt-1 flex-shrink-0" />
-                            <span className="text-void-600 dark:text-starlight-400 leading-relaxed">{achievement}</span>
+                            <span className="text-void-600 dark:text-starlight-400 leading-relaxed text-justify flex-1">{achievement}</span>
                           </li>
                         ))}
                       </ul>
@@ -117,7 +126,7 @@ const Work = ({ data }) => {
 
                   {job.technologies && job.technologies.length > 0 && (
                     <div>
-                      <h4 className="text-sm font-semibold text-void-700 dark:text-starlight-300 mb-3">Technologies Used</h4>
+                      <h4 className="text-sm font-semibold text-void-700 dark:text-starlight-300 mb-3">Skills & Tech-Stack</h4>
                       <div className="flex flex-wrap gap-2">
                         {job.technologies.map((tech, idx) => (
                           <span key={idx} className="tag">{tech}</span>

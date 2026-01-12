@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Sahil Gupta",
-    "title": "Senior Software Engineer | Agentic AI & Multi-Agent Systems Specialist",
+    "title": "Senior Software Engineer | Software Generalist",
     "email": "sahil16gupta11@gmail.com",
     "phone": "+91-7249999056",
     "location": "Bengaluru, Karnataka, India",
@@ -41,7 +41,7 @@
     ]
   },
   "workExperience": {
-    "subtitle": "5+ years of professional experience building scalable software solutions, leading engineering teams, and architecting AI-powered systems across fintech, logistics, and monitoring platforms."
+    "subtitle": "5+ years of professional experience building scalable software solutions, leading engineering teams, and architecting AI-powered systems across various domains."
   },
   "work": [
     {
@@ -51,70 +51,76 @@
       "location": "Bengaluru, Karnataka, India",
       "startDate": "January 2025",
       "endDate": "Present",
+      "level": "L3",
       "logo": "/work/revsure.svg",
       "website": "https://www.revsure.ai/",
-      "description": "Leading development of agentic AI systems and multi-agent architectures. Building sophisticated voice agent platforms using React, TypeScript, FastAPI, and cutting-edge AI technologies.",
+      "description": "Led the design and implementation of agentic and multi-agent AI systems integrated into enterprise workflows, building scalable backend infrastructure, data integrations, third-party integrations, MCP tooling, secure auth systems, and Kubernetes-based data pipelines to drive AI-powered automation and platform scalability.",
       "achievements": [
-        "Architected and built voice agent platform for logistics operations with adaptive conversation flows",
-        "Implemented real-time AI systems using Retell AI and Supabase",
-        "Designed scalable multi-agent communication systems",
-        "Led integration of advanced AI orchestration frameworks"
+        "Pioneered agentic AI features by integrating LLM-based intelligent agents into workflows, automating repetitive tasks and improving customer productivity through AI-driven automation and intelligent decision-making.",
+        "Built a Model Context Protocol (MCP) server to expose in-house APIs and processes as tools for internal and external agents, enabling sophisticated Multi-Agent systems with seamless agent-to-agent communication and workflow orchestration.",
+        "Designed and developed multi-agent systems leveraging distributed AI agents for complex workflow automation, enabling intelligent task delegation, parallel processing, and collaborative problem-solving across enterprise workflows.",
+        "Architected and developed secure authentication and authorization services implementing SP & IdP-based SSO, Keycloak integration, and API token-based access control, strengthening platform security and compliance for multi-tenant SaaS deployments.",
+        "Built a cookieless and cookie-based dynamic site analytics service to track user behavior and engagement across customer websites, providing privacy-compliant visitor tracking and real-time analytics capabilities.",
+        "Designed and optimized data integrations across 25+ enterprise SaaS platforms including CRM, marketing automation, and analytics tools, improving data accuracy and reducing sync latency by 30%.",
+        "Engineered a scalable data extraction worker system on Kubernetes to pull data from external sources, implementing auto-scaling, fault tolerance, and resource optimization to ensure robust data ingestion with 40% cost efficiency improvements through intelligent workload management.",
+        "Architected and enhanced critical infrastructure components including API gateways, Kubernetes ingress controllers, and load balancers, improving system reliability, traffic management, and scalability for high-availability enterprise deployments."
       ],
-      "technologies": ["React", "TypeScript", "FastAPI", "Supabase", "Retell AI", "LangGraph", "Temporal"]
+      "technologies": ["Java - Spring Boot", "Python - FastAPI", "LangChain & LangGraph", "Agentic AI", "Multi-Agent Systems", "Data Integrations", "Model Context Protocol (MCP)", "GCP", "Kubernetes", "React.js", "KeyCloak", "OAuth, SAML & SSO", "Temporal", "RudderStack", "Website Analytics & Tracking", "PostgreSQL", "Redis", "ClickHouse", "BigQuery", "AirFlow"]
     },
     {
       "id": 2,
       "company": "Rugged Monitoring",
-      "position": "Tech Lead",
-      "location": "Remote",
-      "startDate": "2021",
-      "endDate": "2023",
+      "position": "Software Engineer II",
+      "location": "Hyderabad, Telangana, India",
+      "startDate": "August 2023",
+      "endDate": "January 2025",
+      "level": "L2",
       "logo": "/work/rugged.webp",
       "website": "https://www.ruggedmonitoring.com/",
-      "description": "Managed a team of 10+ engineers, overseeing full-stack development and infrastructure projects.",
+      "description": "Built high-performance backend and embedded systems enabling real-time AI monitoring, implemented IPC and API integrations, optimized memory-constrained applications, and led a 10+ member team delivering scalable, production-grade systems.",
       "achievements": [
-        "Led team of 10+ developers in building monitoring solutions",
-        "Architected scalable microservices infrastructure",
-        "Implemented CI/CD pipelines and DevOps best practices",
-        "Reduced deployment time by 60% through automation"
+        "Designed and implemented Inter-Process Communication (IPC) mechanisms and RESTful APIs to enable seamless integration of multiple AI services into the core product's backend, enhancing system modularity and scalability.",
+        "Diagnosed and resolved critical memory leaks and change detection issues in the frontend application, optimizing UI performance by 20% and significantly improving user experience.",
+        "Engineered a lightweight, high-performance application optimized for embedded systems with minimal memory footprint, achieving smooth UX even on resource-constrained hardware environments.",
+        "Led and managed a cross-functional team of 10+ engineers and interns, providing technical mentorship, conducting code reviews, and overseeing project delivery while ensuring adherence to best practices and development standards.",
+        "Collaborated with AI/ML teams to architect backend infrastructure supporting real-time monitoring and analytics capabilities, ensuring robust data processing and system reliability."
       ],
-      "technologies": ["Python", "Node.js", "Docker", "Kubernetes", "AWS", "CloudWatch", "Airflow"]
+      "technologies": ["React.js", "Angular", "Node.js", "Azure Cloud", ".NET Core", "C++ & C#", "Redis", "PostgreSQL", "IoT", "Agile Project Management", "Scrum", "DevOps"]
     },
     {
       "id": 3,
       "company": "Beskar Technologies",
-      "position": "Full Stack Developer",
-      "location": "India",
-      "startDate": "2019",
-      "endDate": "2021",
+      "position": "Associate Consultant",
+      "location": "Bengaluru, Karnataka, India",
+      "startDate": "May 2022",
+      "endDate": "July 2023",
+      "level": "L1",
       "logo": "/work/beskar.jpeg",
       "website": "https://www.beskar.tech/",
-      "description": "Developed full-stack web applications and cloud-based solutions.",
+      "description": "Developed enterprise microservices and APIs, including e-signature integration and a configurable Revenue Operations platform, delivering scalable backend systems, dashboards, and integrations for compliance-driven and operational workflows.",
       "achievements": [
-        "Built responsive web applications using modern frameworks",
-        "Implemented RESTful APIs and microservices",
-        "Optimized database performance and queries",
-        "Collaborated with cross-functional teams"
+        "Developed a microservice to integrate external document signing capabilities (e-signature) into an existing Quality Management System (QMS), implementing mailing services and user portals to streamline document workflows and enhance compliance processes.",
+        "Conceptualized and implemented a scalable and configurable Revenue Operations (RevOps) platform from the ground up, building notification systems, interactive dashboards, and dynamic configuration modules to improve operational efficiency and user experience.",
+        "Designed RESTful APIs and backend services to enable seamless integration between third-party services and internal systems, ensuring high availability and performance for enterprise clients."
       ],
-      "technologies": ["React", "Node.js", "MongoDB", "PostgreSQL", "AWS"]
+      "technologies": ["React.js", "Node.js", "Java - Spring Boot", "PostgreSQL", "AWS", "GCP", "GoLang", "DevOps"]
     },
     {
       "id": 4,
       "company": "Finvolv",
       "position": "Software Engineer",
       "location": "India",
-      "startDate": "2017",
-      "endDate": "2019",
+      "startDate": "February 2021",
+      "endDate": "May 2022",
+      "level": "L1",
       "logo": "/work/finvolv.jpeg",
       "website": "https://www.finvolv.ai/",
-      "description": "Developed financial technology solutions and payment systems.",
+      "description": "Contributed to a cloud-native security and cyber-safety platform using Spring Boot, React, and GCP, building scalable security features, monitoring, and compliance capabilities for distributed enterprise cloud environments.",
       "achievements": [
-        "Built secure payment processing systems",
-        "Implemented financial data analytics pipelines",
-        "Ensured compliance with financial regulations",
-        "Optimized system performance and reliability"
+        "Developed a cloud-based Data Security and Cyber Safety platform using Java Spring Boot, React, and GCP, implementing multiple features through GCP APIs to enable advanced security measures and compliance controls for enterprise teams working on cloud platforms.",
+        "Collaborated with cross-functional teams to enhance workspace security by building scalable security monitoring, data protection features, and real-time vulnerability detection capabilities for distributed cloud environments."
       ],
-      "technologies": ["Java", "Spring Boot", "MySQL", "Redis", "Kafka"]
+      "technologies": ["Java - Spring Boot", "MySQL", "React.js", "GCP", "AWS"]
     }
   ],
   "education": [
@@ -183,8 +189,8 @@
       "institution": "BITS Pilani",
       "degree": "M.Tech",
       "field": "Cloud Computing",
-      "startDate": "2020",
-      "endDate": "2022",
+      "startDate": "January 2024",
+      "endDate": "December 2025",
       "logo": "/education/bits.jpeg",
       "website": "https://www.bits-pilani.ac.in/",
       "gpa": "9.47 / 10 CGPA",
