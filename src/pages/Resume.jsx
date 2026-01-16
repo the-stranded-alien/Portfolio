@@ -18,15 +18,11 @@ const Resume = ({ data }) => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
-  // Use utility function to handle base path for GitHub Pages
-  // For root deployment, ensure we use the correct path
+  // Get the PDF path - use direct path since we're at root domain
+  // The PDF is in public folder, which Vite copies to dist root
   const pdfPath = resume?.pdfUrl || '/resume.pdf';
-  const resumeUrl = getAssetPath(pdfPath);
-  
-  // Debug: log the resume URL to console
-  console.log('Resume URL:', resumeUrl);
-  console.log('Base URL:', import.meta.env.BASE_URL);
-  console.log('PDF Path from JSON:', pdfPath);
+  // For root deployment (base: '/'), the path should be exactly as specified
+  const resumeUrl = pdfPath.startsWith('/') ? pdfPath : `/${pdfPath}`;
   
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -89,7 +85,7 @@ const Resume = ({ data }) => {
             </motion.button>
           </motion.div>
 
-          {/* PDF Viewer - Plain Display */}
+          {/* PDF Viewer - Simple Display */}
           {viewMode === 'document' && (
             <motion.div
               variants={itemVariants}
@@ -98,61 +94,17 @@ const Resume = ({ data }) => {
               transition={{ duration: 0.5 }}
               className="flex justify-center p-6"
             >
-              <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl">
+              <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl overflow-hidden">
                 <iframe
-                  key={resumeUrl}
-                  src={resumeUrl}
-                  className="border-0 outline-0 w-full"
-                  title="Resume PDF"
+                  src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                  className="w-full border-0"
                   style={{ 
                     minHeight: '1000px',
                     height: '120vh',
-                    display: 'block',
-                    border: 'none',
-                    outline: 'none',
-                    width: '100%'
+                    display: 'block'
                   }}
-                  onLoad={(e) => {
-                    // Check if iframe loaded HTML instead of PDF
-                    setTimeout(() => {
-                      try {
-                        const iframe = e.target;
-                        const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
-                        if (iframeDoc) {
-                          const bodyText = iframeDoc.body?.innerText || '';
-                          const hasHtmlContent = iframeDoc.body?.innerHTML?.includes('<!DOCTYPE') || 
-                                               iframeDoc.body?.innerHTML?.includes('<html') ||
-                                               bodyText.includes('Sahil Gupta') && bodyText.includes('Home');
-                          if (hasHtmlContent) {
-                            console.warn('Iframe loaded HTML instead of PDF. URL was:', resumeUrl);
-                            console.warn('Switching to details view');
-                            setViewMode('details');
-                          }
-                        }
-                      } catch (err) {
-                        // Cross-origin - can't check, assume it's working
-                        console.log('PDF iframe loaded (cross-origin, cannot verify content)');
-                      }
-                    }, 1000);
-                  }}
-                  onError={(e) => {
-                    console.error('PDF iframe load error:', e);
-                    setViewMode('details');
-                  }}
+                  title="Resume PDF"
                 />
-                <div className="mt-4 text-center">
-                  <p className="text-sm text-void-600 dark:text-starlight-400 mb-2">
-                    Having trouble viewing the PDF?
-                  </p>
-                  <a 
-                    href={resumeUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-cosmos-500 hover:text-cosmos-600 underline"
-                  >
-                    <span>Open PDF in new tab</span>
-                  </a>
-                </div>
               </div>
             </motion.div>
           )}
