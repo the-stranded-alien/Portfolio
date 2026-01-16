@@ -9,30 +9,34 @@
       // This handles page refreshes on GitHub Pages
       // As requested, refresh from any page redirects to home page
       // BUT: Don't redirect static files (PDFs, images, etc.)
-      var path = window.location.pathname;
-      var isStaticFile = /\.(pdf|jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot)$/i.test(path);
-      
-      // Don't redirect static files - let them be served directly
-      if (isStaticFile) {
-        // This shouldn't happen if file exists, but if it does, just stop here
-        return;
-      }
-      
-      // For any path that's not root or index.html, redirect to home
-      if (path !== '/' && path !== '/index.html') {
-        window.location.replace('/');
-      }
+      (function() {
+        var path = window.location.pathname;
+        var isStaticFile = /\.(pdf|jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot)$/i.test(path);
+        
+        // Don't redirect static files - let them be served directly
+        if (isStaticFile) {
+          // This shouldn't happen if file exists, but if it does, just stop here
+          return;
+        }
+        
+        // For any path that's not root or index.html, redirect to home
+        if (path !== '/' && path !== '/index.html') {
+          window.location.replace('/');
+        }
+      })();
     </script>
   </head>
   <body>
     <p>Redirecting to home page...</p>
     <script>
       // Immediate redirect fallback (but not for static files)
-      var path = window.location.pathname;
-      var isStaticFile = /\.(pdf|jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot)$/i.test(path);
-      if (!isStaticFile && path !== '/' && path !== '/index.html') {
-        window.location.href = '/';
-      }
+      (function() {
+        var path = window.location.pathname;
+        var isStaticFile = /\.(pdf|jpg|jpeg|png|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot)$/i.test(path);
+        if (!isStaticFile && path !== '/' && path !== '/index.html') {
+          window.location.href = '/';
+        }
+      })();
     </script>
   </body>
 </html>
