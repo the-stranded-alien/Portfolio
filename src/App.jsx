@@ -24,7 +24,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Router basename="/Portfolio">
+      <Router>
         <div className="min-h-screen flex flex-col relative">
           <CosmicBackground />
           <Navbar personalData={data.personal} />
