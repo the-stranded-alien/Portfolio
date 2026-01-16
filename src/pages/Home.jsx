@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, Sparkles, Rocket, Zap, Code } from 'lucide-react';
+import { ArrowRight, Download, Sparkles, Rocket, Zap, Code, Target } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import AnimatedBackground from '../components/AnimatedBackground';
 
@@ -175,7 +175,7 @@ const Home = ({ data }) => {
           {/* Floating Stat Cards */}
           <motion.div 
             variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20"
           >
             <motion.div
               variants={floatingVariants}
@@ -184,11 +184,11 @@ const Home = ({ data }) => {
               className="card-glow text-center group cursor-pointer"
             >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-cosmos-500 to-nebula-600 rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow">
-                  <Zap className="w-8 h-8 text-white" />
+                <div className="w-[57.6px] h-[57.6px] bg-gradient-to-br from-cosmos-500 to-nebula-600 rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow">
+                  <Zap className="w-[28.8px] h-[28.8px] text-white" />
                 </div>
               </div>
-              <div className="text-5xl font-display font-bold text-gradient mb-2">
+              <div className="text-[43.2px] font-display font-bold text-gradient mb-2">
                 5+
               </div>
               <div className="text-void-600 dark:text-starlight-400 font-medium">Years Experience</div>
@@ -202,11 +202,11 @@ const Home = ({ data }) => {
               className="card-glow text-center group cursor-pointer"
             >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-nebula-500 to-cosmos-600 rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow">
-                  <Code className="w-8 h-8 text-white" />
+                <div className="w-[57.6px] h-[57.6px] bg-gradient-to-br from-nebula-500 to-cosmos-600 rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow">
+                  <Code className="w-[28.8px] h-[28.8px] text-white" />
                 </div>
               </div>
-              <div className="text-5xl font-display font-bold text-gradient mb-2">
+              <div className="text-[43.2px] font-display font-bold text-gradient mb-2">
                 10+
               </div>
               <div className="text-void-600 dark:text-starlight-400 font-medium">Projects & Certifications</div>
@@ -220,15 +220,32 @@ const Home = ({ data }) => {
               className="card-glow text-center group cursor-pointer"
             >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-cosmos-600 to-nebula-500 rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow">
-                  <Sparkles className="w-8 h-8 text-white" />
+                <div className="w-[57.6px] h-[57.6px] bg-gradient-to-br from-cosmos-600 to-nebula-500 rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow">
+                  <Sparkles className="w-[28.8px] h-[28.8px] text-white" />
                 </div>
               </div>
-              <div className="text-5xl font-display font-bold text-gradient mb-2">
-                {Object.keys(data.skills || {}).reduce((acc, category) => 
-                  acc + (data.skills[category]?.length || 0), 0)}+
+              <div className="text-[43.2px] font-display font-bold text-gradient mb-2">
+                50+
               </div>
               <div className="text-void-600 dark:text-starlight-400 font-medium">Skills Mastered</div>
+            </motion.div>
+
+            <motion.div
+              variants={floatingVariants}
+              animate="animate"
+              transition={{ delay: 0.6 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="card-glow text-center group cursor-pointer"
+            >
+              <div className="flex justify-center mb-4">
+                <div className="w-[57.6px] h-[57.6px] bg-gradient-to-br from-nebula-600 to-cosmos-500 rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow">
+                  <Target className="w-[28.8px] h-[28.8px] text-white" />
+                </div>
+              </div>
+              <div className="text-[43.2px] font-display font-bold text-gradient mb-2">
+                500+
+              </div>
+              <div className="text-void-600 dark:text-starlight-400 font-medium">DSA Problems Solved</div>
             </motion.div>
           </motion.div>
 
