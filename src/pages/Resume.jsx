@@ -21,6 +21,9 @@ const Resume = ({ data }) => {
   // Use utility function to handle base path for GitHub Pages
   const resumeUrl = getAssetPath(resume?.pdfUrl || '/resume.pdf');
   
+  // Debug: log the resume URL to console
+  console.log('Resume URL:', resumeUrl);
+  
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = resumeUrl;
@@ -96,6 +99,7 @@ const Resume = ({ data }) => {
                   src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0`}
                   className="border-0 outline-0 w-full"
                   title="Resume PDF"
+                  type="application/pdf"
                   style={{ 
                     minHeight: '1000px',
                     height: '120vh',
@@ -103,6 +107,28 @@ const Resume = ({ data }) => {
                     border: 'none',
                     outline: 'none',
                     width: '100%'
+                  }}
+                  onLoad={(e) => {
+                    // Check if iframe loaded HTML instead of PDF
+                    try {
+                      const iframe = e.target;
+                      const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
+                      if (iframeDoc && iframeDoc.body) {
+                        const hasHtmlContent = iframeDoc.body.innerHTML.includes('<html') || 
+                                             iframeDoc.body.innerHTML.includes('<!DOCTYPE');
+                        if (hasHtmlContent && !iframeDoc.body.innerHTML.includes('PDF')) {
+                          console.warn('Iframe loaded HTML instead of PDF, switching to details view');
+                          setViewMode('details');
+                        }
+                      }
+                    } catch (err) {
+                      // Cross-origin or other error, assume PDF loaded correctly
+                      console.log('PDF iframe loaded (cross-origin check not possible)');
+                    }
+                  }}
+                  onError={(e) => {
+                    console.error('PDF load error:', e);
+                    setViewMode('details');
                   }}
                 />
               </div>
