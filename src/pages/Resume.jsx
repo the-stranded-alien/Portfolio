@@ -98,14 +98,15 @@ const Resume = ({ data }) => {
               transition={{ duration: 0.5 }}
               className="flex justify-center p-6"
             >
-              <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl">
+              <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl overflow-hidden">
                 <iframe
-                  src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                  src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0&zoom=page-width`}
                   className="w-full border-0"
                   style={{ 
                     minHeight: '1000px',
                     height: '120vh',
-                    display: 'block'
+                    display: 'block',
+                    width: '100%'
                   }}
                   title="Resume PDF"
                 />

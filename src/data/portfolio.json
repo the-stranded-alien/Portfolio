@@ -5,7 +5,7 @@
     "email": "sahil16gupta11@gmail.com",
     "phone": "+91-7249999056",
     "location": "Bengaluru, Karnataka, India",
-    "bio": "Passionate Senior Software Engineer specializing in agentic AI, multi-agent systems, and full-stack development. Currently building cutting-edge AI solutions at RevSure AI with expertise in cloud computing, DevOps, and modern web technologies.",
+    "bio": "Senior Software Engineer with 5+ years of experience architecting and building scalable, secure enterprise platforms. Specializing in distributed systems, cloud-native infrastructure, microservices architecture, and full-stack development. Passionate about creating innovative solutions that drive business transformation and deliver exceptional user experiences.",
     "tagline": "Building the future of AI-powered applications",
     "buzzWords": [
       "Agentic AI & Generative AI",
@@ -19,25 +19,30 @@
     "social": {
       "linkedin": "https://www.linkedin.com/in/sahilgupta1611",
       "github": "https://github.com/the-stranded-alien",
-      "twitter": "https://twitter.com/yourhandle",
       "website": "https://portfolio.guptasahil.in/"
     }
   },
   "about": {
-    "description": "I'm a Senior Software Engineer with a passion for building intelligent, scalable systems. My expertise spans agentic AI, multi-agent architectures, full-stack development, and cloud infrastructure. I thrive on solving complex technical challenges and creating innovative solutions that push the boundaries of what's possible with AI.",
+    "description": "I'm a Senior Software Engineer with 5+ years of experience building scalable, secure, and AI-driven enterprise platforms across SaaS, cloud-native, and distributed systems. My expertise spans Agentic AI, multi-agent architectures, backend and microservices development, and Kubernetes-based infrastructure. I specialize in designing secure authentication and authorization systems (SSO, OAuth, IdP/SP), building high-performance data pipelines, and developing robust third-party integrations. I'm passionate about forward-deployed engineering, collaborating directly with global customers to drive onboarding, data integrations, security integrations, and production adoption of innovative AI solutions.",
     "highlights": [
-      "Leading development of sophisticated voice agent platforms for logistics operations",
-      "Expert in agentic AI architectures and multi-agent systems",
-      "5+ years of experience in full-stack development and team leadership",
-      "Strong background in cloud computing (AWS, GCP) and DevOps practices"
+      "Pioneered agentic AI features by integrating LLM-based intelligent agents into workflows, automating repetitive tasks and improving customer productivity",
+      "Built Model Context Protocol (MCP) server and designed multi-agent systems for complex workflow automation with intelligent task delegation",
+      "Architected secure authentication services implementing SP & IdP-based SSO, Keycloak integration for multi-tenant SaaS deployments",
+      "Designed and optimized data integrations across 25+ enterprise SaaS platforms, reducing sync latency by 30%",
+      "Engineered scalable Kubernetes-based systems achieving 40% cost efficiency improvements through intelligent workload management",
+      "Led and managed cross-functional team of 10+ engineers, providing technical mentorship and overseeing project delivery"
     ],
     "interests": [
-      "Agentic AI & LLM Applications",
+      "Agentic AI & Generative AI",
+      "Full-Stack Development",
       "Distributed Systems",
-      "Real-time Processing",
-      "Developer Experience",
       "System Architecture",
-      "Innovation & Research"
+      "Cloud & DevOps",
+      "Data Science",
+      "Databases",
+      "Data Engineering",
+      "Application Security",
+      "Quantum Computing"
     ]
   },
   "workExperience": {
@@ -165,26 +170,6 @@
         "Agent Memory",
         "Prompt Engineering",
         "Context Engineering"
-      ],
-      "projects": [
-        {
-          "title": "Multi-Agent RAG System",
-          "subtitle": "Advanced Retrieval-Augmented Generation",
-          "description": "Built a sophisticated RAG system with multi-agent collaboration and dynamic retrieval strategies.",
-          "keyTech": ["LangChain", "Pinecone", "OpenAI", "FastAPI"]
-        },
-        {
-          "title": "Voice Agent Platform",
-          "subtitle": "AI-Powered Voice Interactions",
-          "description": "Developed a voice agent platform for handling complex conversational flows and emergency situations.",
-          "keyTech": ["Retell AI", "React", "TypeScript", "Supabase"]
-        },
-        {
-          "title": "Agentic Workflow Orchestration",
-          "subtitle": "Temporal-based Agent Coordination",
-          "description": "Research project exploring Temporal as infrastructure for robust AI agent orchestration.",
-          "keyTech": ["Temporal", "Python", "LangGraph", "PostgreSQL"]
-        }
       ]
     },
     {
@@ -227,32 +212,14 @@
         "Cloud Networking and Security"
       ],
       "otherSkills": [
-        "AWS Services",
+        "AWS & GCP",
         "Kubernetes",
         "Docker",
         "Terraform",
         "CI/CD Pipelines",
-        "Monitoring & Observability"
-      ],
-      "projects": [
-        {
-          "title": "Scalable Cloud Infrastructure",
-          "subtitle": "AWS-based Cloud Architecture",
-          "description": "Designed and implemented a highly scalable cloud infrastructure supporting millions of users.",
-          "keyTech": ["AWS", "Kubernetes", "Terraform", "Docker"]
-        },
-        {
-          "title": "Microservices Architecture",
-          "subtitle": "Distributed System Design",
-          "description": "Architected a microservices-based system with service mesh and API gateway integration.",
-          "keyTech": ["Kubernetes", "Docker", "gRPC", "Istio"]
-        },
-        {
-          "title": "DevOps Automation Platform",
-          "subtitle": "CI/CD Pipeline Optimization",
-          "description": "Built an automated DevOps platform reducing deployment time by 60%.",
-          "keyTech": ["Jenkins", "GitLab CI", "Ansible", "Prometheus"]
-        }
+        "Monitoring & Observability",
+        "FinOps",
+        "Edge Computing"
       ]
     },
     {
@@ -302,103 +269,114 @@
         "Operating Systems and Computer Networks",
         "Big Data Analytics"
       ],
-      "otherSkills": [],
-      "projects": [
-        {
-          "title": "E-Commerce Platform",
-          "subtitle": "Full-Stack Web Application",
-          "description": "Developed a complete e-commerce platform with user authentication, product catalog, and payment integration.",
-          "keyTech": ["Java", "Spring Boot", "MySQL", "React"]
-        },
-        {
-          "title": "Student Management System",
-          "subtitle": "Academic Management Solution",
-          "description": "Built a comprehensive student management system for tracking academic records and attendance.",
-          "keyTech": ["Python", "Django", "PostgreSQL", "Bootstrap"]
-        },
-        {
-          "title": "Social Media Application",
-          "subtitle": "Real-time Social Network",
-          "description": "Created a social media platform with real-time messaging, posts, and user interactions.",
-          "keyTech": ["Node.js", "MongoDB", "Socket.io", "Express"]
-        }
-      ]
+      "otherSkills": []
     }
   ],
   "skills": {
-    "AI & Machine Learning": [
-      "Agentic AI",
-      "Multi-Agent Systems",
-      "LangGraph",
-      "LangChain",
-      "Temporal",
-      "RAG Architectures",
-      "Vector Databases",
-      "Model Context Protocol",
-      "Agent to Agent Protocol",
-      "OpenAI, Anthropic, Gemini",
-      "Prompt Engineering",
-      "Context Engineering"
-    ],
-    "Backend Development": [
-      "Java - Spring Boot",
-      "Python - FastAPI, Django",
-      "JS/TS - Node.js",
-      "APIs & Microservices",
-      "Distributed Systems",
-      "Multi-Tenant Architecture",
-      "Software Architecture",
-      "Cloud Native Architecture",
-      "WebSockets, gRPC, SSE",
-      "Event Driven Architecture",
-      "Test Driven Development",
-      "LLD & HLD"
-    ],
-    "Databases": [
-      "PostgreSQL & MySQL",
-      "MongoDB & FireStore",
-      "ClickHouse",
-      "BigQuery",
-      "Cassandra & DynamoDB",
-      "Redis",
-      "Pinecone, Mem0, Neo4j"
-    ],
-    "Cloud & DevOps": [
-      "AWS",
-      "GCP",
-      "Docker",
-      "Kubernetes",
-      "CI/CD",
-      "Terraform"
-    ],
-    "Frontend Development": [
-      "React",
-      "Angular",
-      "TypeScript",
-      "JavaScript",
-      "Next.js",
-      "Redux",
-      "Vite"
-    ],
-    "Tools & Other": [
-      "Git",
-      "Linux",
-      "Kafka",
-      "GraphQL",
-      "JetBrains IDEs",
-      "Cursor",
-      "VSCode",
-      "Postman"
-    ],
-    "Programming Languages": [
-      "Java",
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "GoLang",
-      "C++",
-      "SQL"
-    ]
+    "Generative AI & Agentic AI": {
+      "rating": 4.0,
+      "items": [
+        "Agentic AI",
+        "Multi-Agent Systems",
+        "LangGraph",
+        "LangChain",
+        "Temporal",
+        "RAG Architectures",
+        "Vector Databases",
+        "Model Context Protocol",
+        "Agent to Agent Protocol",
+        "OpenAI, Anthropic, Gemini",
+        "Prompt Engineering",
+        "Context Engineering"
+      ]
+    },
+    "Backend Development": {
+      "rating": 5,
+      "items": [
+        "Java - Spring Boot",
+        "Python - FastAPI, Django",
+        "JS/TS - Node.js",
+        "APIs & Microservices",
+        "Distributed Systems",
+        "Multi-Tenant Architecture",
+        "Software Architecture",
+        "Cloud Native Architecture",
+        "WebSockets, gRPC, SSE",
+        "Event Driven Architecture",
+        "Test Driven Development",
+        "LLD & HLD"
+      ]
+    },
+    "Databases": {
+      "rating": 4.5,
+      "items": [
+        "PostgreSQL & MySQL",
+        "MongoDB & FireStore",
+        "ClickHouse",
+        "BigQuery",
+        "Cassandra & DynamoDB",
+        "Redis",
+        "Pinecone, Mem0, Neo4j",
+        "Elasticsearch"
+      ]
+    },
+    "Cloud & DevOps": {
+      "rating": 4.0,
+      "items": [
+        "AWS",
+        "GCP",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "Serverless Architecture",
+        "FinOps"
+      ]
+    },
+    "Programming Languages": {
+      "rating": 4.5,
+      "items": [
+        "Java",
+        "Python",
+        "JavaScript & TypeScript",
+        "GoLang",
+        "C++",
+        "SQL"
+      ]
+    },
+    "Tools & Other": {
+      "rating": 4,
+      "items": [
+        "Kafka",
+        "RabbitMQ",
+        "Git & GitHub",
+        "Linux, Windows, macOS",
+        "VSCode, Cursor, JetBrains",
+        "Postman"
+      ]
+    },
+    "Frontend Development": {
+      "rating": 3.5,
+      "items": [
+        "React",
+        "Angular",
+        "TypeScript",
+        "Next.js",
+        "Redux",
+        "Vite"
+      ]
+    },
+    "Data Science": {
+      "rating": 3.5,
+      "items": [
+        "Big Data Analytics",
+        "Data Visualization",
+        "Data Engineering",
+        "Data Warehousing",
+        "ML & DL",
+        "Artificial Intelligence"
+      ]
+    }
   },
   "projects": [
     {
@@ -585,13 +563,15 @@
     "pdfUrl": "/Resume.pdf",
     "lastUpdated": "2024-01-10",
     "sections": {
-      "summary": "Senior Software Engineer with 5+ years of experience specializing in agentic AI, multi-agent systems, and full-stack development. Proven track record of leading teams, architecting scalable solutions, and delivering innovative AI-powered applications. Expert in cloud computing, DevOps, and modern web technologies.",
+      "summary": "Senior Software Engineer with 5+ years of experience building scalable, secure, and AI-driven enterprise platforms across SaaS, cloud-native, and distributed systems. Proven expertise in Agentic AI, multi-agent architectures, backend and microservices development, and Kubernetes-based infrastructure. Strong background in designing secure authentication and authorization systems (SSO, OAuth, IdP/SP), building high-performance data pipelines, and developing robust third-party integrations. Experienced in forward-deployed engineering, collaborating directly with global customers to drive onboarding, data integrations, security integrations, and production adoption.",
       "highlights": [
-        "Led development of sophisticated AI voice agent platforms",
-        "Managed team of 10+ engineers at Rugged Monitoring",
-        "Expert in agentic AI architectures and LLM applications",
-        "M.Tech in Cloud Computing from BITS Pilani",
-        "Currently pursuing PGP in GenAI/Agentic AI from IIT Roorkee"
+        "Pioneered agentic AI features by integrating LLM-based intelligent agents into workflows, automating repetitive tasks and improving customer productivity through AI-driven automation",
+        "Built Model Context Protocol (MCP) server to expose in-house APIs as tools for Multi-Agent systems, enabling sophisticated agent-to-agent communication and workflow orchestration",
+        "Designed and developed multi-agent systems leveraging distributed AI agents for complex workflow automation with intelligent task delegation and parallel processing",
+        "Architected secure authentication and authorization services implementing SP & IdP-based SSO, Keycloak integration, and API token-based access control for multi-tenant SaaS deployments",
+        "Designed and optimized data integrations across 25+ enterprise SaaS platforms, improving data accuracy and reducing sync latency by 30%",
+        "Engineered scalable data extraction worker system on Kubernetes with auto-scaling and fault tolerance, achieving 40% cost efficiency improvements",
+        "Led and managed cross-functional team of 10+ engineers at Rugged Monitoring, providing technical mentorship and overseeing project delivery"
       ]
     }
   }

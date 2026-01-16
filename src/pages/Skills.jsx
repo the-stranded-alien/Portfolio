@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code2, Database, Cloud, Cpu, Wrench, Sparkles, Zap } from 'lucide-react';
+import { Code2, Database, Cloud, Cpu, Wrench, Sparkles, Zap, Brain, Languages, BarChart3, Star } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 
 const Skills = ({ data }) => {
@@ -16,12 +16,14 @@ const Skills = ({ data }) => {
   };
 
   const categoryIcons = {
-    'AI & Machine Learning': Sparkles,
+    'Generative AI & Agentic AI': Brain,
     'Frontend Development': Code2,
     'Backend Development': Cpu,
     'Databases': Database,
     'Cloud & DevOps': Cloud,
+    'Programming Languages': Languages,
     'Tools & Other': Wrench,
+    'Data Science': BarChart3,
   };
 
   const getCategoryIcon = (category) => categoryIcons[category] || Code2;
@@ -41,12 +43,20 @@ const Skills = ({ data }) => {
           </motion.h1>
 
           <motion.p variants={itemVariants} className="text-lg text-void-600 dark:text-starlight-400 text-center max-w-3xl mx-auto mb-12">
-            A comprehensive toolkit built over years of hands-on experience with modern technologies, frameworks, and development practices.
+            A comprehensive skill-set built over years of hands-on experience with modern technologies, frameworks, and development practices.
           </motion.p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {skills && Object.entries(skills).map(([category, skillList], index) => {
+            {skills && Object.entries(skills).map(([category, categoryData], index) => {
               const Icon = getCategoryIcon(category);
+              // Handle both old format (array) and new format (object with rating and items)
+              const skillList = Array.isArray(categoryData) ? categoryData : (categoryData?.items || []);
+              const rating = Array.isArray(categoryData) ? 5 : (categoryData?.rating || 5);
+              
+              // Calculate stars to display
+              const fullStars = Math.floor(rating);
+              const hasHalfStar = rating % 1 !== 0;
+              const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
               
               return (
                 <motion.div
@@ -55,13 +65,40 @@ const Skills = ({ data }) => {
                   whileHover={{ y: -5 }}
                   className="card group"
                 >
-                  <div className="flex items-center space-x-3 mb-6 pb-4 border-b border-void-200 dark:border-starlight-800/30">
-                    <div className={`w-14 h-14 bg-gradient-to-br ${getCategoryColor(index)} rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow transition-all`}>
-                      <Icon className="w-7 h-7 text-white" />
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-void-200 dark:border-starlight-800/30">
+                    <div className="flex items-center space-x-3">
+                      <div className={`w-14 h-14 bg-gradient-to-br ${getCategoryColor(index)} rounded-2xl flex items-center justify-center shadow-glow-lg group-hover:shadow-glow transition-all`}>
+                        <Icon className="w-7 h-7 text-white" />
+                      </div>
+                      <h2 className="text-2xl font-display font-bold text-void-900 dark:text-starlight-50">
+                        {category}
+                      </h2>
                     </div>
-                    <h2 className="text-2xl font-display font-bold text-void-900 dark:text-starlight-50">
-                      {category}
-                    </h2>
+                    <div className="flex items-center space-x-1">
+                      {/* Full stars */}
+                      {[...Array(fullStars)].map((_, i) => (
+                        <Star
+                          key={`full-${i}`}
+                          className="w-4 h-4 text-cosmos-500 dark:text-cosmos-400 fill-cosmos-500 dark:fill-cosmos-400"
+                        />
+                      ))}
+                      {/* Half star */}
+                      {hasHalfStar && (
+                        <div className="relative w-4 h-4 inline-block">
+                          <Star className="w-4 h-4 text-cosmos-500 dark:text-cosmos-400 absolute top-0 left-0" />
+                          <div className="absolute top-0 left-0 overflow-hidden" style={{ width: '50%' }}>
+                            <Star className="w-4 h-4 text-cosmos-500 dark:text-cosmos-400 fill-cosmos-500 dark:fill-cosmos-400" />
+                          </div>
+                        </div>
+                      )}
+                      {/* Empty stars */}
+                      {[...Array(emptyStars)].map((_, i) => (
+                        <Star
+                          key={`empty-${i}`}
+                          className="w-4 h-4 text-cosmos-500 dark:text-cosmos-400"
+                        />
+                      ))}
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
@@ -94,7 +131,10 @@ const Skills = ({ data }) => {
               <Sparkles className="w-7 h-7 text-cosmos-500 dark:text-cosmos-400 animate-pulse" />
               <div>
                 <div className="text-4xl font-display font-bold text-gradient">
-                  {Object.values(skills || {}).reduce((acc, arr) => acc + (arr?.length || 0), 0)}+
+                  {Object.values(skills || {}).reduce((acc, categoryData) => {
+                    const skillList = Array.isArray(categoryData) ? categoryData : (categoryData?.items || []);
+                    return acc + (skillList?.length || 0);
+                  }, 0)}+
                 </div>
                 <div className="text-sm text-void-600 dark:text-starlight-400 font-medium">
                   Technologies Mastered

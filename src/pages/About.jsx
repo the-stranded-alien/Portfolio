@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Coffee, Code, Brain, User, Target, Lightbulb } from 'lucide-react';
+import { Coffee, Code, Brain, User, Target, Lightbulb, Cloud, Database, Shield, Zap, Network, Layers, Activity, Languages } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 
 const About = ({ data }) => {
@@ -15,7 +15,42 @@ const About = ({ data }) => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
-  const interestIcons = [Brain, Code, Coffee, Heart, Lightbulb, Target];
+  // Map interests to icons
+  const getInterestIcon = (interest) => {
+    const iconMap = {
+      'Agentic AI & Generative AI': Brain,
+      'Full-Stack Development': Code,
+      'Distributed Systems': Network,
+      'System Architecture': Layers,
+      'Cloud & DevOps': Cloud,
+      'Data Science': Target,
+      'Databases': Database,
+      'Data Engineering': Activity,
+      'Application Security': Shield,
+      'Quantum Computing': Zap
+    };
+    
+    // Try to find exact match first
+    if (iconMap[interest]) {
+      return iconMap[interest];
+    }
+    
+    // Fallback: try partial match
+    const lowerInterest = interest.toLowerCase();
+    if (lowerInterest.includes('ai') || lowerInterest.includes('generative')) return Brain;
+    if (lowerInterest.includes('full-stack') || lowerInterest.includes('development')) return Code;
+    if (lowerInterest.includes('distributed') || lowerInterest.includes('system')) return Network;
+    if (lowerInterest.includes('architecture')) return Layers;
+    if (lowerInterest.includes('cloud') || lowerInterest.includes('devops')) return Cloud;
+    if (lowerInterest.includes('data engineering')) return Activity;
+    if (lowerInterest.includes('data science')) return Target;
+    if (lowerInterest.includes('database')) return Database;
+    if (lowerInterest.includes('security')) return Shield;
+    if (lowerInterest.includes('quantum')) return Zap;
+    
+    // Default fallback
+    return Lightbulb;
+  };
 
   return (
     <div className="page-container nebula-bg cosmic-grid">
@@ -85,6 +120,11 @@ const About = ({ data }) => {
                   {personal?.location && (
                     <p className="text-void-600 dark:text-starlight-400">{personal.location}</p>
                   )}
+                  {personal?.social?.linkedin && (
+                    <p className="text-void-600 dark:text-starlight-400 break-all">
+                      {personal.social.linkedin.replace(/^https?:\/\//, '')}
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -93,11 +133,14 @@ const About = ({ data }) => {
                   Interests
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
-                  {about?.interests?.slice(0, 6).map((interest, index) => {
-                    const Icon = interestIcons[index % interestIcons.length];
+                  {about?.interests?.map((interest, index) => {
+                    const Icon = getInterestIcon(interest);
                     return (
                       <motion.div
                         key={index}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.05 }}
                         whileHover={{ scale: 1.05, y: -2 }}
                         className="flex flex-col items-center p-4 bg-gradient-to-br from-cosmos-50 to-nebula-50 dark:from-cosmos-950/30 dark:to-nebula-950/30 rounded-xl border border-cosmos-200 dark:border-cosmos-800/30 hover:border-cosmos-500/50 dark:hover:border-cosmos-500/50 transition-all cursor-pointer group/item"
                       >
@@ -106,6 +149,23 @@ const About = ({ data }) => {
                       </motion.div>
                     );
                   })}
+                </div>
+              </div>
+
+              <div className="card group">
+                <h3 className="text-xl font-display font-bold text-void-900 dark:text-starlight-50 mb-4 flex items-center space-x-2">
+                  <Languages className="w-5 h-5 text-cosmos-500" />
+                  <span>Languages</span>
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-cosmos-50/50 dark:bg-cosmos-950/20 border border-cosmos-200/50 dark:border-cosmos-800/30">
+                    <span className="text-void-700 dark:text-starlight-300 font-medium">English</span>
+                    <span className="text-sm text-void-600 dark:text-starlight-400">Professional Proficiency</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 rounded-lg bg-cosmos-50/50 dark:bg-cosmos-950/20 border border-cosmos-200/50 dark:border-cosmos-800/30">
+                    <span className="text-void-700 dark:text-starlight-300 font-medium">Hindi</span>
+                    <span className="text-sm text-void-600 dark:text-starlight-400">Native</span>
+                  </div>
                 </div>
               </div>
             </motion.div>

@@ -207,9 +207,9 @@ const Home = ({ data }) => {
                 </div>
               </div>
               <div className="text-5xl font-display font-bold text-gradient mb-2">
-                {data.projects?.length || 10}+
+                10+
               </div>
-              <div className="text-void-600 dark:text-starlight-400 font-medium">Projects Completed</div>
+              <div className="text-void-600 dark:text-starlight-400 font-medium">Projects & Certifications</div>
             </motion.div>
 
             <motion.div
