@@ -128,40 +128,43 @@
       "id": 1,
       "institution": "IIT Roorkee",
       "degree": "Post Graduation Program",
-      "field": "GenAI/Agentic AI",
-      "startDate": "2024",
-      "endDate": "Present",
+      "field": "GenAI, Agentic AI and ML Applications for Engineers",
+      "startDate": "May 2025",
+      "endDate": "April 2026 (Expected)",
       "logo": "/education/iitr.jpeg",
       "website": "https://www.iitr.ac.in/",
       "gpa": "In Progress",
       "subjects": [
         [
-          "LLM Applications and Multi-Agent Systems",
-          "Advanced RAG Architectures"
-        ],
-        [
-          "Vector Databases",
-          "Model Context Protocol (MCP)"
-        ],
-        [
-          "Agent Orchestration",
-          "Real-world AI Project Implementations"
+          "Mathematics and Statistics for Data Science",
+          "Foundations of AI & ML",
+          "Machine Learning Algorithms",
+          "Deep Learning and NLP",
+          "Generative AI & Large Language Models",
+          "AI Agents & Agentic Frameworks"
         ]
       ],
       "description": "Advanced study in Generative AI, Agentic AI systems, and cutting-edge AI technologies.",
       "highlights": [
-        "Focus on LLM applications and multi-agent systems",
-        "Advanced RAG architectures and vector databases",
-        "Model Context Protocol (MCP) and agent orchestration",
-        "Real-world AI project implementations"
+        "Focus on LLM Applications and Multi-Agent Systems",
+        "Advanced RAG Architectures and Vector Databases",
+        "Model Context Protocol (MCP), Agent to Agent Protocol (A2A) and Agent Orchestration",
+        "Real-world AI Project Implementations"
       ],
       "otherSkills": [
+        "LLMs",
         "LangChain",
         "LangGraph",
         "Temporal",
         "OpenAI API",
+        "Multi-Agent Systems",
+        "Model Context Protocol (MCP)",
+        "Agent to Agent Protocol (A2A)",
+        "Anthropic, Gemini, Claude, OpenAI APIs",
         "Vector Databases",
-        "Prompt Engineering"
+        "Agent Memory",
+        "Prompt Engineering",
+        "Context Engineering"
       ],
       "projects": [
         {
@@ -196,25 +199,32 @@
       "gpa": "9.47 / 10 CGPA",
       "subjects": [
         [
-          "Cloud Architecture and Infrastructure Design",
-          "Distributed Systems",
-          "Microservices Architecture"
+          "Security Fundamentals for Cloud",
+          "Data Warehousing",
+          "DevOps for Cloud",
+          "Scalable Services"
         ],
         [
-          "DevOps and CI/CD",
-          "Containerization and Orchestration",
-          "Cloud Security"
+          "Stream Processing and Analytics",
+          "Distributed Computing",
+          "Cloud Infrastructure and Systems Software",
+          "API Driven Cloud Native Solutions"
         ],
         [
-          "Scalable System Design"
+          "Cloud Computing", 
+          "Big Data Systems",
+          "Parallel and Distributed Computing",
+          "Network Fundamentals for Cloud"
         ]
       ],
-      "description": "Master's degree focused on cloud infrastructure, distributed systems, and scalable architectures.",
+      "description": "Master's degree (Work Integrated Learning) focused on cloud infrastructure, distributed systems, and scalable architectures.",
       "highlights": [
-        "Cloud architecture and infrastructure design",
-        "Distributed systems and microservices",
-        "DevOps and CI/CD practices",
-        "Containerization and orchestration"
+        "Cloud Architecture and Infrastructure Design",
+        "Distributed Systems and Microservices",
+        "DevOps and CI/CD Practices",
+        "Containerization and Orchestration",
+        "Big Data Systems and Data Warehousing",
+        "Cloud Networking and Security"
       ],
       "otherSkills": [
         "AWS Services",
@@ -257,34 +267,42 @@
       "gpa": "8.6 / 10 CGPA",
       "subjects": [
         [
-          "Data Structures and Algorithms",
-          "Object-Oriented Programming",
+          "Software Development Fundamentals",
+          "Theoretical Foundations of Computer Science",
+          "Database Systems and Web",
+          "Computer Organization and Architecture",
+          "Data Structures",
+          "Algorithms and Problem Solving"
+        ],
+        [
+          "Operating Systems and Systems Programming",
+          "Introduction to Data Warehouse and Data Mining",
+          "Open Source Software",
+          "Computer Networks",
+          "Information Security",
           "Software Engineering"
         ],
         [
-          "Database Management Systems",
-          "Operating Systems",
-          "Computer Networks"
-        ],
-        [
-          "Web Development"
+          "Theory of Computation and Compiler Design",
+          "Advanced Data Structures and Applications",
+          "Big Data Analytics",
+          "Data Compression Algorithms",
+          "Advanced Databases",
+          "Introduction to DevOps",
+          "Advanced Software Development Practices",
+          "Image Processing and Analysis"
         ]
       ],
       "description": "Bachelor's degree in Computer Science with focus on software engineering and algorithms.",
       "highlights": [
-        "Data structures and algorithms",
-        "Software engineering principles",
-        "Database management systems",
-        "Web development and networking"
+        "Data Structures and Algorithms",
+        "Software Engineering Principles",
+        "Database Management Systems",
+        "Web Development and Data Engineering",
+        "Operating Systems and Computer Networks",
+        "Big Data Analytics"
       ],
-      "otherSkills": [
-        "Java",
-        "Python",
-        "C++",
-        "SQL",
-        "HTML/CSS",
-        "JavaScript"
-      ],
+      "otherSkills": [],
       "projects": [
         {
           "title": "E-Commerce Platform",
@@ -316,37 +334,34 @@
       "Temporal",
       "RAG Architectures",
       "Vector Databases",
-      "Model Context Protocol (MCP)",
-      "LLM Integration",
-      "Prompt Engineering"
-    ],
-    "Frontend Development": [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Next.js",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Redux",
-      "Vite"
+      "Model Context Protocol",
+      "Agent to Agent Protocol",
+      "OpenAI, Anthropic, Gemini",
+      "Prompt Engineering",
+      "Context Engineering"
     ],
     "Backend Development": [
-      "Python",
-      "FastAPI",
-      "Node.js",
-      "Express",
-      "Django",
-      "Java",
-      "Spring Boot"
+      "Java - Spring Boot",
+      "Python - FastAPI, Django",
+      "JS/TS - Node.js",
+      "APIs & Microservices",
+      "Distributed Systems",
+      "Multi-Tenant Architecture",
+      "Software Architecture",
+      "Cloud Native Architecture",
+      "WebSockets, gRPC, SSE",
+      "Event Driven Architecture",
+      "Test Driven Development",
+      "LLD & HLD"
     ],
     "Databases": [
-      "PostgreSQL",
-      "MongoDB",
-      "Supabase",
+      "PostgreSQL & MySQL",
+      "MongoDB & FireStore",
+      "ClickHouse",
+      "BigQuery",
+      "Cassandra & DynamoDB",
       "Redis",
-      "MySQL",
-      "Pinecone",
-      "ChromaDB"
+      "Pinecone, Mem0, Neo4j"
     ],
     "Cloud & DevOps": [
       "AWS",
@@ -354,25 +369,33 @@
       "Docker",
       "Kubernetes",
       "CI/CD",
-      "Terraform",
-      "CloudWatch",
-      "Airflow"
+      "Terraform"
+    ],
+    "Frontend Development": [
+      "React",
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "Next.js",
+      "Redux",
+      "Vite"
     ],
     "Tools & Other": [
       "Git",
       "Linux",
-      "Retell AI",
       "Kafka",
       "GraphQL",
-      "REST APIs",
-      "Microservices"
+      "JetBrains IDEs",
+      "Cursor",
+      "VSCode",
+      "Postman"
     ],
     "Programming Languages": [
+      "Java",
       "Python",
       "JavaScript",
       "TypeScript",
       "GoLang",
-      "Java",
       "C++",
       "SQL"
     ]
