@@ -19,10 +19,14 @@ const Resume = ({ data }) => {
   };
 
   // Use utility function to handle base path for GitHub Pages
-  const resumeUrl = getAssetPath(resume?.pdfUrl || '/resume.pdf');
+  // For root deployment, ensure we use the correct path
+  const pdfPath = resume?.pdfUrl || '/resume.pdf';
+  const resumeUrl = getAssetPath(pdfPath);
   
   // Debug: log the resume URL to console
   console.log('Resume URL:', resumeUrl);
+  console.log('Base URL:', import.meta.env.BASE_URL);
+  console.log('PDF Path from JSON:', pdfPath);
   
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -96,10 +100,10 @@ const Resume = ({ data }) => {
             >
               <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl">
                 <iframe
-                  src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                  key={resumeUrl}
+                  src={resumeUrl}
                   className="border-0 outline-0 w-full"
                   title="Resume PDF"
-                  type="application/pdf"
                   style={{ 
                     minHeight: '1000px',
                     height: '120vh',
@@ -110,27 +114,45 @@ const Resume = ({ data }) => {
                   }}
                   onLoad={(e) => {
                     // Check if iframe loaded HTML instead of PDF
-                    try {
-                      const iframe = e.target;
-                      const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
-                      if (iframeDoc && iframeDoc.body) {
-                        const hasHtmlContent = iframeDoc.body.innerHTML.includes('<html') || 
-                                             iframeDoc.body.innerHTML.includes('<!DOCTYPE');
-                        if (hasHtmlContent && !iframeDoc.body.innerHTML.includes('PDF')) {
-                          console.warn('Iframe loaded HTML instead of PDF, switching to details view');
-                          setViewMode('details');
+                    setTimeout(() => {
+                      try {
+                        const iframe = e.target;
+                        const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
+                        if (iframeDoc) {
+                          const bodyText = iframeDoc.body?.innerText || '';
+                          const hasHtmlContent = iframeDoc.body?.innerHTML?.includes('<!DOCTYPE') || 
+                                               iframeDoc.body?.innerHTML?.includes('<html') ||
+                                               bodyText.includes('Sahil Gupta') && bodyText.includes('Home');
+                          if (hasHtmlContent) {
+                            console.warn('Iframe loaded HTML instead of PDF. URL was:', resumeUrl);
+                            console.warn('Switching to details view');
+                            setViewMode('details');
+                          }
                         }
+                      } catch (err) {
+                        // Cross-origin - can't check, assume it's working
+                        console.log('PDF iframe loaded (cross-origin, cannot verify content)');
                       }
-                    } catch (err) {
-                      // Cross-origin or other error, assume PDF loaded correctly
-                      console.log('PDF iframe loaded (cross-origin check not possible)');
-                    }
+                    }, 1000);
                   }}
                   onError={(e) => {
-                    console.error('PDF load error:', e);
+                    console.error('PDF iframe load error:', e);
                     setViewMode('details');
                   }}
                 />
+                <div className="mt-4 text-center">
+                  <p className="text-sm text-void-600 dark:text-starlight-400 mb-2">
+                    Having trouble viewing the PDF?
+                  </p>
+                  <a 
+                    href={resumeUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-cosmos-500 hover:text-cosmos-600 underline"
+                  >
+                    <span>Open PDF in new tab</span>
+                  </a>
+                </div>
               </div>
             </motion.div>
           )}
