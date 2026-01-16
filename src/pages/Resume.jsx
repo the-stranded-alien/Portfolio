@@ -94,9 +94,9 @@ const Resume = ({ data }) => {
               transition={{ duration: 0.5 }}
               className="flex justify-center p-6"
             >
-              <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl overflow-hidden">
+              <div className="bg-white dark:bg-void-900 rounded-xl shadow-xl p-6 border-0 w-full max-w-7xl">
                 <iframe
-                  src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                  src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0`}
                   className="w-full border-0"
                   style={{ 
                     minHeight: '1000px',
