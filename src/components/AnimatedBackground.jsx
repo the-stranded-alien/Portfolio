@@ -41,13 +41,31 @@ const AnimatedBackground = () => {
     };
   };
 
-  // Initialize with positions immediately
+  // Track window size for responsive icon count
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Initialize with positions immediately - fewer icons on mobile for performance
   const [positions, setPositions] = useState(() => 
     Array.from({ length: 16 }, generateRandomPosition)
   );
 
   // Update positions randomly
   useEffect(() => {
+    // Adjust icon count based on screen size
+    const iconCount = isMobile ? 8 : 16;
+    if (positions.length !== iconCount) {
+      setPositions(Array.from({ length: iconCount }, generateRandomPosition));
+    }
 
     // Update positions randomly every 8-12 seconds
     const interval = setInterval(() => {
@@ -58,7 +76,7 @@ const AnimatedBackground = () => {
     }, 8000 + Math.random() * 4000); // 8-12 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile, positions.length]);
 
   return (
     <>
@@ -164,7 +182,7 @@ const AnimatedBackground = () => {
           return (
             <motion.div
               key={pos.id}
-              className="absolute hidden md:block pointer-events-none z-10"
+              className="absolute pointer-events-none z-10"
               style={{
                 left: `${pos.x}%`,
                 top: `${pos.y}%`,
@@ -221,10 +239,10 @@ const AnimatedBackground = () => {
               <IconComponent 
                 className={`${colorClass}`}
                 style={{ 
-                  width: `${pos.size}px`, 
-                  height: `${pos.size}px`,
+                  width: `${isMobile ? pos.size * 0.7 : pos.size}px`, 
+                  height: `${isMobile ? pos.size * 0.7 : pos.size}px`,
                   filter: 'drop-shadow(0 0 10px rgba(139, 92, 246, 0.5))',
-                  opacity: 0.7
+                  opacity: isMobile ? 0.5 : 0.7
                 }}
               />
             </motion.div>
