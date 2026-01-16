@@ -20,7 +20,7 @@ const Resume = ({ data }) => {
 
   // Get the PDF path - use direct path since we're at root domain
   // The PDF is in public folder, which Vite copies to dist root
-  const pdfPath = resume?.pdfUrl || '/resume.pdf';
+  const pdfPath = resume?.pdfUrl || '/Resume.pdf';
   // For root deployment (base: '/'), the path should be exactly as specified
   const resumeUrl = pdfPath.startsWith('/') ? pdfPath : `/${pdfPath}`;
   

@@ -582,7 +582,7 @@
     }
   ],
   "resume": {
-    "pdfUrl": "/resume.pdf",
+    "pdfUrl": "/Resume.pdf",
     "lastUpdated": "2024-01-10",
     "sections": {
       "summary": "Senior Software Engineer with 5+ years of experience specializing in agentic AI, multi-agent systems, and full-stack development. Proven track record of leading teams, architecting scalable solutions, and delivering innovative AI-powered applications. Expert in cloud computing, DevOps, and modern web technologies.",
