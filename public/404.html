@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <script>
+      // Redirect to index.html for React Router
+      // This handles page refreshes on GitHub Pages
+      var path = window.location.pathname;
+      var basePath = '/Portfolio';
+      
+      // Remove base path from current path if present
+      if (path.startsWith(basePath)) {
+        path = path.slice(basePath.length);
+      }
+      
+      // Redirect to index.html with the path as hash for React Router
+      var query = window.location.search;
+      var hash = window.location.hash || (path && path !== '/' ? '#' + path : '');
+      window.location.replace(basePath + '/index.html' + query + hash);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

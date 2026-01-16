@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { GraduationCap, Calendar, BookOpen, Award, Star, Code, FolderKanban, Target, FileText } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
+import { getAssetPath } from '../utils/paths';
 
 const Education = ({ data }) => {
   const { education } = data;
@@ -49,7 +50,7 @@ const Education = ({ data }) => {
                             title={`Visit ${edu.institution} website`}
                           >
                             <img 
-                              src={edu.logo} 
+                              src={getAssetPath(edu.logo)} 
                               alt={`${edu.institution} logo`}
                               className="w-full h-full object-contain pointer-events-none"
                             />
@@ -57,7 +58,7 @@ const Education = ({ data }) => {
                         ) : (
                           <div className="w-16 h-16 bg-white dark:bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg border border-void-200 dark:border-void-300 p-2">
                             <img 
-                              src={edu.logo} 
+                              src={getAssetPath(edu.logo)} 
                               alt={`${edu.institution} logo`}
                               className="w-full h-full object-contain"
                             />

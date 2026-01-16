@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Download, Eye, List } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
+import { getAssetPath } from '../utils/paths';
 
 const Resume = ({ data }) => {
   const { personal, resume } = data;
@@ -17,7 +18,8 @@ const Resume = ({ data }) => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
-  const resumeUrl = resume?.pdfUrl || '/Resume.pdf';
+  // Use utility function to handle base path for GitHub Pages
+  const resumeUrl = getAssetPath(resume?.pdfUrl || '/resume.pdf');
   
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -171,7 +173,7 @@ const Resume = ({ data }) => {
                         <div className="flex items-start space-x-3">
                           {job.logo && (
                             <img 
-                              src={job.logo} 
+                              src={getAssetPath(job.logo)} 
                               alt={`${job.company} logo`}
                               className="w-12 h-12 object-contain flex-shrink-0 mt-1 bg-white dark:bg-white rounded-lg p-1"
                             />

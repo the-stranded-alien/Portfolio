@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, Calendar, User, Building2, ExternalLink, Github, Clock, Code } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
+import { getAssetPath } from '../utils/paths';
 
 const Certifications = ({ data }) => {
   const { certifications } = data;
@@ -41,7 +42,7 @@ const Certifications = ({ data }) => {
                     <div className="mb-4 flex justify-center">
                       <div className="w-20 h-20 bg-white dark:bg-white rounded-xl flex items-center justify-center shadow-lg border border-void-200 dark:border-void-300 p-3">
                         <img 
-                          src={cert.logo} 
+                          src={getAssetPath(cert.logo)} 
                           alt={`${cert.institute || cert.title} logo`}
                           className="w-full h-full object-contain"
                         />

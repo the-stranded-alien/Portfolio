@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar, MapPin, Award, TrendingUp, Badge } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
+import { getAssetPath } from '../utils/paths';
 
 const Work = ({ data }) => {
   const { work } = data;
@@ -59,7 +60,7 @@ const Work = ({ data }) => {
                               title={`Visit ${job.company} website`}
                             >
                               <img 
-                                src={job.logo} 
+                                src={getAssetPath(job.logo)} 
                                 alt={`${job.company} logo`}
                                 className="w-full h-full object-contain pointer-events-none"
                               />
@@ -67,7 +68,7 @@ const Work = ({ data }) => {
                           ) : (
                             <div className="flex-shrink-0 w-16 h-16 bg-white dark:bg-white rounded-xl items-center justify-center shadow-lg border border-void-200 dark:border-void-300 p-2 flex">
                               <img 
-                                src={job.logo} 
+                                src={getAssetPath(job.logo)} 
                                 alt={`${job.company} logo`}
                                 className="w-full h-full object-contain"
                               />
