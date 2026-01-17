@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Coffee, Code, Brain, User, Target, Lightbulb, Cloud, Database, Shield, Zap, Network, Layers, Activity, Languages } from 'lucide-react';
+import { Coffee, Code, Brain, User, Target, Lightbulb, Cloud, Database, Shield, Zap, Network, Layers, Activity, Languages, ExternalLink, Globe } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 
 const About = ({ data }) => {
@@ -127,6 +127,39 @@ const About = ({ data }) => {
                   )}
                 </div>
               </div>
+
+              {about?.profiles && about.profiles.length > 0 && (
+                <div className="card group">
+                  <h3 className="text-xl font-display font-bold text-void-900 dark:text-starlight-50 mb-4 flex items-center space-x-2 relative z-10">
+                    <Globe className="w-5 h-5 text-cosmos-500" />
+                    <span>Other Profiles</span>
+                  </h3>
+                  <div className="space-y-2 relative z-10">
+                    {about.profiles.map((profile, index) => (
+                      <motion.a
+                        key={index}
+                        href={profile.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        whileHover={{ scale: 1.02, x: 5 }}
+                        className="flex items-center justify-between p-3 rounded-lg bg-cosmos-50/50 dark:bg-cosmos-950/20 border border-cosmos-200/50 dark:border-cosmos-800/30 hover:border-cosmos-500/50 dark:hover:border-cosmos-500/50 hover:bg-cosmos-100/50 dark:hover:bg-cosmos-900/30 transition-all group/item cursor-pointer relative z-20"
+                        style={{ pointerEvents: 'auto' }}
+                      >
+                        <div className="flex items-center space-x-3">
+                          {profile.icon && (
+                            <Code className="w-4 h-4 text-cosmos-500 dark:text-cosmos-400" />
+                          )}
+                          <span className="text-void-700 dark:text-starlight-300 font-medium">{profile.name}</span>
+                        </div>
+                        <ExternalLink className="w-4 h-4 text-void-500 dark:text-starlight-500 opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                      </motion.a>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="card group">
                 <h3 className="text-xl font-display font-bold text-void-900 dark:text-starlight-50 mb-4">

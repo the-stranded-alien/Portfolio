@@ -30,7 +30,9 @@
       "Architected secure authentication services implementing SP & IdP-based SSO, Keycloak integration for multi-tenant SaaS deployments",
       "Designed and optimized data integrations across 25+ enterprise SaaS platforms, reducing sync latency by 30%",
       "Engineered scalable Kubernetes-based systems achieving 40% cost efficiency improvements through intelligent workload management",
-      "Led and managed cross-functional team of 10+ engineers, providing technical mentorship and overseeing project delivery"
+      "Led and managed cross-functional team of 10+ engineers, providing technical mentorship and overseeing project delivery",
+      "Built privacy-compliant analytics service with cookieless tracking, enabling real-time user behavior monitoring across customer websites",
+      "Holds M.Tech in Cloud Computing from BITS Pilani and Post Graduation in GenAI & Agentic AI from IIT Roorkee, complementing 5+ years of hands-on engineering experience"
     ],
     "interests": [
       "Agentic AI & Generative AI",
@@ -43,6 +45,13 @@
       "Data Engineering",
       "Application Security",
       "Quantum Computing"
+    ],
+    "profiles": [
+      {
+        "name": "LeetCode",
+        "url": "https://leetcode.com/u/sahil16gupta11/",
+        "icon": "code"
+      }
     ]
   },
   "workExperience": {
