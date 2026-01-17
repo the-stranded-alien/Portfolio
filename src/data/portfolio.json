@@ -381,101 +381,155 @@
   "projects": [
     {
       "id": 1,
-      "name": "Voice Agent Platform for Logistics",
-      "description": "Sophisticated AI-powered voice agent system for handling driver check-ins and emergency situations in logistics operations.",
-      "longDescription": "Built an advanced voice agent platform using React, TypeScript, FastAPI, and Retell AI. Features adaptive conversation flows, real-time processing, and intelligent emergency handling. Integrated with Supabase for data persistence and implemented complex state management for multi-turn conversations.",
-      "technologies": ["React", "TypeScript", "FastAPI", "Retell AI", "Supabase", "Framer Motion"],
+      "name": "Agentic Loan Lifecycle Intelligence Platform",
+      "description": "Multi-agent AI platform for intelligent loan lifecycle management, customer nudging, and cross-department coordination in banking.",
+      "longDescription": "Designing an agentic, multi-agent system to manage and optimize the end-to-end loan lifecycle in a banking domain, from lead generation to disbursement and post-loan engagement. The platform uses LLM-powered agents to sense loan status, reason over rules and policies, trigger contextual nudges, and collaborate across departments such as sales, underwriting, verification, and operations. Built using a FastAPI backend with LangChain/LangGraph-based agent orchestration, MCP for agent-to-tool communication, vector databases and memory layers for context retention, and integrations with external tools such as email, messaging, and voice systems. The system operates on synthetic data and mock APIs to simulate real-world banking workflows, decision points, and escalations.",
+      "technologies": ["FastAPI", "Python", "LangChain", "LangGraph", "Multi-Agent Systems", "LLMs", "Vector Databases", "MCP", "Event-Driven Architecture"],
       "status": "In Progress",
-      "github": "https://github.com/the-stranded-alien/voice-agent",
-      "demo": "https://voice-agent-demo.com",
+      "github": "",
       "highlights": [
-        "Adaptive conversation flows for complex scenarios",
-        "Real-time AI processing and decision making",
-        "Emergency situation detection and handling",
-        "Integration with logistics management systems"
+        "Multi-agent orchestration to manage loan stages from lead generation to disbursement",
+        "LLM-driven reasoning to detect stalled loans and trigger rule-based and contextual nudges",
+        "Cross-department collaboration between sales, underwriting, verification, and operations via agents",
+        "Learning and escalation mechanisms where repeated failed nudges trigger human or higher-authority intervention"
       ]
     },
     {
       "id": 2,
-      "name": "Multi-Agent Workflow Orchestration",
-      "description": "Exploring advanced workflow orchestration using Temporal as a replacement for LangGraph in AI applications.",
-      "longDescription": "Research and implementation project investigating how Temporal can provide more robust infrastructure for AI agent orchestration. Includes comparative analysis, architecture design, and proof-of-concept implementations.",
-      "technologies": ["Temporal", "Python", "LangGraph", "FastAPI", "PostgreSQL"],
-      "status": "Research",
-      "github": "https://github.com/the-stranded-alien/temporal-agents",
+      "name": "Contextual News Retrieval & Trending Intelligence System",
+      "description": "LLM-powered backend system for contextual news retrieval, ranking, and location-aware trending insights.",
+      "longDescription": "Designing and implementing a contextual news data retrieval platform that leverages LLMs to understand user intent, extract entities, and dynamically select optimal data retrieval strategies. The system ingests structured news data into a database, simulates multiple API behaviors (category, source, search, score, nearby), and enriches results with LLM-generated summaries. Additionally, implementing a location-based trending news feed by simulating user interaction events, computing trending scores using engagement volume, recency, and geographical relevance, and optimizing performance using location-aware caching strategies.",
+      "technologies": ["FastAPI", "Python", "LLMs", "OpenAI APIs", "SQL/NoSQL Databases", "Geospatial Queries", "Caching Systems"],
+      "status": "In Progress",
+      "github": "",
       "highlights": [
-        "Agent coordination patterns",
-        "Workflow reliability and fault tolerance",
-        "State management for long-running processes",
-        "Performance benchmarking"
+        "LLM-driven entity extraction and intent classification for contextual news queries",
+        "Simulated multi-endpoint news retrieval including category, source, search, score, and nearby queries",
+        "Advanced ranking logic combining relevance scores, recency, text similarity, and geospatial distance",
+        "Location-based trending news feed using simulated user engagement streams and geospatial caching"
       ]
     },
     {
       "id": 3,
-      "name": "Messaging System at Scale",
-      "description": "Architected a massively scalable messaging system designed to support billions of users.",
-      "longDescription": "Comprehensive database and system architecture design for a global-scale messaging platform. Includes sharding strategies, caching layers, real-time delivery mechanisms, and high-availability considerations.",
-      "technologies": ["PostgreSQL", "Redis", "Kafka", "Cassandra", "Kubernetes"],
+      "name": "Voice Agent Platform for Logistics",
+      "description": "AI-powered voice agent platform for automating driver check-ins and handling emergency situations in logistics operations.",
+      "longDescription": "Built an advanced AI voice agent system using React, TypeScript, FastAPI, and Retell AI to automate logistics dispatch operations. Implemented adaptive multi-turn conversation flows, real-time voice processing, and intelligent emergency detection. Integrated LLM-based natural language understanding using Anthropic APIs and persistent storage using Supabase, enabling real-time monitoring and structured data extraction from live voice calls.",
+      "technologies": ["React", "TypeScript", "FastAPI", "Retell AI", "Supabase", "Anthropic APIs"],
       "status": "Completed",
+      "github": "https://github.com/the-stranded-alien/VoiceAgentTool",
       "highlights": [
-        "Supports billions of users",
-        "Horizontal scalability architecture",
-        "Sub-second message delivery",
-        "99.99% uptime SLA"
+        "Adaptive multi-turn conversation flows for complex logistics scenarios",
+        "Real-time voice AI processing and structured conversation extraction",
+        "Intelligent emergency situation detection and automated escalation",
+        "Designed for easy integration with existing logistics management systems"
       ]
     },
     {
       "id": 4,
-      "name": "Agentic RAG System",
-      "description": "Advanced Retrieval-Augmented Generation system with intelligent agent orchestration.",
-      "longDescription": "Built a sophisticated RAG system featuring multi-agent collaboration, dynamic retrieval strategies, and context-aware generation. Implements advanced chunking strategies, hybrid search, and intelligent routing.",
-      "technologies": ["LangChain", "Pinecone", "OpenAI", "FastAPI", "React"],
+      "name": "Social Media Content Moderator",
+      "description": "AI-assisted content moderation system for automated classification and filtering of social media content.",
+      "longDescription": "Developed a modular content moderation pipeline using pretrained and fine-tuned language models to classify social media text into moderation categories (e.g., toxic, abusive, safe). The system includes demonstration notebooks for experimentation with different model backends (OpenAI, Hugging Face) and data preprocessing. Integrated multi-stage classification logic, threshold-based filtering, and explainability insights from model outputs to support human review workflows. Aimed to provide a reusable framework for building scalable moderation systems that can handle large volumes of unstructured social media text.",
+      "technologies": ["Python", "Jupyter Notebook", "OpenAI APIs", "Hugging Face", "NLP Classification", "Data Preprocessing"],
       "status": "Completed",
-      "github": "https://github.com/the-stranded-alien/agentic-rag",
+      "github": "https://github.com/the-stranded-alien/SocialMediaContentModerator",
       "highlights": [
-        "Multi-agent query processing",
-        "Hybrid vector and keyword search",
-        "Dynamic retrieval strategies",
-        "Context-aware response generation"
+        "Notebook workflows for fine-tuning and evaluating moderation models",
+        "Multi-backend support for OpenAI and Hugging Face model experimentation",
+        "Automated text classification into moderation categories",
+        "Framework designed for scalable and human-in-the-loop moderation"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Hotel Booking Microservices Platform",
+      "description": "Enterprise-style hotel management system built using a distributed microservices architecture.",
+      "longDescription": "Developed a full-scale hotel booking and management platform using Spring Boot microservices, API Gateway, and RabbitMQ for asynchronous communication. Implemented service discovery using Eureka and designed scalable REST APIs backed by MySQL. Containerized services using Docker and deployed them using Kubernetes to enable local distributed system simulation and production-style deployments.",
+      "technologies": ["Spring Boot", "Microservices", "API Gateway", "RabbitMQ", "Eureka", "MySQL", "Docker", "Kubernetes", "React"],
+      "status": "Completed",
+      "github": "https://github.com/the-stranded-alien/ScalableServices",
+      "highlights": [
+        "Microservices-based architecture with asynchronous messaging",
+        "API Gateway and service discovery for scalable request routing",
+        "Dockerized services with Kubernetes-based orchestration",
+        "Enterprise-style backend design simulating real-world distributed systems"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Risk-Based Data Policy Management System",
+      "description": "Automated system for detecting and reporting policy-based risks in enterprise user files.",
+      "longDescription": "Designed and developed a risk-based data policy management web application using Spring Boot microservices, Redis, and MySQL. Implemented policy evaluation engines to automatically detect compliance risks in user files and generate real-time reports. Reduced manual compliance assessment time by introducing automated policy checks and real-time alerting mechanisms.",
+      "technologies": ["Spring Boot", "Microservices", "Redis", "JPA", "Hibernate", "MySQL", "React"],
+      "status": "Completed",
+      "github": "https://github.com/the-stranded-alien/Policy_Module_SpringBoot_05",
+      "highlights": [
+        "Automated detection of policy-based data security risks",
+        "Real-time compliance reporting and alerting",
+        "Significant reduction in manual compliance assessment effort",
+        "Designed for enterprise-scale data security workflows"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Drowsiness Detection System",
+      "description": "Real-time driver drowsiness detection system using computer vision and deep learning.",
+      "longDescription": "Built a real-time drowsiness detection application using machine learning and deep learning techniques with computer vision. Implemented facial and eye movement tracking to detect driver fatigue and trigger alerts. Optimized the system to perform reliably in low-light conditions while maintaining high accuracy and real-time performance.",
+      "technologies": ["Machine Learning", "Deep Learning", "Computer Vision", "Python", "OpenCV"],
+      "status": "Completed",
+      "github": "https://github.com/the-stranded-alien/Drowsiness_Detection_Minor",
+      "highlights": [
+        "Real-time detection of driver drowsiness using vision-based models",
+        "Facial and eye movement tracking for fatigue analysis",
+        "High accuracy with reliable performance in low-light environments",
+        "Designed to improve road safety through timely alerts"
       ]
     }
   ],
   "certifications": [
     {
       "id": 1,
-      "title": "Advanced React with Redux",
-      "subtitle": "Complete React Developer Course",
-      "instructor": "Stephen Grider",
-      "institute": "Udemy",
-      "date": "2023-06",
-      "duration": "40 hours",
-      "logo": "/certifications/udemy.png",
-      "certificateLink": "https://www.udemy.com/certificate/example",
-      "githubLink": "https://github.com/the-stranded-alien/react-projects",
-      "skills": ["React", "Redux", "JavaScript", "ES6+", "Hooks", "Context API"]
+      "title": "Data Structures and Algorithms, Level-up Course",
+      "institute": "Coding Minutes",
+      "instructor": "Prateek Narang",
+      "date": "September 2021",
+      "duration": "30 Hours",
+      "logo": "/certifications/dsa.jpg",
+      "githubLink": "https://github.com/the-stranded-alien/DSA",
+      "certificateLink": "https://www.udemy.com/certificate/UC-8d6a63cf-4f74-4622-b158-121444f123b5/",
+      "skills": ["Data Structures", "Algorithms", "Problem Solving"]
     },
     {
       "id": 2,
-      "title": "AWS Certified Solutions Architect",
-      "subtitle": "Associate Level Certification",
-      "institute": "Amazon Web Services",
+      "title": "Data Science Master Course",
+      "institute": "Coding Blocks",
       "date": "2022-12",
       "duration": "3 months",
       "logo": "/certifications/aws.png",
+      "githubLink": "https://github.com/the-stranded-alien/Deep_Learning",
       "certificateLink": "https://aws.amazon.com/verification",
-      "skills": ["AWS", "Cloud Architecture", "EC2", "S3", "RDS", "VPC", "IAM"]
+      "skills": ["Data Analysis", "Data Visualization", "Artificial Intelligence", "Machine Learning", "Deep Learning", "Computer Vision", "NLP", "Reinforcement Learning"]
     },
     {
       "id": 3,
-      "title": "Machine Learning Specialization",
-      "subtitle": "Deep Learning and Neural Networks",
-      "instructor": "Andrew Ng",
-      "institute": "Coursera",
-      "date": "2022-08",
-      "duration": "6 months",
-      "logo": "/certifications/coursera.png",
-      "certificateLink": "https://www.coursera.org/account/accomplishments/verify/example",
-      "skills": ["Machine Learning", "Deep Learning", "Neural Networks", "TensorFlow", "Python", "Scikit-learn"]
+      "title": "MongoDB Basics",
+      "institute": "MongoDB University",
+      "date": "August 2019",
+      "duration": "2 months",
+      "logo": "/certifications/mongo.webp",
+      "certificateLink": "https://university.mongodb.com/course_completion/8bc1a2ff-feee-4229-a16e-bd8974fdd5c1",
+      "skills": ["NoSQL", "MongoDB", "Mongoose", "MongoDB Atlas", "MongoDB Compass"]
+    },
+    {
+      "id": 10,
+      "title": "Web Development using Node.js",
+      "instructor": "Arnav Gupta",
+      "institute": "Coding Blocks",
+      "date": "July 2019",
+      "duration": "9 Months",
+      "logo": "/certifications/webdev.png",
+      "certificateLink": "https://online.codingblocks.com/app/certificates/CBOL-6289-f0de53f9",
+      "githubLink": "https://github.com/the-stranded-alien/Node.js",
+      "skills": ["Node.js", "Express.js", "WebSockets", "React", "Redux", "TypeScript", "ES6+"]
     }
   ],
   "books": [

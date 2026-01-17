@@ -39,8 +39,8 @@ const Certifications = ({ data }) => {
                 <div className="relative flex flex-col flex-1">
                   {/* Logo */}
                   {cert.logo && (
-                    <div className="mb-4 flex justify-center">
-                      <div className="w-20 h-20 bg-white dark:bg-white rounded-xl flex items-center justify-center shadow-lg border border-void-200 dark:border-void-300 p-3">
+                    <div className="mb-4 w-full h-[40%] flex justify-center items-center">
+                      <div className="w-full h-full bg-white dark:bg-white rounded-xl flex items-center justify-center shadow-lg border border-void-200 dark:border-void-300 p-3">
                         <img 
                           src={getAssetPath(cert.logo)} 
                           alt={`${cert.institute || cert.title} logo`}

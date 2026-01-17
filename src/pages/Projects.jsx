@@ -67,6 +67,21 @@ const Projects = ({ data }) => {
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                       <div className="flex-1">
                         <div className="flex items-start gap-3 mb-3 flex-wrap">
+                          <motion.div
+                            animate={{ 
+                              rotate: [0, 360],
+                              scale: [1, 1.2, 1],
+                              opacity: [0.7, 1, 0.7]
+                            }}
+                            transition={{ 
+                              rotate: { duration: 3, repeat: Infinity, ease: "linear" },
+                              scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                              opacity: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+                            }}
+                            className="flex-shrink-0 mt-1"
+                          >
+                            <Star className="w-6 h-6 text-nebula-500 fill-nebula-500" />
+                          </motion.div>
                           <h2 className="text-2xl md:text-3xl font-display font-bold text-void-900 dark:text-starlight-50 flex-1">
                             {project.name}
                           </h2>
