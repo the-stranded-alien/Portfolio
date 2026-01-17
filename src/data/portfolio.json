@@ -483,82 +483,68 @@
       "id": 1,
       "title": "Designing Data-Intensive Applications",
       "author": "Martin Kleppmann",
-      "year": "2023",
-      "description": "Comprehensive guide to building scalable, reliable, and maintainable data systems.",
+      "year": "2024",
+      "description": "Comprehensive Guide to Building Scalable, Reliable, and Maintainable Data Systems.",
       "link": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
-      "category": "System Design"
+      "category": "System Architecture"
     },
     {
       "id": 2,
-      "title": "Clean Architecture",
-      "author": "Robert C. Martin",
-      "year": "2022",
-      "description": "A guide to software structure and design principles for building maintainable systems.",
-      "link": "https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164",
-      "category": "Software Engineering"
+      "title": "The StatQuest Illustrated Guide to Neural Networks and AI",
+      "author": "Josh Starmer",
+      "year": "2026",
+      "description": "Comprehensive Guide to Building Scalable, Reliable, and Maintainable Data Systems.",
+      "link": "https://statquest.gumroad.com/l/kihdi",
+      "category": "Artificial Intelligence"
     },
     {
       "id": 3,
-      "title": "The Pragmatic Programmer",
-      "author": "Andrew Hunt, David Thomas",
-      "year": "2021",
-      "description": "A practical guide to becoming a more effective and productive programmer.",
-      "link": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
-      "category": "Software Engineering"
-    }
-  ],
-  "papers": [
-    {
-      "id": 1,
-      "title": "Attention Is All You Need",
-      "authors": "Vaswani et al.",
-      "year": "2017",
-      "venue": "NeurIPS",
-      "description": "Introduces the Transformer architecture, foundation of modern LLMs.",
-      "link": "https://arxiv.org/abs/1706.03762",
-      "category": "Machine Learning"
+      "title": "Agentic Design Patterns",
+      "author": "Antonio Gulli",
+      "year": "2026",
+      "description": "A Hands-On Guide to Building Intelligent Systems",
+      "link": "https://books.google.co.in/books/about/Agentic_Design_Patterns.html?id=5Z6TEQAAQBAJ&redir_esc=y",
+      "category": "Agentic AI"
     },
     {
-      "id": 2,
-      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
-      "authors": "Lewis et al.",
-      "year": "2020",
-      "venue": "NeurIPS",
-      "description": "Presents RAG architecture combining retrieval and generation for knowledge-intensive tasks.",
-      "link": "https://arxiv.org/abs/2005.11401",
-      "category": "NLP"
+      "id": 4,
+      "title": "Building Multi-Tenant SaaS Architectures",
+      "author": "Tod Golding",
+      "year": "2025",
+      "description": "Principles, Practices, and Patterns Using AWS",
+      "link": "https://www.oreilly.com/library/view/building-multi-tenant-saas/9781098140632/",
+      "category": "Multi-Tenant SaaS"
     },
     {
-      "id": 3,
-      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
-      "authors": "Yao et al.",
-      "year": "2022",
-      "venue": "arXiv",
-      "description": "Proposes ReAct framework for combining reasoning and acting in language models.",
-      "link": "https://arxiv.org/abs/2210.03629",
-      "category": "AI Agents"
-    }
-  ],
-  "blogs": [
-    {
-      "id": 1,
-      "title": "Building Scalable Multi-Agent Systems",
-      "author": "Sahil Gupta",
-      "date": "2024-01",
-      "description": "Exploring architectures and patterns for building robust multi-agent AI systems.",
-      "link": "https://medium.com/@yourusername/multi-agent-systems",
-      "category": "AI"
+      "id": 5,
+      "title": "Database Internals",
+      "author": "Alex Petrov",
+      "year": "2025",
+      "description": "Deep Dive into How Distributed Data Systems Work",
+      "link": "https://www.oreilly.com/library/view/database-internals/9781492040330/",
+      "category": "Databases"
     },
     {
-      "id": 2,
-      "title": "Understanding RAG Architectures",
-      "author": "Sahil Gupta",
-      "date": "2023-12",
-      "description": "Deep dive into Retrieval-Augmented Generation and its applications in modern AI systems.",
-      "link": "https://medium.com/@yourusername/rag-architectures",
-      "category": "AI"
+      "id": 6,
+      "title": "Software Architecture: The Hard Parts",
+      "author": "Neal Ford, Mark Richards, Pramod Sadalage & Z. Dehghani",
+      "year": "2025",
+      "description": "Modern Trade-Off Analyses for Distributed Architectures",
+      "link": "https://www.oreilly.com/library/view/software-architecture-the/9781492086888/",
+      "category": "System Architecture"
+    },
+    {
+      "id": 7,
+      "title": "Designing Distributed Systems",
+      "author": "Brendan Burns",
+      "year": "2024",
+      "description": "Patterns and Paradigms for Scalable, Reliable Systems Using Kubernetes",
+      "link": "https://www.oreilly.com/library/view/designing-distributed-systems/9781491983638/",
+      "category": "Distributed Systems"
     }
   ],
+  "papers": [],
+  "blogs": [],
   "resume": {
     "pdfUrl": "/Resume.pdf",
     "lastUpdated": "2024-01-10",
