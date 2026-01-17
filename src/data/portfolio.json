@@ -488,6 +488,15 @@
   "certifications": [
     {
       "id": 1,
+      "title": "System Design Masterclass",
+      "instructor": "Arpit Bhayani",
+      "date": "January 2026",
+      "duration": "2 Months",
+      "logo": "/certifications/system.png",
+      "skills": ["System Design", "Software Architecture", "Databases", "CDN", "Caching", "Cloud Services"]
+    },
+    {
+      "id": 1,
       "title": "Data Structures and Algorithms, Level-up Course",
       "institute": "Coding Minutes",
       "instructor": "Prateek Narang",
@@ -504,13 +513,24 @@
       "institute": "Coding Blocks",
       "date": "2022-12",
       "duration": "3 months",
-      "logo": "/certifications/aws.png",
+      "logo": "/certifications/datascience.png",
       "githubLink": "https://github.com/the-stranded-alien/Deep_Learning",
-      "certificateLink": "https://aws.amazon.com/verification",
+      "certificateLink": "https://online.codingblocks.com/certificates/CBOL-22769-d845",
       "skills": ["Data Analysis", "Data Visualization", "Artificial Intelligence", "Machine Learning", "Deep Learning", "Computer Vision", "NLP", "Reinforcement Learning"]
     },
     {
-      "id": 3,
+      "id": 4,
+      "title": "Competitive Programming",
+      "institute": "Coding Blocks",
+      "instructor": "Prateek Narang",
+      "date": "December 2020",
+      "duration": "6 Months",
+      "logo": "/certifications/competitive.png",
+      "certificateLink": "https://online.codingblocks.com/app/certificates/CBOL-98620-924f",
+      "skills": ["Data Structures", "Algorithms", "Problem Solving", "Competitive Programming"]
+    },
+    {
+      "id": 5,
       "title": "MongoDB Basics",
       "institute": "MongoDB University",
       "date": "August 2019",
@@ -520,7 +540,7 @@
       "skills": ["NoSQL", "MongoDB", "Mongoose", "MongoDB Atlas", "MongoDB Compass"]
     },
     {
-      "id": 10,
+      "id": 6,
       "title": "Web Development using Node.js",
       "instructor": "Arnav Gupta",
       "institute": "Coding Blocks",
@@ -530,6 +550,35 @@
       "certificateLink": "https://online.codingblocks.com/app/certificates/CBOL-6289-f0de53f9",
       "githubLink": "https://github.com/the-stranded-alien/Node.js",
       "skills": ["Node.js", "Express.js", "WebSockets", "React", "Redux", "TypeScript", "ES6+"]
+    }
+  ],
+  "plannedCertifications": [
+    {
+      "id": 1,
+      "title": "AWS Certified Solutions Architect Associate",
+      "institute": "Amazon Web Services",
+      "expectedDate": "Q2 2026",
+      "logo": "/certifications/awsarch.png",
+      "skills": ["AWS", "Cloud Architecture", "Solutions Design", "Infrastructure"],
+      "registrationLink": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    },
+    {
+      "id": 2,
+      "title": "AWS Certified Developer Associate",
+      "institute": "Amazon Web Services",
+      "expectedDate": "Q3 2026",
+      "logo": "/certifications/awsdev.png",
+      "skills": ["AWS", "Cloud Architecture", "Solutions Design", "Infrastructure"],
+      "registrationLink": "https://aws.amazon.com/certification/certified-developer-associate/"
+    },
+    {
+      "id": 3,
+      "title": "Certified Kubernetes Application Developer (CKAD)",
+      "institute": "The Linux Foundation",
+      "expectedDate": "Q4 2026",
+      "logo": "/certifications/ckad.png",
+      "skills": ["Kubernetes", "Container Orchestration", "DevOps", "Cloud Native"],
+      "registrationLink": "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/"
     }
   ],
   "books": [
