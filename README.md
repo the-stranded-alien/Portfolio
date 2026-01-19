@@ -1,11 +1,11 @@
-# 🚀 Portfolio Website - Space Theme Edition
+# 🚀 Portfolio Website - Tech & Space Theme Edition
 
 A stunning, modern portfolio website with a cosmic space theme, featuring dark/light mode, smooth animations, and a professional PDF resume viewer. Built with React 18, Vite, Tailwind CSS, and Framer Motion.
 
 ## ✨ Features
 
 ### Design
-- **🌌 Space Theme**: Cosmic purple/black color palette with stellar visual effects
+- **🌌 Tech & Space Theme**: Cosmic purple/black color palette with stellar visual effects
 - **🌓 Dark/Light Mode**: Seamless theme switching with persistent preferences
 - **✨ Animated Background**: Dynamic star field with particles
 - **🎭 Smooth Animations**: Professional transitions using Framer Motion

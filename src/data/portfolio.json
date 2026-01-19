@@ -65,7 +65,7 @@
       "location": "Bengaluru, Karnataka, India",
       "startDate": "January 2025",
       "endDate": "Present",
-      "level": "L3",
+      "level": "",
       "logo": "/work/revsure.svg",
       "website": "https://www.revsure.ai/",
       "description": "Led the design and implementation of agentic and multi-agent AI systems integrated into enterprise workflows, building scalable backend infrastructure, data integrations, third-party integrations, MCP tooling, secure auth systems, and Kubernetes-based data pipelines to drive AI-powered automation and platform scalability.",
@@ -88,7 +88,7 @@
       "location": "Hyderabad, Telangana, India",
       "startDate": "August 2023",
       "endDate": "January 2025",
-      "level": "L2",
+      "level": "",
       "logo": "/work/rugged.webp",
       "website": "https://www.ruggedmonitoring.com/",
       "description": "Built high-performance backend and embedded systems enabling real-time AI monitoring, implemented IPC and API integrations, optimized memory-constrained applications, and led a 10+ member team delivering scalable, production-grade systems.",
@@ -108,7 +108,7 @@
       "location": "Bengaluru, Karnataka, India",
       "startDate": "May 2022",
       "endDate": "July 2023",
-      "level": "L1",
+      "level": "",
       "logo": "/work/beskar.jpeg",
       "website": "https://www.beskar.tech/",
       "description": "Developed enterprise microservices and APIs, including e-signature integration and a configurable Revenue Operations platform, delivering scalable backend systems, dashboards, and integrations for compliance-driven and operational workflows.",
@@ -123,16 +123,17 @@
       "id": 4,
       "company": "Finvolv",
       "position": "Software Engineer",
-      "location": "India",
+      "location": "Bengaluru, Karnataka, India",
       "startDate": "February 2021",
       "endDate": "May 2022",
-      "level": "L1",
+      "level": "",
       "logo": "/work/finvolv.jpeg",
       "website": "https://www.finvolv.ai/",
       "description": "Contributed to a cloud-native security and cyber-safety platform using Spring Boot, React, and GCP, building scalable security features, monitoring, and compliance capabilities for distributed enterprise cloud environments.",
       "achievements": [
         "Developed a cloud-based Data Security and Cyber Safety platform using Java Spring Boot, React, and GCP, implementing multiple features through GCP APIs to enable advanced security measures and compliance controls for enterprise teams working on cloud platforms.",
-        "Collaborated with cross-functional teams to enhance workspace security by building scalable security monitoring, data protection features, and real-time vulnerability detection capabilities for distributed cloud environments."
+        "Collaborated with cross-functional teams to enhance workspace security by building scalable security monitoring, data protection features, and real-time vulnerability detection capabilities for distributed cloud environments.",
+        "Promoted from Intern Developer to Software Engineer after completing the internship project within 3 months of joining the company."
       ],
       "technologies": ["Java - Spring Boot", "MySQL", "React.js", "GCP", "AWS"]
     }
@@ -409,8 +410,8 @@
       "description": "LLM-powered backend system for contextual news retrieval, ranking, and location-aware trending insights.",
       "longDescription": "Designing and implementing a contextual news data retrieval platform that leverages LLMs to understand user intent, extract entities, and dynamically select optimal data retrieval strategies. The system ingests structured news data into a database, simulates multiple API behaviors (category, source, search, score, nearby), and enriches results with LLM-generated summaries. Additionally, implementing a location-based trending news feed by simulating user interaction events, computing trending scores using engagement volume, recency, and geographical relevance, and optimizing performance using location-aware caching strategies.",
       "technologies": ["FastAPI", "Python", "LLMs", "OpenAI APIs", "SQL/NoSQL Databases", "Geospatial Queries", "Caching Systems"],
-      "status": "In Progress",
-      "github": "",
+      "status": "Completed",
+      "github": "https://github.com/the-stranded-alien/Contextual_News_Data_Retrieval",
       "highlights": [
         "LLM-driven entity extraction and intent classification for contextual news queries",
         "Simulated multi-endpoint news retrieval including category, source, search, score, and nearby queries",

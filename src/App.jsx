@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import CosmicBackground from './components/CosmicBackground';
@@ -15,6 +15,21 @@ import Reading from './pages/Reading';
 import Resume from './pages/Resume';
 import portfolioData from './data/portfolio.json';
 
+// Component to scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const [data, setData] = useState(portfolioData);
 
@@ -25,6 +40,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen flex flex-col relative">
           <CosmicBackground />
           <Navbar personalData={data.personal} />

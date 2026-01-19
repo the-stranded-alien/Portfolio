@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Twitter, Mail, Globe, Rocket } from 'lucide-react';
 
@@ -52,13 +53,13 @@ const Footer = ({ personalData }) => {
             </h3>
             <div className="grid grid-cols-2 gap-2">
               {['Home', 'About', 'Work', 'Projects', 'Resume'].map((link) => (
-                <a
+                <Link
                   key={link}
-                  href={`/${link.toLowerCase() === 'home' ? '' : link.toLowerCase()}`}
+                  to={`/${link.toLowerCase() === 'home' ? '' : link.toLowerCase()}`}
                   className="text-void-600 dark:text-starlight-400 hover:text-cosmos-600 dark:hover:text-cosmos-400 text-sm transition-colors duration-200"
                 >
                   {link}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
