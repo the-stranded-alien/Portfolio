@@ -390,13 +390,42 @@
   },
   "projects": [
     {
+      "id": 0,
+      "name": "Intelligent Voice Agent with Avatar",
+      "description": "Full-stack AI voice agent with synchronized visual avatar for natural conversation and appointment-style booking workflows.",
+      "longDescription": "Implemented a web-based voice assistant that combines real-time speech recognition, LLM-powered reasoning, and a synchronized visual avatar. The system supports natural multi-turn conversations, scheduling-style flows (such as booking and managing time slots), real-time transcription, and conversation summarization. The backend is built with Python using LiveKit Agents and FastAPI, integrating Deepgram for STT, Cartesia for TTS, Anthropic Claude for LLM reasoning, Tavus for avatar streaming, and Supabase for persistence. The frontend is a React + TypeScript app using Vite, LiveKit Components, and WebRTC to deliver low-latency, bi-directional audio/video and transcripts in the browser.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "LiveKit Agents",
+        "Supabase",
+        "Deepgram",
+        "Cartesia",
+        "Anthropic Claude",
+        "Tavus Avatar",
+        "React",
+        "TypeScript",
+        "Vite",
+        "LiveKit Components",
+        "WebRTC"
+      ],
+      "status": "Completed",
+      "github": "https://github.com/the-stranded-alien/VoiceAgentWithAvatar",
+      "highlights": [
+        "End-to-end voice assistant with synchronized avatar, real-time transcription, and conversation summaries",
+        "Tool-calling agent that can identify users, fetch slots, book, modify, retrieve, and cancel appointments",
+        "LiveKit-based architecture that streams low-latency audio/video between browser and backend agent",
+        "Containerized deployment using Docker Compose for backend, frontend, and supporting services"
+      ]
+    },
+    {
       "id": 1,
       "name": "Agentic Loan Lifecycle Intelligence Platform",
       "description": "Multi-agent AI platform for intelligent loan lifecycle management, customer nudging, and cross-department coordination in banking.",
       "longDescription": "Designing an agentic, multi-agent system to manage and optimize the end-to-end loan lifecycle in a banking domain, from lead generation to disbursement and post-loan engagement. The platform uses LLM-powered agents to sense loan status, reason over rules and policies, trigger contextual nudges, and collaborate across departments such as sales, underwriting, verification, and operations. Built using a FastAPI backend with LangChain/LangGraph-based agent orchestration, MCP for agent-to-tool communication, vector databases and memory layers for context retention, and integrations with external tools such as email, messaging, and voice systems. The system operates on synthetic data and mock APIs to simulate real-world banking workflows, decision points, and escalations.",
       "technologies": ["FastAPI", "Python", "LangChain", "LangGraph", "Multi-Agent Systems", "LLMs", "Vector Databases", "MCP", "Event-Driven Architecture"],
       "status": "In Progress",
-      "github": "",
+      "github": "https://github.com/the-stranded-alien/Intelligent_Loan_Disbursement_System",
       "highlights": [
         "Multi-agent orchestration to manage loan stages from lead generation to disbursement",
         "LLM-driven reasoning to detect stalled loans and trigger rule-based and contextual nudges",
