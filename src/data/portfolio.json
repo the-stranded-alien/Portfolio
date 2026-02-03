@@ -6,7 +6,7 @@
     "email": "sahil16gupta11@gmail.com",
     "phone": "+91-7249999056",
     "location": "Bengaluru, Karnataka, India",
-    "bio": "Senior Software Engineer with 5+ years of experience architecting and building scalable, secure enterprise platforms. Specializing in distributed systems, cloud-native infrastructure, microservices architecture, and full-stack development. Passionate about creating innovative solutions that drive business transformation and deliver exceptional user experiences.",
+    "bio": "Lead Software Engineer with 5+ years of experience architecting and building scalable, secure enterprise platforms. Specializing in distributed systems, cloud-native infrastructure, microservices architecture, and full-stack development. Passionate about creating innovative solutions that drive business transformation and deliver exceptional user experiences.",
     "tagline": "Building the future of AI-powered applications",
     "buzzWords": [
       "Agentic AI & Generative AI",
@@ -704,7 +704,7 @@
     "pdfUrl": "/Resume.pdf",
     "lastUpdated": "2024-01-10",
     "sections": {
-      "summary": "Senior Software Engineer with 5+ years of experience building scalable, secure, and AI-driven enterprise platforms across SaaS, cloud-native, and distributed systems. Proven expertise in Agentic AI, multi-agent architectures, backend and microservices development, and Kubernetes-based infrastructure. Strong background in designing secure authentication and authorization systems (SSO, OAuth, IdP/SP), building high-performance data pipelines, and developing robust third-party integrations. Experienced in forward-deployed engineering, collaborating directly with global customers to drive onboarding, data integrations, security integrations, and production adoption.",
+      "summary": "Lead Software Engineer with 5+ years of experience building scalable, secure, and AI-driven enterprise platforms across SaaS, cloud-native, and distributed systems. Proven expertise in Agentic AI, multi-agent architectures, backend and microservices development, and Kubernetes-based infrastructure. Strong background in designing secure authentication and authorization systems (SSO, OAuth, IdP/SP), building high-performance data pipelines, and developing robust third-party integrations. Experienced in forward-deployed engineering, collaborating directly with global customers to drive onboarding, data integrations, security integrations, and production adoption.",
       "highlights": [
         "Pioneered agentic AI features by integrating LLM-based intelligent agents into workflows, automating repetitive tasks and improving customer productivity through AI-driven automation",
         "Built Model Context Protocol (MCP) server to expose in-house APIs as tools for Multi-Agent systems, enabling sophisticated agent-to-agent communication and workflow orchestration",
