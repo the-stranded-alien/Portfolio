@@ -65,23 +65,25 @@ const Home = ({ data }) => {
           animate="visible"
           className="max-w-6xl mx-auto"
         >
-          {/* Badge */}
-          <motion.div variants={itemVariants} className="flex justify-center mb-8">
-            <motion.div 
-              className="inline-flex items-center space-x-2 px-5 py-2.5 bg-cosmos-500/10 dark:bg-cosmos-500/20 border border-cosmos-500/30 dark:border-cosmos-500/40 rounded-full backdrop-blur-sm"
-              whileHover={{ scale: 1.05 }}
-            >
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          {/* Badge - only when explicitly shown */}
+          {personal?.showAvailableForOpportunities !== false && (
+            <motion.div variants={itemVariants} className="flex justify-center mb-8">
+              <motion.div 
+                className="inline-flex items-center space-x-2 px-5 py-2.5 bg-cosmos-500/10 dark:bg-cosmos-500/20 border border-cosmos-500/30 dark:border-cosmos-500/40 rounded-full backdrop-blur-sm"
+                whileHover={{ scale: 1.05 }}
               >
-                <Sparkles className="w-5 h-5 text-cosmos-500 dark:text-cosmos-400" />
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                >
+                  <Sparkles className="w-5 h-5 text-cosmos-500 dark:text-cosmos-400" />
+                </motion.div>
+                <span className="text-sm font-semibold text-cosmos-700 dark:text-cosmos-300 tracking-wide">
+                  Available for exciting opportunities
+                </span>
               </motion.div>
-              <span className="text-sm font-semibold text-cosmos-700 dark:text-cosmos-300 tracking-wide">
-                Available for exciting opportunities
-              </span>
             </motion.div>
-          </motion.div>
+          )}
 
           {/* Main Heading with Cosmic Effect */}
           <motion.div variants={itemVariants} className="text-center mb-6">

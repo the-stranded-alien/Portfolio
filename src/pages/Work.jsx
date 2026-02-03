@@ -88,6 +88,28 @@ const Work = ({ data }) => {
                               </span>
                             )}
                           </div>
+                          {job.positions && job.positions.length > 0 && (() => {
+                            const isCurrentJob = String(job.endDate || '').toLowerCase() === 'present';
+                            return (
+                              <div className="flex flex-col gap-1 mt-1.5 mb-1">
+                                {[...job.positions].reverse().map((p, i) => (
+                                  <div
+                                    key={i}
+                                    className={`flex items-center gap-2 text-sm ${i === 0 ? 'text-void-700 dark:text-starlight-200 font-medium' : 'text-void-500 dark:text-starlight-500'}`}
+                                  >
+                                    {i === 0 && isCurrentJob && (
+                                      <span className="inline-flex items-center rounded-md bg-cosmos-500/15 dark:bg-cosmos-500/25 px-1.5 py-0.5 text-xs font-semibold text-cosmos-700 dark:text-cosmos-300 border border-cosmos-500/30">
+                                        Current
+                                      </span>
+                                    )}
+                                    <span className={i === 0 ? 'font-semibold' : ''}>{p.title}</span>
+                                    <span className="text-void-400 dark:text-starlight-600">·</span>
+                                    <span>{p.startDate} – {p.endDate}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            );
+                          })()}
                           <h3 className="text-xl text-gradient font-semibold">
                             {job.company}
                           </h3>
