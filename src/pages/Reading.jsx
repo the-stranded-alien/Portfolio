@@ -28,16 +28,16 @@ const Reading = ({ data }) => {
           </motion.h1>
 
           {/* Blogs Section */}
-          {blogs.length > 0 && (
-            <motion.div variants={itemVariants} className="mb-16">
-              <div className="flex items-center space-x-3 mb-8">
-                <PenTool className="w-8 h-8 text-nebula-500" />
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-void-900 dark:text-starlight-50">
-                  Blogs
-                </h2>
-              </div>
+          <motion.div variants={itemVariants} className="mb-16">
+            <div className="flex items-center space-x-3 mb-8">
+              <PenTool className="w-8 h-8 text-nebula-500" />
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-void-900 dark:text-starlight-50">
+                Blogs
+              </h2>
+            </div>
 
-              <div className="card max-w-4xl mx-auto">
+            <div className="card max-w-4xl mx-auto">
+              {blogs.length > 0 ? (
                 <div className="space-y-6">
                   {blogs.map((blog, index) => (
                     <motion.div
@@ -101,9 +101,20 @@ const Reading = ({ data }) => {
                     </motion.div>
                   ))}
                 </div>
-              </div>
-            </motion.div>
-          )}
+              ) : (
+                <div className="text-center py-12">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cosmos-600 to-nebula-500 rounded-lg flex items-center justify-center shadow-glow">
+                      <PenTool className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <p className="text-xl text-void-600 dark:text-starlight-400 font-medium">
+                    Coming Soon...
+                  </p>
+                </div>
+              )}
+            </div>
+          </motion.div>
 
           {/* Books Section */}
           {books.length > 0 && (
