@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Moon, Sparkles } from 'lucide-react';
+import { Menu, X, Sun, Moon, Sparkles, SunDim } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navbar = ({ personalData }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -96,38 +96,68 @@ const Navbar = ({ personalData }) => {
 
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-3">
-            {/* Theme Toggle */}
-            <motion.button
-              onClick={toggleTheme}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="theme-toggle"
-              aria-label="Toggle theme"
-            >
-              <AnimatePresence mode="wait" initial={false}>
-                {theme === 'dark' ? (
-                  <motion.div
-                    key="sun"
-                    initial={{ y: -20, opacity: 0, rotate: -90 }}
-                    animate={{ y: 0, opacity: 1, rotate: 0 }}
-                    exit={{ y: 20, opacity: 0, rotate: 90 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Sun className="w-5 h-5 text-cosmos-400" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="moon"
-                    initial={{ y: -20, opacity: 0, rotate: -90 }}
-                    animate={{ y: 0, opacity: 1, rotate: 0 }}
-                    exit={{ y: 20, opacity: 0, rotate: 90 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Moon className="w-5 h-5 text-cosmos-600" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+            {/* Theme Toggle: Cool sliding toggle */}
+            <div className="relative flex items-center bg-void-100/80 dark:bg-void-800/80 backdrop-blur-sm rounded-xl p-1 border border-void-300/50 dark:border-starlight-700/50 shadow-lg dark:shadow-glow">
+              {/* Sliding indicator */}
+              <motion.div
+                className="absolute h-8 rounded-lg bg-gradient-to-r from-cosmos-500 to-nebula-500 shadow-glow z-0"
+                initial={false}
+                animate={{
+                  x: theme === 'light' ? 0 : theme === 'dim' ? 32 : 64,
+                  width: 32,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 500,
+                  damping: 30,
+                }}
+              />
+              
+              {/* Theme buttons */}
+              <div className="relative z-10 flex items-center">
+                <motion.button
+                  onClick={() => setTheme('light')}
+                  className="relative flex items-center justify-center w-8 h-8 rounded-lg transition-colors duration-200"
+                  aria-label="Light theme"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Moon className={`w-4 h-4 transition-colors duration-200 ${
+                    theme === 'light' 
+                      ? 'text-white drop-shadow-lg' 
+                      : 'text-void-500 dark:text-starlight-500 hover:text-cosmos-600 dark:hover:text-cosmos-400'
+                  }`} />
+                </motion.button>
+                
+                <motion.button
+                  onClick={() => setTheme('dim')}
+                  className="relative flex items-center justify-center w-8 h-8 rounded-lg transition-colors duration-200"
+                  aria-label="Dim theme"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <SunDim className={`w-4 h-4 transition-colors duration-200 ${
+                    theme === 'dim' 
+                      ? 'text-white drop-shadow-lg' 
+                      : 'text-void-500 dark:text-starlight-500 hover:text-cosmos-600 dark:hover:text-cosmos-400'
+                  }`} />
+                </motion.button>
+                
+                <motion.button
+                  onClick={() => setTheme('dark')}
+                  className="relative flex items-center justify-center w-8 h-8 rounded-lg transition-colors duration-200"
+                  aria-label="Dark theme"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Sun className={`w-4 h-4 transition-colors duration-200 ${
+                    theme === 'dark' 
+                      ? 'text-white drop-shadow-lg' 
+                      : 'text-void-500 dark:text-starlight-500 hover:text-cosmos-600 dark:hover:text-cosmos-400'
+                  }`} />
+                </motion.button>
+              </div>
+            </div>
 
             {/* Mobile Menu Button */}
             <button

@@ -26,22 +26,21 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    
+    root.classList.remove('dark', 'dim');
     if (theme === 'dark') {
       root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
+    } else if (theme === 'dim') {
+      root.classList.add('dim', 'dark'); // dim reuses dark styles; CSS overrides lighten key surfaces
     }
-    
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+  const cycleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dim' : prev === 'dim' ? 'dark' : 'light'));
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme: cycleTheme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
