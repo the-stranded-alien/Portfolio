@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Sahil Gupta",
-    "title": "Lead Engineer | Software Generalist",
+    "title": "Lead Software Engineer | Software Generalist",
     "showAvailableForOpportunities": false,
     "email": "sahil16gupta11@gmail.com",
     "phone": "+91-7249999056",
@@ -62,10 +62,10 @@
     {
       "id": 1,
       "company": "RevSure AI",
-      "position": "Lead Engineer",
+      "position": "Lead Software Engineer",
       "positions": [
         { "title": "Senior Software Engineer", "startDate": "January 2025", "endDate": "January 2026" },
-        { "title": "Lead Engineer", "startDate": "January 2026", "endDate": "Present" }
+        { "title": "Lead Software Engineer", "startDate": "January 2026", "endDate": "Present" }
       ],
       "location": "Bengaluru, Karnataka, India",
       "startDate": "January 2025",
