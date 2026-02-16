@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Coffee, Code, Brain, User, Target, Lightbulb, Cloud, Database, Shield, Zap, Network, Layers, Activity, Languages, ExternalLink, Globe } from 'lucide-react';
+import { Coffee, Code, Brain, User, Target, Lightbulb, Cloud, Database, Shield, Zap, Network, Layers, Activity, Languages, ExternalLink, Globe, Github, Trophy } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 
 const About = ({ data }) => {
@@ -13,6 +13,18 @@ const About = ({ data }) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  // Map profile icons
+  const getProfileIcon = (iconName) => {
+    const iconMap = {
+      'github': Github,
+      'code': Code,
+      'leetcode': Trophy,
+    };
+    
+    const lowerIcon = (iconName || '').toLowerCase();
+    return iconMap[lowerIcon] || Code; // Default to Code if not found
   };
 
   // Map interests to icons
@@ -149,9 +161,10 @@ const About = ({ data }) => {
                         style={{ pointerEvents: 'auto' }}
                       >
                         <div className="flex items-center space-x-3">
-                          {profile.icon && (
-                            <Code className="w-4 h-4 text-cosmos-500 dark:text-cosmos-400" />
-                          )}
+                          {profile.icon && (() => {
+                            const IconComponent = getProfileIcon(profile.icon);
+                            return <IconComponent className="w-4 h-4 text-cosmos-500 dark:text-cosmos-400" />;
+                          })()}
                           <span className="text-void-700 dark:text-starlight-300 font-medium">{profile.name}</span>
                         </div>
                         <ExternalLink className="w-4 h-4 text-void-500 dark:text-starlight-500 opacity-0 group-hover/item:opacity-100 transition-opacity" />

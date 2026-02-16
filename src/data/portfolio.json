@@ -49,9 +49,14 @@
     ],
     "profiles": [
       {
+        "name": "GitHub",
+        "url": "https://github.com/the-stranded-alien",
+        "icon": "github"
+      },
+      {
         "name": "LeetCode",
         "url": "https://leetcode.com/u/sahil16gupta11/",
-        "icon": "code"
+        "icon": "leetcode"
       }
     ]
   },
@@ -64,7 +69,7 @@
       "company": "RevSure AI",
       "position": "Lead Software Engineer",
       "positions": [
-        { "title": "Senior Software Engineer", "startDate": "January 2025", "endDate": "January 2026" },
+        { "title": "Senior Software Engineer", "startDate": "January 2025", "endDate": "December 2025" },
         { "title": "Lead Software Engineer", "startDate": "January 2026", "endDate": "Present" }
       ],
       "location": "Bengaluru, Karnataka, India",
