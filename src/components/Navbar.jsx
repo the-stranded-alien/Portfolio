@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Moon, Sparkles, SunDim } from 'lucide-react';
+import { Menu, X, Sun, Moon, Sparkles, SunDim, Maximize2, Minimize2 } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navbar = ({ personalData }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const location = useLocation();
   const { theme, setTheme } = useTheme();
 
@@ -33,6 +34,22 @@ const Navbar = ({ personalData }) => {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  };
 
   return (
     <motion.nav
@@ -158,6 +175,39 @@ const Navbar = ({ personalData }) => {
                 </motion.button>
               </div>
             </div>
+
+            {/* Fullscreen Toggle */}
+            <motion.button
+              onClick={toggleFullscreen}
+              className="theme-toggle"
+              aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {isFullscreen ? (
+                  <motion.div
+                    key="minimize"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Minimize2 className="w-5 h-5" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="maximize"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Maximize2 className="w-5 h-5" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
 
             {/* Mobile Menu Button */}
             <button
