@@ -12,7 +12,7 @@ const Footer = ({ personalData }) => {
   ];
 
   return (
-    <footer className="relative bg-void-50 dark:bg-void-900 border-t border-void-200 dark:border-starlight-800/30 mt-20 overflow-hidden">
+    <footer className="relative bg-void-50 dark:bg-void-900 border-t border-void-200 dark:border-starlight-800/30 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10 dark:opacity-5">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cosmos-500 rounded-full blur-3xl"></div>
