@@ -176,39 +176,6 @@ const Navbar = ({ personalData }) => {
               </div>
             </div>
 
-            {/* Fullscreen Toggle */}
-            <motion.button
-              onClick={toggleFullscreen}
-              className="theme-toggle"
-              aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <AnimatePresence mode="wait" initial={false}>
-                {isFullscreen ? (
-                  <motion.div
-                    key="minimize"
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.5, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Minimize2 className="w-5 h-5" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="maximize"
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.5, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Maximize2 className="w-5 h-5" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -238,6 +205,39 @@ const Navbar = ({ personalData }) => {
                 )}
               </AnimatePresence>
             </button>
+
+            {/* Fullscreen Toggle */}
+            <motion.button
+              onClick={toggleFullscreen}
+              className="theme-toggle"
+              aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {isFullscreen ? (
+                  <motion.div
+                    key="minimize"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Minimize2 className="w-3.5 h-3.5" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="maximize"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Maximize2 className="w-3.5 h-3.5" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
         </div>
 
