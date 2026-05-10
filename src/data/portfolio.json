@@ -621,7 +621,7 @@
       "title": "AWS Certified AI Practitioner",
       "institute": "Amazon Web Services",
       "expectedDate": "Q2 2026",
-      "logo": "/certifications/awsarch.png",
+      "logo": "/certifications/awsgen.png",
       "skills": ["AWS", "Generative AI", "Machine Learning", "AI Services", "Foundation Models"],
       "registrationLink": "https://docs.aws.amazon.com/aws-certification/latest/ai-professional-01/ai-professional-01.html?refid=1baaf775-293c-48b5-9cd2-e494d641d6d1"
     },
