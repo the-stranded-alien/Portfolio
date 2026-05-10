@@ -618,27 +618,36 @@
   "plannedCertifications": [
     {
       "id": 1,
-      "title": "AWS Certified Solutions Architect Associate",
+      "title": "AWS Certified AI Practitioner",
       "institute": "Amazon Web Services",
       "expectedDate": "Q2 2026",
+      "logo": "/certifications/awsarch.png",
+      "skills": ["AWS", "Generative AI", "Machine Learning", "AI Services", "Foundation Models"],
+      "registrationLink": "https://docs.aws.amazon.com/aws-certification/latest/ai-professional-01/ai-professional-01.html?refid=1baaf775-293c-48b5-9cd2-e494d641d6d1"
+    },
+    {
+      "id": 2,
+      "title": "AWS Certified Solutions Architect Associate",
+      "institute": "Amazon Web Services",
+      "expectedDate": "Q3 2026",
       "logo": "/certifications/awsarch.png",
       "skills": ["AWS", "Cloud Architecture", "Solutions Design", "Infrastructure"],
       "registrationLink": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "AWS Certified Developer Associate",
       "institute": "Amazon Web Services",
-      "expectedDate": "Q3 2026",
+      "expectedDate": "Q4 2026",
       "logo": "/certifications/awsdev.png",
       "skills": ["AWS", "Cloud Architecture", "Solutions Design", "Infrastructure"],
       "registrationLink": "https://aws.amazon.com/certification/certified-developer-associate/"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Certified Kubernetes Application Developer (CKAD)",
       "institute": "The Linux Foundation",
-      "expectedDate": "Q4 2026",
+      "expectedDate": "Q1 2027",
       "logo": "/certifications/ckad.png",
       "skills": ["Kubernetes", "Container Orchestration", "DevOps", "Cloud Native"],
       "registrationLink": "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/"
