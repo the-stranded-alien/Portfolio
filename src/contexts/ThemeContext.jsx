@@ -30,7 +30,7 @@ export const ThemeProvider = ({ children }) => {
     if (theme === 'dark') {
       root.classList.add('dark');
     } else if (theme === 'dim') {
-      root.classList.add('dim', 'dark'); // dim reuses dark styles; CSS overrides lighten key surfaces
+      root.classList.add('dim'); // light-mode base styles flow through; CSS adds warm parchment tones
     }
     localStorage.setItem('theme', theme);
   }, [theme]);

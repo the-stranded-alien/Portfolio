@@ -275,81 +275,86 @@
   animation: shimmer 2s infinite;
 }
 
-/* Dim theme: warm parchment / paper reading mode */
-.dim.dark body {
-  background-color: #f5f0e8 !important;
-  color: #2c2420 !important;
-}
-.dim.dark .card {
-  background-color: rgba(255, 250, 242, 0.92) !important;
-  border-color: rgba(180, 140, 80, 0.25) !important;
-  color: #2c2420 !important;
-  box-shadow: 0 4px 20px rgba(100, 70, 30, 0.1) !important;
-}
-.dim.dark .card:hover {
-  border-color: rgba(180, 140, 80, 0.5) !important;
-  box-shadow: 0 8px 30px rgba(100, 70, 30, 0.15) !important;
-}
-.dim.dark nav {
-  background-color: rgba(245, 240, 232, 0.92) !important;
-  border-color: rgba(180, 140, 80, 0.2) !important;
-}
-.dim.dark footer {
-  background-color: #ede8e0 !important;
-  border-color: rgba(180, 140, 80, 0.2) !important;
-}
-.dim.dark .theme-toggle {
-  background-color: #e8e2d8 !important;
-  border-color: rgba(180, 140, 80, 0.35) !important;
-}
-.dim.dark .theme-toggle:hover {
-  background-color: #ddd8ce !important;
-}
-.dim.dark .btn-secondary {
-  background-color: #e8e2d8 !important;
-  border-color: rgba(180, 140, 80, 0.4) !important;
-  color: #2c2420 !important;
-}
-.dim.dark .btn-secondary:hover {
-  background-color: #ddd8ce !important;
-}
-.dim.dark .nebula-bg {
-  background: radial-gradient(ellipse at 0% 0%, rgba(180, 140, 80, 0.08) 0%, transparent 50%),
-              radial-gradient(ellipse at 100% 100%, rgba(160, 120, 60, 0.06) 0%, transparent 50%),
-              radial-gradient(ellipse at 50% 50%, rgba(200, 160, 80, 0.05) 0%, transparent 50%) !important;
-}
-.dim.dark .cosmic-grid {
-  background-image:
-    linear-gradient(rgba(150, 110, 50, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(150, 110, 50, 0.06) 1px, transparent 1px) !important;
-}
-.dim.dark .stars-bg {
-  opacity: 0.08 !important;
-}
-.dim.dark ::-webkit-scrollbar-track {
+/* ── Dim: warm parchment reading mode ──────────────────────────────
+   dim class only (no 'dark') — light-mode base styles flow through;
+   these rules layer warm amber-cream tones on top.
+   ─────────────────────────────────────────────────────────────────── */
+.dim body {
   background-color: #f5f0e8;
+  color: #2d1f14;
 }
-.dim.dark ::-webkit-scrollbar-thumb {
-  background-color: #c4a878;
+
+/* Dial back cosmic effects that clash with a cream background */
+.dim .stars-bg   { opacity: 0.07; }
+.dim .aurora     { opacity: 0.04; }
+.dim .nebula-bg  {
+  background:
+    radial-gradient(ellipse at   0%   0%, rgba(200, 155, 70, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(175, 120, 50, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse at  50%  50%, rgba(215, 170, 80, 0.04) 0%, transparent 55%);
 }
-.dim.dark ::-webkit-scrollbar-thumb:hover {
-  background-color: #a8834a;
+.dim .cosmic-grid {
+  background-image:
+    linear-gradient(rgba(140, 100, 40, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 100, 40, 0.05) 1px, transparent 1px);
 }
-.dim.dark .tag {
-  background-color: rgba(180, 130, 50, 0.12) !important;
-  border-color: rgba(180, 130, 50, 0.3) !important;
-  color: #7a5020 !important;
+
+/* Cards */
+.dim .card {
+  background-color: rgba(255, 251, 243, 0.94);
+  border-color: rgba(160, 118, 50, 0.18);
+  box-shadow: 0 2px 14px rgba(100, 68, 20, 0.07);
 }
-.dim.dark .tag:hover {
-  background-color: rgba(180, 130, 50, 0.2) !important;
-  border-color: rgba(180, 130, 50, 0.5) !important;
+.dim .card:hover {
+  border-color: rgba(148, 104, 36, 0.40);
+  box-shadow: 0 8px 28px rgba(100, 68, 20, 0.12);
 }
-/* Flip nav link and generic text colours back to dark */
-.dim.dark nav a, .dim.dark nav button:not(.btn-primary) {
-  color: #2c2420 !important;
+
+/* Navigation */
+.dim nav {
+  background-color: rgba(248, 243, 235, 0.96);
+  border-color: rgba(160, 118, 50, 0.15);
+  box-shadow: 0 1px 10px rgba(100, 68, 20, 0.06);
 }
-/* Theme toggle pill inside nav */
-.dim.dark nav > div .relative.flex.items-center {
-  background-color: #e8e2d8 !important;
-  border-color: rgba(180, 140, 80, 0.35) !important;
+
+/* Theme-toggle pill (bg-void-100/80 in light mode → warm amber) */
+.dim nav .rounded-xl.p-1 {
+  background-color: #ece5d8;
+  border-color: rgba(160, 118, 50, 0.26);
 }
+
+/* Footer */
+.dim footer {
+  background-color: #ede7de;
+  border-color: rgba(160, 118, 50, 0.16);
+}
+
+/* Buttons & interactive controls */
+.dim .btn-secondary {
+  background-color: #ece5d8;
+  border-color: rgba(160, 118, 50, 0.30);
+  color: #2d1f14;
+}
+.dim .btn-secondary:hover { background-color: #e2dace; }
+
+.dim .theme-toggle {
+  background-color: #ece5d8;
+  border-color: rgba(160, 118, 50, 0.26);
+}
+.dim .theme-toggle:hover { background-color: #e2dace; }
+
+/* Tags */
+.dim .tag {
+  background-color: rgba(155, 108, 38, 0.09);
+  border-color: rgba(155, 108, 38, 0.24);
+  color: #7a5518;
+}
+.dim .tag:hover {
+  background-color: rgba(155, 108, 38, 0.16);
+  border-color: rgba(155, 108, 38, 0.42);
+}
+
+/* Scrollbar */
+.dim ::-webkit-scrollbar-track { background-color: #f0ebe2; }
+.dim ::-webkit-scrollbar-thumb { background-color: #c0a06c; }
+.dim ::-webkit-scrollbar-thumb:hover { background-color: #a07840; }
