@@ -139,9 +139,9 @@ const Navbar = ({ personalData }) => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Moon className={`w-4 h-4 transition-colors duration-200 ${
-                    theme === 'light' 
-                      ? 'text-white drop-shadow-lg' 
+                  <Sun className={`w-4 h-4 transition-colors duration-200 ${
+                    theme === 'light'
+                      ? 'text-white drop-shadow-lg'
                       : 'text-void-500 dark:text-starlight-500 hover:text-cosmos-600 dark:hover:text-cosmos-400'
                   }`} />
                 </motion.button>
@@ -167,9 +167,9 @@ const Navbar = ({ personalData }) => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Sun className={`w-4 h-4 transition-colors duration-200 ${
-                    theme === 'dark' 
-                      ? 'text-white drop-shadow-lg' 
+                  <Moon className={`w-4 h-4 transition-colors duration-200 ${
+                    theme === 'dark'
+                      ? 'text-white drop-shadow-lg'
                       : 'text-void-500 dark:text-starlight-500 hover:text-cosmos-600 dark:hover:text-cosmos-400'
                   }`} />
                 </motion.button>
