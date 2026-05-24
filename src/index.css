@@ -275,60 +275,60 @@
   animation: shimmer 2s infinite;
 }
 
-/* Dim theme: between light and dark – lighter than full dark */
+/* Dim theme: deep blue-purple dusk — distinct from near-black dark mode */
 .dim.dark body {
-  background-color: #171717; /* void-900 */
-  color: #f4f4f5; /* starlight-100 */
+  background-color: #1e1e2e; /* Catppuccin Mocha base */
+  color: #cdd6f4;            /* Catppuccin Mocha text — soft lavender-white */
 }
 .dim.dark .card {
-  background-color: rgba(39, 39, 42, 0.9); /* void-800 with opacity */
-  border-color: rgba(63, 63, 70, 0.5);
+  background-color: rgba(49, 50, 68, 0.9); /* Catppuccin Mocha surface */
+  border-color: rgba(88, 91, 112, 0.45);   /* Catppuccin Mocha overlay0 */
 }
 .dim.dark nav {
-  background-color: rgba(24, 24, 27, 0.95) !important;
-  border-color: rgba(63, 63, 70, 0.4);
+  background-color: rgba(24, 24, 37, 0.95) !important; /* Catppuccin Mocha crust */
+  border-color: rgba(88, 91, 112, 0.35);
 }
 .dim.dark footer {
-  background-color: #27272a !important; /* void-800 */
-  border-color: rgba(63, 63, 70, 0.4);
+  background-color: #181825 !important; /* Catppuccin Mocha mantle */
+  border-color: rgba(88, 91, 112, 0.35);
 }
 .dim.dark .theme-toggle {
-  background-color: #3f3f46;
-  border-color: #52525b;
+  background-color: #313244; /* Catppuccin Mocha surface */
+  border-color: #585b70;     /* Catppuccin Mocha overlay0 */
 }
 .dim.dark .theme-toggle:hover {
-  background-color: #525252;
+  background-color: #45475a; /* Catppuccin Mocha surface1 */
 }
 .dim.dark .btn-secondary {
-  background-color: #3f3f46;
-  border-color: #52525b;
-  color: #f4f4f5;
+  background-color: #313244;
+  border-color: #585b70;
+  color: #cdd6f4;
 }
 .dim.dark .btn-secondary:hover {
-  background-color: #525252;
+  background-color: #45475a;
 }
 .dim.dark .nebula-bg {
-  background: radial-gradient(ellipse at 0% 0%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
-              radial-gradient(ellipse at 100% 100%, rgba(168, 85, 247, 0.18) 0%, transparent 50%),
-              radial-gradient(ellipse at 50% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 0% 0%, rgba(203, 166, 247, 0.18) 0%, transparent 50%),
+              radial-gradient(ellipse at 100% 100%, rgba(180, 190, 254, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, rgba(137, 180, 250, 0.1) 0%, transparent 50%);
 }
 .dim.dark .cosmic-grid {
-  background-image: 
-    linear-gradient(rgba(139, 92, 246, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.08) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(137, 180, 250, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(137, 180, 250, 0.07) 1px, transparent 1px);
 }
 .dim.dark ::-webkit-scrollbar-track {
-  background-color: #171717;
+  background-color: #1e1e2e;
 }
 .dim.dark ::-webkit-scrollbar-thumb {
-  background-color: #525252;
+  background-color: #585b70;
 }
 .dim.dark .tag {
-  background-color: rgba(46, 16, 101, 0.35);
-  border-color: rgba(92, 58, 177, 0.5);
-  color: #c4b5fd;
+  background-color: rgba(203, 166, 247, 0.15); /* mauve tint */
+  border-color: rgba(203, 166, 247, 0.4);
+  color: #cba6f7; /* Catppuccin Mocha mauve */
 }
 .dim.dark .tag:hover {
-  background-color: rgba(46, 16, 101, 0.5);
-  border-color: rgba(139, 92, 246, 0.6);
+  background-color: rgba(203, 166, 247, 0.25);
+  border-color: rgba(203, 166, 247, 0.6);
 }
