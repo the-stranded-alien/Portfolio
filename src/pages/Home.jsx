@@ -114,9 +114,19 @@ const Home = ({ data }) => {
             variants={itemVariants}
             className="text-center mb-8 max-w-4xl mx-auto"
           >
-            <p className="text-xl md:text-2xl lg:text-3xl text-void-700 dark:text-starlight-300 font-display mb-4 leading-relaxed">
-              {personal?.title || 'Your Professional Title'}
-            </p>
+            {personal?.titleLines ? (
+              <div className="flex flex-col items-center gap-1 mb-4">
+                {personal.titleLines.map((line, i) => (
+                  <p key={i} className="text-xl md:text-2xl lg:text-3xl text-void-700 dark:text-starlight-300 font-display leading-relaxed">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xl md:text-2xl lg:text-3xl text-void-700 dark:text-starlight-300 font-display mb-4 leading-relaxed">
+                {personal?.title || 'Your Professional Title'}
+              </p>
+            )}
             
             {buzzWords.length > 0 && (
               <div className="flex items-center justify-center gap-3 flex-wrap mt-6">

@@ -2,6 +2,10 @@
   "personal": {
     "name": "Sahil Gupta",
     "title": "Senior Forward Deployed AI Engineer | Software Generalist",
+    "titleLines": [
+      "Senior Forward Deployed AI Engineer",
+      "Software Generalist"
+    ],
     "showAvailableForOpportunities": false,
     "email": "sahil16gupta11@gmail.com",
     "phone": "+91-7249999056",
@@ -76,7 +80,7 @@
       "website": "https://www.gehealthcare.com/",
       "description": "Senior Forward Deployed AI Engineer working at the intersection of AI and healthcare technology, collaborating directly with enterprise customers to drive adoption and deployment of cutting-edge AI-powered solutions in clinical and operational workflows.",
       "achievements": [],
-      "technologies": ["AI/ML", "Agentic AI", "Forward Deployed Engineering", "Healthcare Technology", "Enterprise AI"]
+      "technologies": ["AI/ML", "Agentic AI", "Forward Deployed Engineering", "Healthcare Technology", "Enterprise AI", "AWS"]
     },
     {
       "id": 1,
