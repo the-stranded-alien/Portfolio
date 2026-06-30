@@ -28,7 +28,7 @@
     }
   },
   "about": {
-    "description": "I'm a Lead Software Engineer with 5+ years of experience building scalable, secure, and AI-driven enterprise platforms across SaaS, cloud-native, and distributed systems. My expertise spans Agentic AI, multi-agent architectures, backend and microservices development, and Kubernetes-based infrastructure. I specialize in designing secure authentication and authorization systems (SSO, OAuth, IdP/SP), building high-performance data pipelines, and developing robust third-party integrations. I'm passionate about forward-deployed engineering, collaborating directly with global customers to drive onboarding, data integrations, security integrations, and production adoption of innovative AI solutions.",
+    "description": "I'm a Senior Forward Deployed AI Engineer at GE HealthCare with 5+ years of experience building scalable, secure, and AI-driven enterprise platforms across healthcare, SaaS, cloud-native, and distributed systems. My expertise spans Agentic AI, multi-agent architectures, backend and microservices development, and Kubernetes-based infrastructure. I specialize in designing secure authentication and authorization systems (SSO, OAuth, IdP/SP), building high-performance data pipelines, and developing robust third-party integrations. I'm passionate about forward-deployed engineering, collaborating directly with global customers to drive onboarding, data integrations, security integrations, and production adoption of innovative AI solutions.",
     "highlights": [
       "Pioneered agentic AI features by integrating LLM-based intelligent agents into workflows, automating repetitive tasks and improving customer productivity",
       "Built Model Context Protocol (MCP) server and designed multi-agent systems for complex workflow automation with intelligent task delegation",
@@ -37,7 +37,7 @@
       "Engineered scalable Kubernetes-based systems achieving 40% cost efficiency improvements through intelligent workload management",
       "Led and managed cross-functional team of 10+ engineers, providing technical mentorship and overseeing project delivery",
       "Built privacy-compliant analytics service with cookieless tracking, enabling real-time user behavior monitoring across customer websites",
-      "Holds M.Tech in Cloud Computing from BITS Pilani and Post Graduation in GenAI & Agentic AI from IIT Roorkee, complementing 5+ years of hands-on engineering experience"
+      "Holds M.Tech in Cloud Computing from BITS Pilani and Post Graduation in GenAI & Agentic AI from IIT Roorkee, complementing 5+ years of hands-on engineering experience at companies like GE HealthCare and RevSure AI"
     ],
     "interests": [
       "Agentic AI & Generative AI",
